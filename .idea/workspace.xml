@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="REST4:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d799b732-0c63-4290-884f-ebdf9fea81a0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/GetIndexPageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/REST4_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/REST4_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Java_EE_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/REST4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/SynchronousQueueDemo$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/SynchronousQueueDemo$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/SynchronousQueueDemo$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/SynchronousQueueDemo$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/SynchronousQueueDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/TabletWaiter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/Waiter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/advertisement/Advertisement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/advertisement/AdvertisementManager$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/advertisement/AdvertisementManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/advertisement/AdvertisementStorage$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/advertisement/AdvertisementStorage$InstanceHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/advertisement/AdvertisementStorage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/advertisement/NoVideoAvailableException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/advertisement/StatisticAdvertisementManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/dao/UserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/kitchen/ConsoleHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/kitchen/Cook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/kitchen/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/kitchen/dishes/Dish.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/kitchen/dishes/DishType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/model/User$ROLE.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/servlets/ContextListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/servlets/filter/AuthFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/servlets/servlet/LogoutServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/statistic/StatisticManager$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/statistic/StatisticManager$StatisticStorage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/statistic/StatisticManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/statistic/event/CookedOrderEventDataRow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/statistic/event/EventDataRow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/statistic/event/EventType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/statistic/event/NoAvailableVideoEventDataRow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/classes/com/company/statistic/event/VideoSelectedEventDataRow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/REST4_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/LogoutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/LogoutServlet.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1xpEm8z7AoSC29X3R3LAQo55LHt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PAVEL\REST4\src\main\webapp\WEB-INF" />
+      <recent name="D:\PAVEL\REST4\src\main\java\com\company" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PAVEL\REST4\src\main\java\com\company\DAO" />
+      <recent name="D:\PAVEL\REST4\src\main\webapp\WEB-INF" />
+      <recent name="D:\PAVEL\REST4\src\main" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.521" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.521" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="REST4:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_REST4" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="63389" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="REST4:war" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY">
+      <option name="adminPort" value="8005" />
+      <option name="contextPath" value="/REST4" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/web" />
+      <option name="envOptions" />
+      <option name="passParentEnvironmentVariables" value="true" />
+      <option name="port" value="8080" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/10.0.8" />
+          <option name="number" value="0" />
+          <option name="path" value="D:\ProgrammFiles\apache-tomcat-10.0.8" />
+          <option name="version" value="10.0.8.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d799b732-0c63-4290-884f-ebdf9fea81a0" name="Default Changelist" comment="" />
+      <created>1631043785421</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1631043785421</updated>
+      <workItem from="1631043788949" duration="1610000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="159" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1631044336180">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="0" y="159" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1631044336180" />
+    <state x="130" y="193" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1631043920067">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="130" y="193" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1631043920067" />
+    <state width="636" height="266" key="GridCell.Tab.0.bottom" timestamp="1631045098998">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="636" height="266" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1631045098998" />
+    <state width="636" height="266" key="GridCell.Tab.0.center" timestamp="1631045098998">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="636" height="266" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1631045098998" />
+    <state width="636" height="266" key="GridCell.Tab.0.left" timestamp="1631045098998">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="636" height="266" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1631045098998" />
+    <state width="636" height="266" key="GridCell.Tab.0.right" timestamp="1631045098998">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="636" height="266" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1631045098998" />
+    <state width="636" height="266" key="GridCell.Tab.1.bottom" timestamp="1631045098882">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="636" height="266" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1631045098882" />
+    <state width="636" height="266" key="GridCell.Tab.1.center" timestamp="1631045098881">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="636" height="266" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1631045098881" />
+    <state width="636" height="266" key="GridCell.Tab.1.left" timestamp="1631045098881">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="636" height="266" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1631045098881" />
+    <state width="636" height="266" key="GridCell.Tab.1.right" timestamp="1631045098882">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="636" height="266" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1631045098882" />
+    <state width="636" height="266" key="GridCell.Tab.2.bottom" timestamp="1631045098882">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="636" height="266" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1631045098882" />
+    <state width="636" height="266" key="GridCell.Tab.2.center" timestamp="1631045098882">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="636" height="266" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1631045098882" />
+    <state width="636" height="266" key="GridCell.Tab.2.left" timestamp="1631045098882">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="636" height="266" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1631045098882" />
+    <state width="636" height="266" key="GridCell.Tab.2.right" timestamp="1631045098882">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="636" height="266" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1631045098882" />
+  </component>
+</project>
