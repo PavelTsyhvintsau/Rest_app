@@ -2,6 +2,8 @@ package com.company.servlets.filter;
 
 import com.company.dao.UserDAO;
 import com.company.model.User;
+import com.company.util.AppUtils;
+
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,12 +27,14 @@ public class AuthFilter implements Filter {
                          final FilterChain filterChain)
 
             throws IOException, ServletException {
-
+        System.out.println("now do filter AuthFilt");
         final HttpServletRequest req = (HttpServletRequest) request;
         final HttpServletResponse res = (HttpServletResponse) response;
 
         final String login = req.getParameter("login");
         final String password = req.getParameter("password");
+        System.out.println("login "+login);
+        System.out.println("password "+password);
 
         @SuppressWarnings("unchecked")
         final AtomicReference<UserDAO> dao = (AtomicReference<UserDAO>) req.getServletContext().getAttribute("dao");
@@ -48,7 +52,7 @@ public class AuthFilter implements Filter {
 
 
         } else if (dao.get().userIsExist(login, password)) {
-
+            System.out.println("не знаем роль и ищем(doFiltr AuthFiltr)");
             final User.ROLE role = dao.get().getRoleByLoginPassword(login, password);
 
             req.getSession().setAttribute("password", password);
@@ -72,18 +76,24 @@ public class AuthFilter implements Filter {
                             final HttpServletResponse res,
                             final User.ROLE role)
             throws ServletException, IOException {
+       User user=new User();
+       user.setPassword((String) req.getSession().getAttribute("password"));
+       user.setRole(role);
+       user.setLogin((String)req.getSession().getAttribute("login"));
 
+        System.out.println("now do move to menu AuthFilt ---- create user for session"+ user.getLogin());
+       AppUtils.setSessionUserParam(req.getSession(),role,user.getLogin());
 
         if (role.equals(User.ROLE.ADMIN)) {
 
             req.getRequestDispatcher("/WEB-INF/view/admin_menu.jsp").forward(req, res);
 
-        } else if (role.equals(User.ROLE.WAITER)) {
+        } else if (role.equals(User.ROLE.COOK)) {
 
-            req.getRequestDispatcher("/WEB-INF/view/user_menu.jsp").forward(req, res);
+            req.getRequestDispatcher("/WEB-INF/view/cook_menu.jsp").forward(req, res);
 
         } else {
-
+            AppUtils.setSessionUserParam(req.getSession(), User.ROLE.UNKNOWN,null);
             req.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(req, res);
         }
     }

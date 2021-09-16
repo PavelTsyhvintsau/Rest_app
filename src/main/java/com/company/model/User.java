@@ -53,6 +53,11 @@ public class User {
     }
 
     public enum ROLE {
-        ADMIN, TABLET_TABLE, COOK, MANAGER, WAITER, UNKNOWN
+        ADMIN,
+        TABLET_TABLE,
+        COOK,
+        MANAGER,
+        WAITER,
+        UNKNOWN
     }
 }

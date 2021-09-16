@@ -8,6 +8,16 @@ import java.util.List;
 public class UserDAO {
 
     private final List<User> store = new ArrayList<>();
+    private final List<String> roleList = new ArrayList<>();
+
+
+    public List<String> getRoleList() {
+        return roleList;
+    }
+
+    public List<User> getStore() {
+        return store;
+    }
 
     public User getById(int id) {
 

@@ -1,6 +1,6 @@
 package com.company.statistic.event;
 
-import com.company.kitchen.dishes.Dish;
+import com.company.model.kitchen.dishes.Dish;
 
 import java.util.Date;
 import java.util.List;

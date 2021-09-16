@@ -3,25 +3,154 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+   <!-- <display-name>SecurityWebApp</display-name>
+
+
+    <welcome-file-list>
+
+        <welcome-file>/</welcome-file>
+
+    </welcome-file-list>-->
+
+
     <!--filter check exist session for sign in-->
     <filter>
         <filter-name>AuthFilter</filter-name>
         <filter-class>com.company.servlets.filter.AuthFilter</filter-class>
     </filter>
-
-    <filter-mapping>
+     <filter-mapping>
         <filter-name>AuthFilter</filter-name>
         <url-pattern>/</url-pattern>
     </filter-mapping>
+
+    <filter>
+        <filter-name>SecurityFilter</filter-name>
+        <filter-class>com.company.servlets.filter.SecurityFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SecurityFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!--paths
+    /
+    /logout
+    /updateUsers
+    /add_user
+    /delete_user
+    /update_user
+    /dishes_menu_editor
+    /add_dish
+    /delete_dish
+    /update_dish
+    /activate_dish
+
+    -->
+
 
     <!--Logout servlet-->
     <servlet>
         <servlet-name>LogoutServlet</servlet-name>
         <servlet-class>com.company.servlets.servlet.LogoutServlet</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
+
+    <!--admin main menu servlet-->
+    <servlet>
+        <servlet-name>AdminAddRemoveServlet</servlet-name>
+        <servlet-class>com.company.servlets.servlet.AdminAddRemoveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminAddRemoveServlet</servlet-name>
+        <url-pattern>/updateUsers</url-pattern>
+    </servlet-mapping>
+
+    <!--admin add user servlet-->
+    <servlet>
+        <servlet-name>AddUserServlet</servlet-name>
+        <servlet-class>com.company.servlets.servlet.AddUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddUserServlet</servlet-name>
+        <url-pattern>/add_user</url-pattern>
+    </servlet-mapping>
+
+    <!--Delete user-->
+    <servlet-mapping>
+        <servlet-name>DeleteUserServlet</servlet-name>
+        <url-pattern>/delete_user</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteUserServlet</servlet-name>
+        <servlet-class>com.company.servlets.servlet.DeleteUserServlet</servlet-class>
+    </servlet>
+
+    <!--Update user-->
+    <servlet-mapping>
+        <servlet-name>UpdateUserServlet</servlet-name>
+        <url-pattern>/update_user</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateUserServlet</servlet-name>
+        <servlet-class>com.company.servlets.servlet.UpdateUserServlet</servlet-class>
+    </servlet>
+
+    <!--Edit dishes menu-->
+    <servlet-mapping>
+        <servlet-name>DishMenuEditor</servlet-name>
+        <url-pattern>/dishes_menu_editor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DishMenuEditor</servlet-name>
+        <servlet-class>com.company.servlets.servlet.DishesMenuEditorServlet</servlet-class>
+    </servlet>
+
+    <!--add dish servlet-->
+    <servlet>
+        <servlet-name>AddDishServlet</servlet-name>
+        <servlet-class>com.company.servlets.servlet.AddDishServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddDishServlet</servlet-name>
+        <url-pattern>/add_dish</url-pattern>
+    </servlet-mapping>
+
+    <!--Delete dish-->
+    <servlet-mapping>
+        <servlet-name>DeleteDishServlet</servlet-name>
+        <url-pattern>/delete_dish</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteDishServlet</servlet-name>
+        <servlet-class>com.company.servlets.servlet.DeleteDishServlet</servlet-class>
+    </servlet>
+
+    <!--Update dish-->
+    <servlet-mapping>
+        <servlet-name>UpdateDishServlet</servlet-name>
+        <url-pattern>/update_dish</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateDishServlet</servlet-name>
+        <servlet-class>com.company.servlets.servlet.UpdateDishServlet</servlet-class>
+    </servlet>
+
+    <!--Activating dish-->
+    <servlet-mapping>
+        <servlet-name>ActivateDishServlet</servlet-name>
+        <url-pattern>/activate_dish</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ActivateDishServlet</servlet-name>
+        <servlet-class>com.company.servlets.servlet.ActivateDishServlet</servlet-class>
+    </servlet>
+
+
+
 </web-app>
