@@ -13,6 +13,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DishesMenuEditorServlet extends HttpServlet {
     private AtomicReference<Menu> menu;
 
+
     @Override
     public void init() throws ServletException {
 
@@ -24,6 +25,8 @@ public class DishesMenuEditorServlet extends HttpServlet {
 
             this.menu = (AtomicReference<Menu>) getServletContext().getAttribute("menu");
         }
+
+
     }
 
 

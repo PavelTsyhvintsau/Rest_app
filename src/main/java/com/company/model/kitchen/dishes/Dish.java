@@ -7,6 +7,7 @@ public class Dish {
     private DishType dishType;
     private int id;
     private boolean active;
+    private int price;
 
     public Dish() {}
 
@@ -15,6 +16,19 @@ public class Dish {
         else return 0;
     }
 
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+    public int getRublePrice(){
+        return price/100;
+    }
+    public int getPennyPrice(){
+        return price%100;
+    }
     public void setActive(boolean active) {
         this.active = active;
     }
@@ -62,5 +76,6 @@ public class Dish {
         this.dishType = dishType;
         this.id=id;
         this.active=false;
+        this.price=0;
     }
 }

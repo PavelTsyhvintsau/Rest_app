@@ -31,6 +31,7 @@ public class AddDishServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("do post AddDishServlet in work");
         req.setCharacterEncoding("UTF-8");
         final String dishName = req.getParameter("dishName");
         final DishType dishType =DishType.valueOf(req.getParameter("dishType"));

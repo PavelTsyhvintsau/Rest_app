@@ -13,10 +13,6 @@
 </head>
 <body>
 <jsp:include page="_menu.jsp"></jsp:include>
-Access Denied
-<hr/>
-
-<a href="<c:url value='/logout' />">Logout</a>
-<hr/>
+<h1 style="color:red">Access Denied!!!</h1>
 </body>
 </html>

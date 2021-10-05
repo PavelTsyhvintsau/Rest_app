@@ -1,5 +1,7 @@
 package com.company.model;
 
+import com.company.model.kitchen.Cook;
+
 public class User {
 
     private int id;
@@ -9,6 +11,7 @@ public class User {
     private String password;
 
     private ROLE role;
+    private Cook cook;
 
     public User() {
     }
@@ -18,6 +21,18 @@ public class User {
         this.login = login;
         this.password = password;
         this.role = role;
+        if(role.equals(ROLE.COOK)){
+            cook=new Cook(login);
+        }
+    }
+
+    public Cook getCook() {
+        return cook;
+    }
+
+
+    public void setCook(Cook cook) {
+        this.cook = cook;
     }
 
     public int getId() {

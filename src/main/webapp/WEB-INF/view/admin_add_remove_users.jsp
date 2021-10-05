@@ -13,9 +13,7 @@
 </head>
 <body>
 <jsp:include page="_menu.jsp"></jsp:include>
-<h3>Тукущая роль: <c:out value="${sessionScope.role}"/> <br/>
-    Логин: <c:out value="${sessionScope.login}"/>! <a href="<c:url value='/logout' />">Logout</a></h3>
-<hr/>
+
 <h4>Users redactor</h4>
 <hr/>
 <h3>Все пользователи</h3><br />
@@ -57,11 +55,5 @@
 
     <input type="submit" value="Ok" name="Ok"><br>
 </form>
-
-<hr/>
-
-
-<hr/>
-
 </body>
 </html>

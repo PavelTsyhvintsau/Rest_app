@@ -10,17 +10,9 @@
     MainPage
 </a>
 ||
-<a href="${pageContext.request.contextPath}/managerTask">
-    Manager Task
-</a>
-||
-<a href="${pageContext.request.contextPath}/userInfo">
-    User Info
-</a>
-||
-<a href="<c:url value='/logout' />">Logout</a>
+<a style="color:red" href="<c:url value='/logout' />">Logout</a>
 
 &nbsp;
-<span style="color:red">[<c:out value="${sessionScope.role}"/> <c:out value="${sessionScope.login}"/> ]</span>
-
+<span style="color:darkblue">[<c:out value="${sessionScope.role}"/> <c:out value="${sessionScope.login}"/> ]</span>
+<hr/>
 

@@ -37,14 +37,11 @@ public class SecurityFilter implements Filter {
             chain.doFilter(request, response);
             return;
         }
-        HttpServletRequest wrapRequest = request;
 
         if (role != null) {
             // User Name
             String userName = AppUtils.getSessionLogin(request.getSession());
             System.out.println("doFilter:1) username ----"+userName+". 2) role session--- "+request.getSession().getAttribute("role"));
-
-
         }
 
         // Страницы требующие входа в систему.
@@ -53,28 +50,28 @@ public class SecurityFilter implements Filter {
             // Если пользователь еще не вошел в систему,
             // Redirect (перенаправить) к странице логина.
             if (role == null) {
-
                 String requestUri = request.getRequestURI();
                 System.out.println(requestUri+"Если пользователь еще не вошел в систему,Redirect (перенаправить) к странице логина.");
                 request.getServletContext().getRequestDispatcher("/");
-
                 return;
             }
 
             // Проверить пользователь имеет действительную роль или нет?
             boolean hasPermission=SecurityConfig.getUrlPatternsForRole(role.toString()).contains(servletPath);
-
+                System.out.println("haPermission "+hasPermission);
             if (hasPermission) {
-                System.out.println("права пользователя не подтверждены"+hasPermission);
-                RequestDispatcher dispatcher //
-                        = request.getServletContext().getRequestDispatcher("/WEB-INF/view/access_denied.jsp");
-
-                dispatcher.forward(request, response);
+                System.out.println("права пользователя подтверждены");
+                chain.doFilter(request, response);
                 return;
             }
+            System.out.println("права пользователя не подтверждены"+hasPermission);
+            RequestDispatcher dispatcher= request.getServletContext().getRequestDispatcher("/WEB-INF/view/access_denied.jsp");
+
+            dispatcher.forward(request, response);
+
         }
-        System.out.println("права пользователя подтверждены");
-        chain.doFilter(wrapRequest, response);
+
+
     }
 
 

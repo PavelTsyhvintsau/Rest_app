@@ -1,7 +1,7 @@
 package com.company.model.kitchen.dishes;
 
 public enum DishType {
-    SALAT,
+    SALAD,
     SOUP,
     GARNISH,
     HOT,

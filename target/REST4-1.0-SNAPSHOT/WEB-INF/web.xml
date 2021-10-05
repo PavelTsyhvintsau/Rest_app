@@ -153,4 +153,63 @@
 
 
 
+    <!--Menu for ordering create-->
+    <servlet-mapping>
+        <servlet-name>ActivateMenuForOrdering</servlet-name>
+        <url-pattern>/menu_for_ordering</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ActivateMenuForOrdering</servlet-name>
+        <servlet-class>com.company.servlets.servlet.MenuForOrderingServlet</servlet-class>
+    </servlet>
+
+    <!--Menu dishes price correcting-->
+    <servlet-mapping>
+        <servlet-name>ActivateMenuDishPriceCorrecting</servlet-name>
+        <url-pattern>/update_dish_price</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ActivateMenuDishPriceCorrecting</servlet-name>
+        <servlet-class>com.company.servlets.servlet.DishesPriceCorrectingServlet</servlet-class>
+    </servlet>
+
+    <!--add dish to order-->
+    <servlet-mapping>
+        <servlet-name>AddDishToOrder</servlet-name>
+        <url-pattern>/add_dish_to_order</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddDishToOrder</servlet-name>
+        <servlet-class>com.company.servlets.servlet.AddDishToOrderServlet</servlet-class>
+    </servlet>
+
+    <!--add order to queue-->
+    <servlet-mapping>
+        <servlet-name>AddOrderToQueue</servlet-name>
+        <url-pattern>/add_order_to_queue</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddOrderToQueue</servlet-name>
+        <servlet-class>com.company.servlets.servlet.AddOrderToQueueServlet</servlet-class>
+    </servlet>
+
+    <!--cooking page for cook main work-->
+    <servlet-mapping>
+        <servlet-name>CookPageCooking</servlet-name>
+        <url-pattern>/cooking_page</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CookPageCooking</servlet-name>
+        <servlet-class>com.company.servlets.servlet.CookCookingServlet</servlet-class>
+    </servlet>
+    <!--cooking page for cook main work-->
+    <servlet-mapping>
+        <servlet-name>ActivateCook</servlet-name>
+        <url-pattern>/activate_cook</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ActivateCook</servlet-name>
+        <servlet-class>com.company.servlets.servlet.ActivateCookServlet</servlet-class>
+    </servlet>
+
 </web-app>

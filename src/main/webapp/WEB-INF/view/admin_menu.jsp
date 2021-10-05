@@ -12,12 +12,8 @@
 <body>
 <jsp:include page="_menu.jsp"></jsp:include>
 
-<h3>Тукущая роль: <c:out value="${sessionScope.role}"/> <br/>
-    Логин: <c:out value="${sessionScope.login}"/>! <a href="<c:url value='/logout' />">Logout</a></h3>
-<hr/>
-<a href="<c:url value='/updateUsers' />">Update users</a>
-<br/>
-
+<a href="<c:url value='/updateUsers' />">Обновить пользователей</a><br/>
+<a href="<c:url value='/update_dish_price' />">Обновить стоимость блюд</a>
 
 </body>
 </html>

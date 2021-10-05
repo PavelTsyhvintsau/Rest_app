@@ -23,26 +23,42 @@ public class SecurityConfig {
 
         // Конфигурация для роли "ADMIN".
         List<String> urlAdmin = new ArrayList<String>();
-
         urlAdmin.add("/updateUsers");
         urlAdmin.add("/add_user");
         urlAdmin.add("/delete_user");
         urlAdmin.add("/update_user");
         urlAdmin.add("/add_user");
+        urlAdmin.add("/logout");
+        urlAdmin.add("/update_dish_price");
+        urlAdmin.add("/style/style1.css");
+        mapConfig.put(ADMIN, urlAdmin);
 
-        mapConfig.put(COOK, urlAdmin);
 
         // Конфигурация для роли "COOK".
         List<String> urlCook = new ArrayList<String>();
-
         urlCook.add("/dishes_menu_editor");
         urlCook.add("/add_dish");
         urlCook.add("/delete_dish");
         urlCook.add("/update_dish");
         urlCook.add("/add_dish");
         urlCook.add("/activate_dish");
+        urlCook.add("/logout");
+        urlCook.add("/cooking_page");
+        urlCook.add("/activate_cook");
+        urlCook.add("/js/timer.js");
+        urlCook.add("/style/style1.css");
+        mapConfig.put(COOK, urlCook);
 
-        mapConfig.put(ADMIN, urlCook);
+
+        // Конфигурация для роли "WAITER".
+        List<String> urlWaiter = new ArrayList<String>();
+        urlWaiter.add("/menu_for_ordering");
+        urlWaiter.add("/logout");
+        urlWaiter.add("/add_dish_to_order");
+        urlWaiter.add("/add_order_to_queue");
+        urlWaiter.add("/style/style1.css");
+        mapConfig.put(WAITER,urlWaiter);
+
     }
 
     public static Set<String> getAllAppRoles() {

@@ -7,6 +7,23 @@ public class Cook extends Observable implements Runnable {
     private final String name;
     private boolean busy;
     private LinkedBlockingQueue<Order> queue;
+    private Order currentOrder;
+
+    public Order getCurrentOrder() {
+        return currentOrder;
+    }
+
+    public void setBusy(boolean busy) {
+        this.busy = busy;
+    }
+
+    public LinkedBlockingQueue<Order> getQueue() {
+        return queue;
+    }
+
+    public void setCurrentOrder(Order currentOrder) {
+        this.currentOrder = currentOrder;
+    }
 
     public boolean isBusy() {
         return busy;
@@ -29,19 +46,22 @@ public class Cook extends Observable implements Runnable {
     }
     public void startCookingOrder(Order arg) {
         busy = true;
-        Order order = arg;
-        ConsoleHelper.writeMessage("Start cooking - " + order);
+        currentOrder = arg;
+
+        ConsoleHelper.writeMessage("Start cooking - " + currentOrder);
 
         /*CookedOrderEventDataRow row = new CookedOrderEventDataRow(order.getTablet().toString(), name, order.getTotalCookingTime() * 60, order.getDishes());
-        StatisticManager.getInstance().register(row);
+        StatisticManager.getInstance().register(row);*/
         try {
-            Thread.sleep(order.getTotalCookingTime() * 10);
+            Thread.sleep(currentOrder.getTotalCookingTime() * 1000+180*1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }*/
+        }
         setChanged();
-        notifyObservers(order);
+        notifyObservers(currentOrder);
+
         busy = false;
+        currentOrder=null;
     }
     @Override
     public void run() {

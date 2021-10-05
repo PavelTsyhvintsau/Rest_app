@@ -2,6 +2,8 @@ package com.company.servlets.filter;
 
 import com.company.dao.UserDAO;
 import com.company.model.User;
+import com.company.model.kitchen.Cook;
+import com.company.model.kitchen.Order;
 import com.company.util.AppUtils;
 
 import javax.servlet.*;
@@ -82,18 +84,23 @@ public class AuthFilter implements Filter {
        user.setLogin((String)req.getSession().getAttribute("login"));
 
         System.out.println("now do move to menu AuthFilt ---- create user for session"+ user.getLogin());
-       AppUtils.setSessionUserParam(req.getSession(),role,user.getLogin());
+       AppUtils.setSessionUserParam(req.getSession(),role,user.getLogin(),user);
 
         if (role.equals(User.ROLE.ADMIN)) {
-
             req.getRequestDispatcher("/WEB-INF/view/admin_menu.jsp").forward(req, res);
-
         } else if (role.equals(User.ROLE.COOK)) {
-
+            req.getSession().setAttribute("user", user);
+            user.setCook(new Cook(user.getLogin()));
             req.getRequestDispatcher("/WEB-INF/view/cook_menu.jsp").forward(req, res);
+        } else if (role.equals(User.ROLE.WAITER)) {
+            if (req.getSession().getAttribute("order")==null){
+                req.getSession().setAttribute("order",new Order(user));
+            }
+            req.getSession().setAttribute("user", user);
+            req.getRequestDispatcher("/WEB-INF/view/waiter_menu.jsp").forward(req, res);
 
         } else {
-            AppUtils.setSessionUserParam(req.getSession(), User.ROLE.UNKNOWN,null);
+            AppUtils.setSessionUserParam(req.getSession(), User.ROLE.UNKNOWN,null,user);
             req.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(req, res);
         }
     }

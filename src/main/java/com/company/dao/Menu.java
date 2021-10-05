@@ -11,8 +11,8 @@ public class Menu {
     private final List<String> dishTypeList = new ArrayList<>();
 
 
-    public List<String> getDishTypeList() {
-        return dishTypeList;
+    public List<String> getDishTypeList(){
+            return dishTypeList;
     }
 
     public List<Dish> getDishesList() {
