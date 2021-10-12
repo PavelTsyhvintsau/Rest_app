@@ -1,36 +1,29 @@
 package com.company.servlets.servlet;
 
-
-
-import com.company.dao.UserDAO;
+import com.company.model.Restaurant;
 import com.company.model.User;
 import com.company.util.Utils;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicReference;
+
 
 public class AddUserServlet extends HttpServlet {
-
-
-
     private AtomicInteger id;
-
-    private AtomicReference<UserDAO> dao;
+    private Restaurant restaurant;
     @Override
     public void init() throws ServletException {
-        final Object dao = getServletContext().getAttribute("dao");
-        if (dao == null ) {
 
-            throw new IllegalStateException("You're repo does not initialize! )))))");
+        final Object restaurant = getServletContext().getAttribute("restaurant");
+        if (restaurant == null) {
+            throw new IllegalStateException("You're restaurant does not initialize! )))))");
         } else {
-
-            this.dao = (AtomicReference<UserDAO>) getServletContext().getAttribute("dao");
+            this.restaurant = (Restaurant) getServletContext().getAttribute("restaurant");
         }
+
         id = new AtomicInteger(3);
     }
 
@@ -52,7 +45,7 @@ public class AddUserServlet extends HttpServlet {
             user.setLogin(login);
             user.setRole(role);
 
-            dao.get().add(user);
+            restaurant.getDao().get().add(user);
         }
 
         resp.sendRedirect(req.getContextPath()+"/updateUsers");

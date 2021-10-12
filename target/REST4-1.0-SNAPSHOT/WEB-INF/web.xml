@@ -193,6 +193,26 @@
         <servlet-class>com.company.servlets.servlet.AddOrderToQueueServlet</servlet-class>
     </servlet>
 
+    <!--waiter orders list-->
+    <servlet-mapping>
+        <servlet-name>WaiterOrderingList</servlet-name>
+        <url-pattern>/waiter_ordering</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>WaiterOrderingList</servlet-name>
+        <servlet-class>com.company.servlets.servlet.WaiterOrderingListServlet</servlet-class>
+    </servlet>
+
+    <!--waiter order to bank-->
+    <servlet-mapping>
+        <servlet-name>WaiterOrderToBank</servlet-name>
+        <url-pattern>/order_to_bank</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>WaiterOrderToBank</servlet-name>
+        <servlet-class>com.company.servlets.servlet.WaiterOrderToBankServlet</servlet-class>
+    </servlet>
+
     <!--cooking page for cook main work-->
     <servlet-mapping>
         <servlet-name>CookPageCooking</servlet-name>
@@ -202,7 +222,7 @@
         <servlet-name>CookPageCooking</servlet-name>
         <servlet-class>com.company.servlets.servlet.CookCookingServlet</servlet-class>
     </servlet>
-    <!--cooking page for cook main work-->
+    <!--cooking page for cook start cook-->
     <servlet-mapping>
         <servlet-name>ActivateCook</servlet-name>
         <url-pattern>/activate_cook</url-pattern>
@@ -211,5 +231,15 @@
         <servlet-name>ActivateCook</servlet-name>
         <servlet-class>com.company.servlets.servlet.ActivateCookServlet</servlet-class>
     </servlet>
+    <!--cooking page for /order_completed-->
+    <servlet-mapping>
+        <servlet-name>OrderCompleted</servlet-name>
+        <url-pattern>/order_completed</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>OrderCompleted</servlet-name>
+        <servlet-class>com.company.servlets.servlet.OrderCompleteServlet</servlet-class>
+    </servlet>
+
 
 </web-app>

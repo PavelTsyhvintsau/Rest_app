@@ -25,6 +25,7 @@
     <h4>Стоимость заказа: <c:out value="${sessionScope.order.rublePrice}"/> руб. <c:out value="${sessionScope.order.pennyPrice}"/> коп.</h4>
 </div>
 <div> <form method="post" action="<c:url value='/add_order_to_queue'/>">
+   <label> <input type="number" name="tableNumber" required></label>№ стола<br>
         <input type="submit" name="addToOrder" value="Заказать"/>
 </form></div>
 

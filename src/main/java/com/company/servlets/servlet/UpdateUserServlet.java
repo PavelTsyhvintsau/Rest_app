@@ -1,7 +1,6 @@
 package com.company.servlets.servlet;
 
-
-import com.company.dao.UserDAO;
+import com.company.model.Restaurant;
 import com.company.model.User;
 import com.company.util.Utils;
 
@@ -12,25 +11,20 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicReference;
 
 public class UpdateUserServlet extends HttpServlet {
 
-    private AtomicReference<UserDAO> dao;
-
+    private Restaurant restaurant;
     @Override
     public void init() throws ServletException {
 
-        final Object dao = getServletContext().getAttribute("dao");
-        if (dao == null ) {
-
-            throw new IllegalStateException("You're repo does not initialize! )))))");
+        final Object restaurant = getServletContext().getAttribute("restaurant");
+        if (restaurant == null) {
+            throw new IllegalStateException("You're restaurant does not initialize! )))))");
         } else {
-
-            this.dao = (AtomicReference<UserDAO>) getServletContext().getAttribute("dao");
+            this.restaurant = (Restaurant) getServletContext().getAttribute("restaurant");
         }
     }
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
@@ -42,7 +36,7 @@ public class UpdateUserServlet extends HttpServlet {
         final String password = req.getParameter("password");
         final String role=req.getParameter("role");
 
-        final User user = dao.get().getById(Integer.valueOf(id));
+        final User user = restaurant.getDao().get().getById(Integer.valueOf(id));
         user.setLogin(login);
         user.setPassword(password);
         user.setRole(User.ROLE.valueOf(role));
@@ -56,7 +50,7 @@ public class UpdateUserServlet extends HttpServlet {
 
         final String id = req.getParameter("id");
         Map<Integer, User> users= new HashMap<>();
-        for (User element:dao.get().getStore()){
+        for (User element:restaurant.getDao().get().getStore()){
             users.put(element.getId(),element);
         }
 
@@ -67,8 +61,7 @@ public class UpdateUserServlet extends HttpServlet {
 
         final User user =users.get(Integer.parseInt(id));
         req.setAttribute("user", user);
-        req.setAttribute("dao", dao.get());
-        req.getRequestDispatcher("/WEB-INF/view/update_user.jsp")
-                .forward(req, resp);
+        req.setAttribute("dao", restaurant.getDao().get());
+        req.getRequestDispatcher("/WEB-INF/view/update_user.jsp").forward(req, resp);
     }
 }

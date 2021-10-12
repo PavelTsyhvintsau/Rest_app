@@ -1,6 +1,7 @@
 package com.company.servlets.servlet;
 
 import com.company.dao.Menu;
+import com.company.model.Restaurant;
 import com.company.model.kitchen.dishes.Dish;
 import com.company.model.kitchen.dishes.DishType;
 
@@ -15,18 +16,19 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class AddDishServlet extends HttpServlet {
-    private AtomicReference<Menu> menu;
+
     private AtomicInteger id;
+    private Restaurant restaurant;
     @Override
     public void init() throws ServletException {
-        final Object menu = getServletContext().getAttribute("menu");
-        if (menu == null) {
 
-            throw new IllegalStateException("You're menu repo does not initialize! )))))");
+        final Object restaurant = getServletContext().getAttribute("restaurant");
+        if (restaurant == null) {
+            throw new IllegalStateException("You're restaurant does not initialize! )))))");
         } else {
-
-            this.menu = (AtomicReference<Menu>) getServletContext().getAttribute("menu");
+            this.restaurant = (Restaurant) getServletContext().getAttribute("restaurant");
         }
+
         id = new AtomicInteger(5);
     }
 
@@ -39,14 +41,14 @@ public class AddDishServlet extends HttpServlet {
         final String dishImagePath = req.getParameter("dishImagePath");
 
         List<String>listNames=new ArrayList<>();
-        for(Dish elem:this.menu.get().getDishesList()){
+        for(Dish elem:this.restaurant.getMenu().get().getDishesList()){
             listNames.add(elem.getDishName());
         }
         if(listNames.contains(dishName)){
             resp.sendRedirect(req.getContextPath()+"/dishes_menu_editor");
         }else {
             final int id = this.id.getAndIncrement();
-            menu.get().addDishToMenu(new Dish(dishName,dishCookingTime,dishImagePath,dishType,id));
+            restaurant.getMenu().get().addDishToMenu(new Dish(dishName,dishCookingTime,dishImagePath,dishType,id));
             resp.sendRedirect(req.getContextPath()+"/dishes_menu_editor");
         }
 

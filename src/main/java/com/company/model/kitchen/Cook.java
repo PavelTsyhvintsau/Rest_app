@@ -1,21 +1,23 @@
 package com.company.model.kitchen;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Observable;
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class Cook extends Observable implements Runnable {
+public class Cook extends Observable {
     private final String name;
-    private boolean busy;
+    //private boolean busy;
     private LinkedBlockingQueue<Order> queue;
     private Order currentOrder;
 
-    public Order getCurrentOrder() {
-        return currentOrder;
-    }
 
-    public void setBusy(boolean busy) {
-        this.busy = busy;
-    }
+
+
+
+    public Order getCurrentOrder() { return currentOrder; }
+
+    //public void setBusy(boolean busy) { this.busy = busy; }
 
     public LinkedBlockingQueue<Order> getQueue() {
         return queue;
@@ -25,9 +27,7 @@ public class Cook extends Observable implements Runnable {
         this.currentOrder = currentOrder;
     }
 
-    public boolean isBusy() {
-        return busy;
-    }
+   // public boolean isBusy() {        return busy;}
 
     public String getName() {
         return name;
@@ -44,8 +44,9 @@ public class Cook extends Observable implements Runnable {
     public String toString() {
         return name;
     }
+
     public void startCookingOrder(Order arg) {
-        busy = true;
+        //busy = true;
         currentOrder = arg;
 
         ConsoleHelper.writeMessage("Start cooking - " + currentOrder);
@@ -60,22 +61,9 @@ public class Cook extends Observable implements Runnable {
         setChanged();
         notifyObservers(currentOrder);
 
-        busy = false;
+        //busy = false;
         currentOrder=null;
     }
-    @Override
-    public void run() {
-        try {
-            while (true) {
-                Thread.sleep(10);
-                if (!queue.isEmpty()) {
-                    if (!this.isBusy()) {
-                        this.startCookingOrder(queue.take());
-                    }
-                }
-            }
-        } catch (InterruptedException e) {
-        }
-    }
+
 
 }

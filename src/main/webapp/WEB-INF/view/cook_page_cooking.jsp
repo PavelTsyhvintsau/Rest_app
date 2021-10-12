@@ -18,36 +18,38 @@
 </head>
 <body onload="startTimer()">
 <jsp:include page="_menu.jsp"></jsp:include>
-<p><span id="timer" style="color: brown; font-size: 150%; font-weight: bold;">01:20:30</span></p>
+
 <h2 class="h2">Выполнение заказов.</h2>
 
-<c:if test="${requestScope.cook.busy eq true}" >
-    <li>Активность: <c:out value="занят"/></li>
+<c:if test="${requestScope.cook.currentOrder == null}" >
+    <li>Активность: <c:out value="нет заказа в работе"/></li>
     <form method="post" action="<c:url value='/activate_cook'/>">
         <input type="number" hidden name="id" value="${requestScope.user.id}" />
-        <input type="number" hidden name="act" value="false" />
-        <input type="submit" name="activate" value="освободиться для выполнения заказа"/>
+        <input type="submit" name="activate" value="взять заказ"/>
     </form>
 </c:if>
-    <c:if test="${requestScope.cook.busy eq false}" >
-    <li>Активность: <c:out value="свободен"/></li>
-    <form method="post" action="<c:url value='/activate_cook'/>">
+    <c:if test="${requestScope.cook.currentOrder != null}" >
+    <li>Активность: <c:out value="в работе заказ ${requestScope.cook.currentOrder.id}. Номер столика ${requestScope.cook.currentOrder.tableNumber}."/> </li>
+        <li><p><span id="timer" style="color: brown; font-size: 150%; font-weight: bold;">${requestScope.cook.currentOrder.cookingTimeHours}:${requestScope.cook.currentOrder.cookingTimeMinutes}:00</span></p></li>
+        <div>
+
+            <c:forEach var="order" items="${sessionScope.user.cook.currentOrder.dishes}">
+                <ul>
+                    <li>Название блюда: <c:out value="${order.key.dishName}"/></li>
+                    <li>Количество: <c:out value="${order.value}"/></li>
+                </ul>
+                <hr/>
+            </c:forEach>
+            <h4>Время выполнения :<c:out value="${sessionScope.user.cook.currentOrder.totalCookingTime}" /> секунд</h4>
+        </div>
+    <form method="post" action="<c:url value='/order_completed'/>">
+
         <input type="number" hidden name="id" value="${requestScope.user.id}" />
-        <input type="number" hidden name="act" value="true" />
-        <input type="submit" name="activate" value="стать занятым"/>
+        <input type="submit" name="activate" value="выполнен"/>
     </form>
     </c:if>
-<h3>Заказ взятый на выполнение:</h3><br />
-<div>
-    <c:forEach var="order" items="${sessionScope.user.cook.currentOrder.dishes}">
-        <ul>
-            <li>Название блюда: <c:out value="${order.key.dishName}"/></li>
-            <li>Количество: <c:out value="${order.value}"/></li>
-        </ul>
-        <hr/>
-    </c:forEach>
-    <h4>Время выполнения :<c:out value="${sessionScope.user.cook.currentOrder.totalCookingTime}" /> секунд</h4>
-</div>
+<br />
+
 <h4>лист заказов :<c:out value="${sessionScope.user.cook.queue}" /> </h4>
 <c:forEach var="order" items="${sessionScope.user.cook.queue}">
     <ul>

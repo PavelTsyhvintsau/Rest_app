@@ -6,13 +6,19 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<a href="/">
+<head><link href="style/style1.css" rel="stylesheet" type="text/css"></head>
+<div class="mainHref"><a href="/">
     MainPage
-</a>
-||
-<a style="color:red" href="<c:url value='/logout' />">Logout</a>
+</a></div>
 
-&nbsp;
-<span style="color:darkblue">[<c:out value="${sessionScope.role}"/> <c:out value="${sessionScope.login}"/> ]</span>
-<hr/>
+<div class="mainHref"><a style="color:red" href="<c:url value='/logout' />">
+    Logout
+</a></div>
+
+<%--&nbsp;--%>
+
+<div class="mainHref"><span >[<c:out value="${sessionScope.role}"/> <c:out value="${sessionScope.login}"/> ]</span>
+
+</div>
+<br/>
 

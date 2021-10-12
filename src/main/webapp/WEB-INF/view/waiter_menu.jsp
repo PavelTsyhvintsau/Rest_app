@@ -14,6 +14,8 @@
 <body>
 <jsp:include page="_menu.jsp"></jsp:include>
 
-<a href="<c:url value="/menu_for_ordering"/>">Menu for ordering</a>
+<a href="<c:url value="/menu_for_ordering"/>">Меню для заказа</a>
+<a href="<c:url value="/waiter_ordering"/>">Мои заказы</a>
+
 </body>
 </html>

@@ -6,6 +6,8 @@ import com.company.model.User;
 import com.company.model.kitchen.dishes.Dish;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,7 +15,57 @@ public class Order {
     private final User user;
     private HashMap<Dish, Integer> dishes;
     private  int totalPrice=0;
+    private int id;
+    private int tableNumber;
+    private long orderCreateTime;
+    private String orderStartCreateString;
+    private long orderStartCookingTime;
+    private String orderStartCookingTimeString;
+    private long orderEndCookingTime;
+    private String orderEndCookingTimeString;
 
+    public String getOrderCreateTime(){
+        String result=new String();
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        Date date =new Date(orderCreateTime);
+        result=formatter.format(date);
+        this.orderStartCreateString =result;
+        return result;
+    }
+
+    public void setOrderCreateTime(long orderCreateTime) {
+        this.orderCreateTime = orderCreateTime;
+    }
+
+    public void setOrderStartCookingTime(long orderStartCookingTime) {
+        this.orderStartCookingTime = orderStartCookingTime;
+    }
+    public String getOrderStartCookingTime(){
+        String result=new String();
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        Date date =new Date(orderStartCookingTime);
+        result=formatter.format(date);
+        this.orderStartCookingTimeString =result;
+        return result;
+    }
+    public void setOrderEndCookingTime(long orderEndCookingTime) {
+        this.orderEndCookingTime = orderEndCookingTime;
+    }
+    public String getOrderEndCookingTime(){
+        String result=new String();
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        Date date =new Date(orderEndCookingTime);
+        result=formatter.format(date);
+        this.orderEndCookingTimeString =result;
+        return result;
+    }
+
+    public int getTableNumber() {return tableNumber; }
+
+    public void setTableNumber(int tableNumber) { this.tableNumber = tableNumber;}
+
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
     public HashMap<Dish, Integer> getDishes() {
         return dishes;
     }
@@ -70,8 +122,12 @@ public class Order {
         }
 
         return cookingTime;
+    }public int getCookingTimeMinutes() {
+        return getTotalCookingTime()%60;
     }
-
+    public int getCookingTimeHours() {
+         return getTotalCookingTime()/60;
+    }
     protected void initDishes() throws IOException {
         dishes=new HashMap<>();
         //дописать инициализацию списка заказа

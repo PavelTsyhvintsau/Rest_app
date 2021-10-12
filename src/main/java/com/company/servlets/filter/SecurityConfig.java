@@ -45,6 +45,7 @@ public class SecurityConfig {
         urlCook.add("/logout");
         urlCook.add("/cooking_page");
         urlCook.add("/activate_cook");
+        urlCook.add("/order_completed");
         urlCook.add("/js/timer.js");
         urlCook.add("/style/style1.css");
         mapConfig.put(COOK, urlCook);
@@ -56,6 +57,8 @@ public class SecurityConfig {
         urlWaiter.add("/logout");
         urlWaiter.add("/add_dish_to_order");
         urlWaiter.add("/add_order_to_queue");
+        urlWaiter.add("/waiter_ordering");
+        urlWaiter.add("/order_to_bank");
         urlWaiter.add("/style/style1.css");
         mapConfig.put(WAITER,urlWaiter);
 

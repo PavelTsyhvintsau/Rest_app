@@ -1,5 +1,6 @@
 package com.company.servlets.servlet;
 
+import com.company.model.Restaurant;
 import com.company.model.User;
 import com.company.model.kitchen.Order;
 
@@ -9,17 +10,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class AddOrderToQueueServlet extends HttpServlet {
-    private LinkedBlockingQueue<Order> queueOrders;
+
+    private AtomicInteger idOrder;
+    private Restaurant restaurant;
     @Override
     public void init() throws ServletException {
-        final Object queueOrders = getServletContext().getAttribute("queueOrders");
-        if (queueOrders == null) {
-            throw new IllegalStateException("You're queueOrder does not initialize! )))))");
+
+        final Object restaurant = getServletContext().getAttribute("restaurant");
+        if (restaurant == null) {
+            throw new IllegalStateException("You're restaurant does not initialize! )))))");
         } else {
-            this.queueOrders = (LinkedBlockingQueue<Order>) getServletContext().getAttribute("queueOrders");
+            this.restaurant = (Restaurant) getServletContext().getAttribute("restaurant");
         }
+
+        idOrder = new AtomicInteger(1);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -28,9 +35,14 @@ public class AddOrderToQueueServlet extends HttpServlet {
             response.sendRedirect(request.getContextPath()+"/menu_for_ordering");
         }else {
             try {
-                queueOrders.put(order);
+                restaurant.getQueueOrders().put(order);
+                order.setOrderCreateTime(System.currentTimeMillis());
                 System.out.println("заказ помещен в очередь");
                 Order orderNew=new Order((User)request.getSession().getAttribute("user"));
+                final int id = this.idOrder.getAndIncrement();
+                order.setTableNumber(Integer.parseInt(request.getParameter("tableNumber")));
+                orderNew.setId(id);
+
                 request.getSession().removeAttribute("order");
                 request.getSession().setAttribute("order",orderNew);
             } catch (InterruptedException e) {
