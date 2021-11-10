@@ -99,7 +99,14 @@ public class AuthFilter implements Filter {
             req.getSession().setAttribute("user", user);
             req.getRequestDispatcher("/WEB-INF/view/waiter_menu.jsp").forward(req, res);
 
-        } else {
+        } else if (role.equals(User.ROLE.TABLET_TABLE)) {
+        if (req.getSession().getAttribute("order")==null){
+            req.getSession().setAttribute("order",new Order(user));
+        }
+        req.getSession().setAttribute("user", user);
+        req.getRequestDispatcher("/WEB-INF/view/table_menu.jsp").forward(req, res);
+
+    } else {
             AppUtils.setSessionUserParam(req.getSession(), User.ROLE.UNKNOWN,null,user);
             req.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(req, res);
         }

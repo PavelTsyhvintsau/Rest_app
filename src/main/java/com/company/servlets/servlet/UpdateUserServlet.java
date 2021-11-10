@@ -35,11 +35,17 @@ public class UpdateUserServlet extends HttpServlet {
         final String login = req.getParameter("login");
         final String password = req.getParameter("password");
         final String role=req.getParameter("role");
+        final String isActive=req.getParameter("active");
 
         final User user = restaurant.getDao().get().getById(Integer.valueOf(id));
         user.setLogin(login);
         user.setPassword(password);
         user.setRole(User.ROLE.valueOf(role));
+        if(isActive==null){
+            user.setActive(false);
+        }else {
+            user.setActive(true);
+        }
 
         resp.sendRedirect(req.getContextPath() + "/updateUsers");
     }

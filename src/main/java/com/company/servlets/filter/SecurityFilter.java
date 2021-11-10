@@ -14,12 +14,8 @@ import java.util.logging.LogRecord;
 public class SecurityFilter implements Filter {
     public SecurityFilter() {
     }
-
-
     public void destroy() {
     }
-
-
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
             throws IOException, ServletException {
 
@@ -43,7 +39,6 @@ public class SecurityFilter implements Filter {
             String userName = AppUtils.getSessionLogin(request.getSession());
             System.out.println("doFilter:1) username ----"+userName+". 2) role session--- "+request.getSession().getAttribute("role"));
         }
-
         // Страницы требующие входа в систему.
         if (SecurityConfig.getUrlPatternsAllSecurityPages().contains(servletPath)) {
 
@@ -70,16 +65,15 @@ public class SecurityFilter implements Filter {
             dispatcher.forward(request, response);
 
         }
-
-
+        if (!SecurityConfig.getUrlPatternsAllSecurityPages().contains(servletPath)) {
+            req.setAttribute("path", servletPath);
+            RequestDispatcher dispatcher= request.getServletContext().getRequestDispatcher("/WEB-INF/view/unknown_address.jsp");
+            dispatcher.forward(request, response);
+        }
     }
-
-
     public void init(FilterConfig fConfig) throws ServletException {
 
     }
-
-
     public boolean isLoggable(LogRecord record) {
         return false;
     }

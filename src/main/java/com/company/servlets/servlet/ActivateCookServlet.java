@@ -30,8 +30,9 @@ public class ActivateCookServlet extends HttpServlet {
         if (!restaurant.getQueueOrders().isEmpty()) {
             try {
                 cook.setCurrentOrder(restaurant.getQueueOrders().take());
-                restaurant.getOrdersInWork().add(cook.getCurrentOrder());
                 Order order=cook.getCurrentOrder();
+                order.setCook(cook);
+                order.setOrderstatus(Order.Orderstatus.INWORK);
                 order.setOrderStartCookingTime(System.currentTimeMillis());
             } catch (InterruptedException e) {
                 System.out.println("ошибка взятия заказа из очереди!");

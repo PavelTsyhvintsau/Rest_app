@@ -12,7 +12,9 @@
     <title>Access Denied</title>
 </head>
 <body>
-<jsp:include page="_menu.jsp"></jsp:include>
-<h1 style="color:red">Access Denied!!!</h1>
+<div class="mainMenu"><jsp:include page="_menu.jsp"></jsp:include></div>
+<div class="body">
+    <h1 style="color:red">Access Denied!!!</h1>
+</div>
 </body>
 </html>

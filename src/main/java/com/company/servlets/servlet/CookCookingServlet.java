@@ -3,6 +3,8 @@ package com.company.servlets.servlet;
 import com.company.model.Restaurant;
 import com.company.model.User;
 import com.company.model.kitchen.Cook;
+import com.company.model.kitchen.Order;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -27,9 +29,12 @@ public class CookCookingServlet extends HttpServlet {
         req.setAttribute("queueOrders", restaurant.getQueueOrders());
         Cook cook=((User)req.getSession().getAttribute("user")).getCook();
         cook.setQueue(restaurant.getQueueOrders());
+                for (Order e:restaurant.getOrdersBank()){
+            if(e.getCook()!=null&&e.getCook().getName().equals(cook.getName())&&e.getOrderstatus().equals(Order.Orderstatus.INWORK)){
+                cook.setCurrentOrder(e);
+            }
+        }
         req.setAttribute("cook",cook);
-
-
         req.getRequestDispatcher("/WEB-INF/view/cook_page_cooking.jsp").forward(req, resp);
     }
 

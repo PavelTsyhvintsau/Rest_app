@@ -24,11 +24,11 @@ public class AddUserServlet extends HttpServlet {
             this.restaurant = (Restaurant) getServletContext().getAttribute("restaurant");
         }
 
-        id = new AtomicInteger(3);
+        id = new AtomicInteger(6);
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
+            throws IOException {
 
         req.setCharacterEncoding("UTF-8");
 

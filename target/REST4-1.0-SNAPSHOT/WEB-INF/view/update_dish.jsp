@@ -12,7 +12,8 @@
     <title>Title</title>
 </head>
 <body>
-<jsp:include page="_menu.jsp"></jsp:include>
+<div class="mainMenu"><jsp:include page="_menu.jsp"></jsp:include></div>
+<div class="body">
     <div>Название: <c:out value="${requestScope.dish.dishName}"/> </div>
     <div>Время приготовления: <c:out value="${requestScope.dish.dishCookingTime}"/> </div>
     <div>Тип: <c:out value="${requestScope.dish.dishType.toString()}"/> </div>
@@ -35,6 +36,6 @@
         <input type="submit" value="Ok" name="Ok"><br>
     </form>
     <a href="<c:url value='/dishes_menu_editor' />">Отмена</a>
-
+</div>
 </body>
 </html>

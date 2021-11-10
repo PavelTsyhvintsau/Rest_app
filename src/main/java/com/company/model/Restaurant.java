@@ -12,9 +12,7 @@ public class Restaurant {
     private AtomicReference<UserDAO> dao;
     private AtomicReference<Menu> menu;
     private LinkedBlockingQueue<Order> queueOrders;
-    private ArrayList<Order> ordersInWork;
-    private ArrayList<Order> ordersComplete;
-    private ArrayList<Order> ordersBank;
+        private ArrayList<Order> ordersBank;
 
     public AtomicReference<UserDAO> getDao() {
         return dao;
@@ -33,18 +31,6 @@ public class Restaurant {
     }
     public void setQueueOrders(LinkedBlockingQueue<Order> queueOrders) {
         this.queueOrders = queueOrders;
-    }
-    public ArrayList<Order> getOrdersInWork() {
-        return ordersInWork;
-    }
-    public void setOrdersInWork(ArrayList<Order> ordersInWork) {
-        this.ordersInWork = ordersInWork;
-    }
-    public ArrayList<Order> getOrdersComplete() {
-        return ordersComplete;
-    }
-    public void setOrdersComplete(ArrayList<Order> ordersComplete) {
-        this.ordersComplete = ordersComplete;
     }
 
     public ArrayList<Order> getOrdersBank() {

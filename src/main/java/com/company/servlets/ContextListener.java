@@ -27,9 +27,7 @@ public class ContextListener implements ServletContextListener {
     private AtomicReference<UserDAO> dao;
     private AtomicReference<Menu> menu;
     private LinkedBlockingQueue<Order> queueOrders;
-    private ArrayList<Order> ordersInWork;
-    private ArrayList<Order> ordersComplete;
-    private ArrayList<Order> ordersBank;
+   private ArrayList<Order> ordersBank;
 
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
@@ -38,12 +36,6 @@ public class ContextListener implements ServletContextListener {
         restaurant=new Restaurant();
         queueOrders=new LinkedBlockingQueue<>();
         servletContext.setAttribute("queueOrders", queueOrders);
-
-        ordersInWork=new ArrayList<>();
-        servletContext.setAttribute("ordersInWork", ordersInWork);
-
-        ordersComplete=new ArrayList<>();
-        servletContext.setAttribute("ordersComplete",ordersComplete);
 
         ordersBank=new ArrayList<>();
         servletContext.setAttribute("ordersBank",ordersBank);
@@ -56,7 +48,9 @@ public class ContextListener implements ServletContextListener {
 
         dao.get().add(new User(1, "Admin", "1", User.ROLE.ADMIN));
         dao.get().add(new User(2, "Cook", "1", User.ROLE.COOK));
-        dao.get().add(new User(2, "Waiter", "1", User.ROLE.WAITER));
+        dao.get().add(new User(3, "Cook1", "1", User.ROLE.COOK));
+        dao.get().add(new User(4, "Waiter", "1", User.ROLE.WAITER));
+        dao.get().add(new User(5, "Table1", "1", User.ROLE.WAITER));
 
 
 
@@ -72,14 +66,13 @@ public class ContextListener implements ServletContextListener {
         menu.get().addDishToMenu(new Dish("Сельд под шубой",30,"com/company/dao/pictures/olive.jpg", DishType.SALAD,2));
         menu.get().addDishToMenu(new Dish("Цезарь",15,"com/company/dao/pictures/olive.jpg", DishType.SALAD,3));
         menu.get().addDishToMenu(new Dish("Оливье",43,"https://potokmedia.ru/wp-content/uploads/2020/12/word-image-9.jpeg", DishType.SALAD,4));
-        servletContext.setAttribute("menu", menu);
         for(Dish e:menu.get().getDishesList()){
+            e.setPrice((int)(Math.random()*500));
             e.setActive(true);
         }
+        servletContext.setAttribute("menu", menu);
         restaurant.setDao(this.dao);
         restaurant.setMenu(this.menu);
-        restaurant.setOrdersComplete(this.ordersComplete);
-        restaurant.setOrdersInWork(this.ordersInWork);
         restaurant.setQueueOrders(this.queueOrders);
         restaurant.setOrdersBank(this.ordersBank);
         servletContext.setAttribute("restaurant", restaurant);

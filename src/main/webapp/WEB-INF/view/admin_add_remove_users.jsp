@@ -12,48 +12,53 @@
     <title>Users redactor</title>
 </head>
 <body>
-<jsp:include page="_menu.jsp"></jsp:include>
+<div class="mainMenu">
+    <jsp:include page="_menu.jsp"></jsp:include>
+    <a class="button28" href="<c:url value='/updateUsers' />">Обновить пользователей</a>
+    <a class="button28" href="<c:url value='/update_dish_price' />">Обновить стоимость блюд</a>
+    <a class="button28" href="<c:url value='/admin_look_orders' />">Просмотр текущих заказов</a>
+    <a class="button28" href="<c:url value='/admin_statistic_page' />">Статистика</a></div>
+</div>
+<div class="body">
+    <h4>Users redactor</h4>
+    <hr/>
+    <h3>Все пользователи</h3><br />
 
-<h4>Users redactor</h4>
-<hr/>
-<h3>Все пользователи</h3><br />
+    <c:forEach var="dao" items="${requestScope.dao.store}">
+    <div class="userInfo">
+        <ul>
+            <li>Login: <c:out value="${dao.login}"/></li>
+            <li>Password: <c:out value="${dao.password}"/></li>
+            <li>Role: <c:out value="${dao.role}"/></li>
+            <li>ID: <c:out value="${dao.id}"/></li>
+            <li> IsActive: <c:out value="${dao.active}"/></li>
+        </ul>
+        <form method="post" action="<c:url value='/delete_user'/>">
+            <input type="number" hidden name="id" value="${dao.id}" />
+            <input class="button17" type="submit" name="delete" value="Удалить"/>
+        </form>
+        <form method="get" action="<c:url value='/update_user'/>">
+            <input type="number" hidden name="id" value="${dao.id}" />
+            <input class="button17" type="submit" value="Редактированть"/>
+        </form>
+    </div>
+    </c:forEach>
 
--<c:forEach var="dao" items="${requestScope.dao.store}">
-    <ul>
+    <h3>Создание нового пользователя</h3><br />
 
-    <li>Login: <c:out value="${dao.login}"/></li>
-    <li>Password: <c:out value="${dao.password}"/></li>
-     <li>Role: <c:out value="${dao.role}"/></li>
-        <li>ID: <c:out value="${dao.id}"/></li>
+    <form method="post" action="<c:url value='/add_user'/>">
 
-    <form method="post" action="<c:url value='/delete_user'/>">
-    <input type="number" hidden name="id" value="${dao.id}" />
-    <input type="submit" name="delete" value="Удалить"/>
+        <label><input type="text" name="login"></label>Логин<br>
+
+        <label><input type="text" name="password"></label>Пароль<br>
+
+        <select name="role">
+            <c:forEach var="role" items="${requestScope.dao.roleList}">
+                <option value="${role}">${role}</option>
+            </c:forEach>
+        </select>
+        <input type="submit" value="Ok" name="Ok"><br>
     </form>
-
-    <form method="get" action="<c:url value='/update_user'/>">
-    <input type="number" hidden name="id" value="${dao.id}" />
-    <input type="submit" value="Редактированть"/>
-    </form>
-    </ul>
-    <hr />
-</c:forEach>
-
-<h3>Создание нового пользователя</h3><br />
-
-<form method="post" action="<c:url value='/add_user'/>">
-
-    <label><input type="text" name="login"></label>Логин<br>
-
-    <label><input type="text" name="password"></label>Пароль<br>
-
-    <select name="role">
-        <c:forEach var="role" items="${requestScope.dao.roleList}">
-            <option value="${role}">${role}</option>
-        </c:forEach>
-    </select>
-
-    <input type="submit" value="Ok" name="Ok"><br>
-</form>
+</div>
 </body>
 </html>

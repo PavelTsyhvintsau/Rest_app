@@ -33,22 +33,6 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-    <!--paths
-    /
-    /logout
-    /updateUsers
-    /add_user
-    /delete_user
-    /update_user
-    /dishes_menu_editor
-    /add_dish
-    /delete_dish
-    /update_dish
-    /activate_dish
-
-    -->
-
-
     <!--Logout servlet-->
     <servlet>
         <servlet-name>LogoutServlet</servlet-name>
@@ -69,6 +53,56 @@
         <url-pattern>/updateUsers</url-pattern>
     </servlet-mapping>
 
+    <!--admin statistic menu-->
+    <servlet>
+        <servlet-name>AdminStatisticPage</servlet-name>
+        <servlet-class>com.company.servlets.servlet.AdminStatisticPageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminStatisticPage</servlet-name>
+        <url-pattern>/admin_statistic_page</url-pattern>
+    </servlet-mapping>
+
+    <!--admin- cook statistic -->
+    <servlet>
+        <servlet-name>CooksStatistic</servlet-name>
+        <servlet-class>com.company.servlets.servlet.CooksStatisticServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CooksStatistic</servlet-name>
+        <url-pattern>/cooks_statistic</url-pattern>
+    </servlet-mapping>
+
+    <!--admin- waiter statistic-->
+    <servlet>
+        <servlet-name>WaiterStatistic</servlet-name>
+        <servlet-class>com.company.servlets.servlet.WaiterStatisticServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WaiterStatistic</servlet-name>
+        <url-pattern>/waiter_statistic</url-pattern>
+    </servlet-mapping>
+
+    <!--admin- dish statistic-->
+    <servlet>
+        <servlet-name>DishStatistic</servlet-name>
+        <servlet-class>com.company.servlets.servlet.DishStatisticServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DishStatistic</servlet-name>
+        <url-pattern>/dish_statistic</url-pattern>
+    </servlet-mapping>
+
+    <!--admin- order complete page-->
+    <servlet>
+        <servlet-name>order_completed_page</servlet-name>
+        <servlet-class>com.company.servlets.servlet.ordersCompletePageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>order_completed_page</servlet-name>
+        <url-pattern>/order_completed_page</url-pattern>
+    </servlet-mapping>
+
     <!--admin add user servlet-->
     <servlet>
         <servlet-name>AddUserServlet</servlet-name>
@@ -77,6 +111,16 @@
     <servlet-mapping>
         <servlet-name>AddUserServlet</servlet-name>
         <url-pattern>/add_user</url-pattern>
+    </servlet-mapping>
+
+    <!--admin look orders-->
+    <servlet>
+        <servlet-name>AdminLookOrders</servlet-name>
+        <servlet-class>com.company.servlets.servlet.AdminLookOrdersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLookOrders</servlet-name>
+        <url-pattern>/admin_look_orders</url-pattern>
     </servlet-mapping>
 
     <!--Delete user-->
@@ -241,5 +285,54 @@
         <servlet-class>com.company.servlets.servlet.OrderCompleteServlet</servlet-class>
     </servlet>
 
+    <!-- Page with order detals info by order.id-->
+    <servlet-mapping>
+        <servlet-name>OrderInfo</servlet-name>
+        <url-pattern>/order_info</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>OrderInfo</servlet-name>
+        <servlet-class>com.company.servlets.servlet.OrderInfo</servlet-class>
+    </servlet>
+
+    <!-- создание официантом планшета с меню для заказа посетителями со стола-->
+    <servlet-mapping>
+        <servlet-name>CreateTabletTable</servlet-name>
+        <url-pattern>/waiter_create_tabletTable</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CreateTabletTable</servlet-name>
+        <servlet-class>com.company.servlets.servlet.CreateTabletTableServlet</servlet-class>
+    </servlet>
+
+    <!-- переход в  меню для заказа посетителями со стола-->
+    <servlet-mapping>
+        <servlet-name>TableMenu</servlet-name>
+        <url-pattern>/table_menu</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>TableMenu</servlet-name>
+        <servlet-class>com.company.servlets.servlet.TableMenuServlet</servlet-class>
+    </servlet>
+
+    <!-- добавление блюдя в заказ посетителем стола-->
+    <servlet-mapping>
+        <servlet-name>AddDishToOrderTable</servlet-name>
+        <url-pattern>/add_dish_to_orderTable</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddDishToOrderTable</servlet-name>
+        <servlet-class>com.company.servlets.servlet.AddDishToOrderTableServlet</servlet-class>
+    </servlet>
+
+    <!-- добавление заказа посетителем стола в очередь-->
+    <servlet-mapping>
+        <servlet-name>AddOrderTable</servlet-name>
+        <url-pattern>/add_order_to_TableQueue</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddOrderTable</servlet-name>
+        <servlet-class>com.company.servlets.servlet.AddOrderTableServlet</servlet-class>
+    </servlet>
 
 </web-app>

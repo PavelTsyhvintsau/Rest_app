@@ -10,10 +10,12 @@
     <title>ADMIN</title>
 </head>
 <body>
-<jsp:include page="_menu.jsp"></jsp:include>
-
-<a href="<c:url value='/updateUsers' />">Обновить пользователей</a><br/>
-<a href="<c:url value='/update_dish_price' />">Обновить стоимость блюд</a>
-
+<div class="mainMenu"><jsp:include page="_menu.jsp"></jsp:include> <a class="button28" href="<c:url value='/updateUsers' />">Обновить пользователей</a>
+    <a class="button28" href="<c:url value='/update_dish_price' />">Обновить стоимость блюд</a>
+    <a class="button28" href="<c:url value='/admin_look_orders' />">Просмотр текущих заказов</a>
+    <a class="button28" href="<c:url value='/admin_statistic_page' />">Статистика</a></div>
+<div class="body">
+   Hello admin!
+</div>
 </body>
 </html>

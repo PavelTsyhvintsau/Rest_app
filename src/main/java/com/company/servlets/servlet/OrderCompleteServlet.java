@@ -26,10 +26,13 @@ public class OrderCompleteServlet extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         Cook cook=((User)req.getSession().getAttribute("user")).getCook();
         Order order=cook.getCurrentOrder();
-        order.setOrderEndCookingTime(System.currentTimeMillis());
-        restaurant.getOrdersInWork().remove(order);
-        restaurant.getOrdersComplete().add(order);
         cook.setCurrentOrder(null);
+        for(Order e:restaurant.getOrdersBank()){
+            if (e.getId()==order.getId()){
+                e.setOrderstatus(Order.Orderstatus.ISREADY);
+                e.setOrderEndCookingTime(System.currentTimeMillis());
+            }
+        }
 
         req.setAttribute("cook",cook);
         resp.sendRedirect(req.getContextPath()+"/cooking_page" );

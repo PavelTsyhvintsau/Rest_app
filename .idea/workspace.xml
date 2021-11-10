@@ -25,90 +25,130 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d799b732-0c63-4290-884f-ebdf9fea81a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/model/Restaurant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/OrderCompleteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/WaiterOrderToBankServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/WaiterOrderingListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/waiter_orders_list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddDishToOrderTableServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddOrderTableServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AdminLookOrdersServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AdminStatisticPageServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/CooksStatisticServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/CreateTabletTableServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DishStatisticServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/OrderInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/TableMenuServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/WaiterStatisticServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/ordersCompletePageServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/statistic/CookInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/statistic/DishInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/statistic/WaiterInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_dishInfoTable.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_order_full.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_order_shot.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_look_orders.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_statistic_page.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cooksStat.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/create_tabletTable.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/dishStat.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/order_completed_page.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/order_info_page.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/table_menu.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/unknown_address.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/waitersStat.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/model/Waiter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/model/Waiter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/model/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/model/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/model/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/model/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/model/TabletTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/model/TabletTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/model/Waiter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/model/kitchen/Cook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/model/kitchen/Cook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/model/kitchen/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/model/kitchen/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/ContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/ContextListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/filter/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/filter/AuthFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/filter/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/filter/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/filter/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/filter/SecurityFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/ActivateCookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/ActivateCookServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/ActivateDishServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/ActivateDishServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddDishServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddDishServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddDishToOrderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddDishToOrderServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddOrderToQueueServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddOrderToQueueServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AdminAddRemoveServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AdminAddRemoveServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/CookCookingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/CookCookingServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DeleteDishServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DeleteDishServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DeleteUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DeleteUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DishesMenuEditorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DishesMenuEditorServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DishesPriceCorrectingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DishesPriceCorrectingServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/MenuForOrderingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/MenuForOrderingServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/UpdateDishServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/UpdateDishServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/OrderCompleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/OrderCompleteServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/UpdateUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/UpdateUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/UserInfoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/UserInfoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/WaiterOrderToBankServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/WaiterOrderToBankServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/WaiterOrderingListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/WaiterOrderingListServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_dishInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_dishInfo.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/access_denied.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/access_denied.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_add_remove_users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_add_remove_users.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cook_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cook_menu.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cook_page_cooking.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cook_page_cooking.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/dishes_menu_editor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/dishes_menu_editor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/dishes_price_update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/dishes_price_update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/menu_for_ordering.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/menu_for_ordering.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/update_dish.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/update_dish.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/update_user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/update_user.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/waiter_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/waiter_menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/waiter_orders_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/waiter_orders_list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/timer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/style/style1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/style/style1.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Waiter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Waiter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Restaurant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/TabletTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/TabletTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/User$ROLE.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/User$ROLE.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Waiter.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/kitchen/Cook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/kitchen/Cook.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/kitchen/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/kitchen/Order.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/ContextListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/ContextListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/filter/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/filter/AuthFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/filter/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/filter/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/filter/SecurityFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/filter/SecurityFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/ActivateCookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/ActivateCookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/ActivateDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/ActivateDishServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddDishServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddDishToOrderServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddDishToOrderServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddOrderToQueueServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddOrderToQueueServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AdminAddRemoveServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AdminAddRemoveServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/CookCookingServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/CookCookingServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DeleteDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DeleteDishServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DeleteUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DeleteUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DishesMenuEditorServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DishesMenuEditorServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DishesPriceCorrectingServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DishesPriceCorrectingServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/MenuForOrderingServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/MenuForOrderingServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UpdateDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UpdateDishServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/OrderCompleteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/OrderCompleteServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UpdateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UpdateUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UserInfoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UserInfoServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/WaiterOrderToBankServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/WaiterOrderToBankServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/WaiterOrderingListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/WaiterOrderingListServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/_dishInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/_dishInfo.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/_menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/access_denied.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/access_denied.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/admin_add_remove_users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/admin_add_remove_users.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/admin_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/admin_menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/cook_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/cook_menu.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/cook_page_cooking.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/cook_page_cooking.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/dishes_menu_editor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/dishes_menu_editor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/dishes_price_update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/dishes_price_update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/menu_for_ordering.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/menu_for_ordering.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/update_dish.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/update_dish.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/update_user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/update_user.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/waiter_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/waiter_menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/waiter_orders_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/waiter_orders_list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/js/timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/js/timer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/style/style1.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/style/style1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/Waiter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/Waiter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/Restaurant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/TabletTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/TabletTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/User$ROLE.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/User$ROLE.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/Waiter.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/kitchen/Cook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/kitchen/Cook.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/kitchen/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/kitchen/Order.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/ContextListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/ContextListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/filter/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/filter/AuthFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/filter/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/filter/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/filter/SecurityFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/filter/SecurityFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/ActivateCookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/ActivateCookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/ActivateDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/ActivateDishServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddDishServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddDishToOrderServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddDishToOrderServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddOrderToQueueServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddOrderToQueueServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AdminAddRemoveServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AdminAddRemoveServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/CookCookingServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/CookCookingServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DeleteDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DeleteDishServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DeleteUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DeleteUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DishesMenuEditorServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DishesMenuEditorServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DishesPriceCorrectingServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DishesPriceCorrectingServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/MenuForOrderingServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/MenuForOrderingServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UpdateDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UpdateDishServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/OrderCompleteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/OrderCompleteServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UpdateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UpdateUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UserInfoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UserInfoServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/WaiterOrderToBankServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/WaiterOrderToBankServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/WaiterOrderingListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/WaiterOrderingListServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,8 +160,10 @@
       <list>
         <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="Jsp File" />
+        <option value="jsf" />
+        <option value="Jspx File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -145,14 +187,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../!старое с репозитория/task2712_restaurant" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\PAVEL\REST4\src\main\java\com\company\DAO" />
-      <recent name="D:\PAVEL\REST4\src\main\webapp\WEB-INF" />
-      <recent name="D:\PAVEL\REST4\src\main" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.company.statistic" />
+      <recent name="com.company.servlets.filter" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\PAVEL\REST4\src\main\java\com\company\dao\pictures" />
@@ -165,8 +206,10 @@
       <recent name="com.company.util" />
       <recent name="com" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.company.servlets.filter" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PAVEL\REST4\src\main\java\com\company\DAO" />
+      <recent name="D:\PAVEL\REST4\src\main\webapp\WEB-INF" />
+      <recent name="D:\PAVEL\REST4\src\main" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.521">
@@ -319,6 +362,49 @@
       <workItem from="1634032953371" duration="7019000" />
       <workItem from="1634047769782" duration="6135000" />
       <workItem from="1634054850807" duration="863000" />
+      <workItem from="1634068007375" duration="3994000" />
+      <workItem from="1634105612113" duration="461000" />
+      <workItem from="1634107229883" duration="360000" />
+      <workItem from="1634107621740" duration="124000" />
+      <workItem from="1634107808056" duration="258000" />
+      <workItem from="1634109874524" duration="68000" />
+      <workItem from="1634109959229" duration="152000" />
+      <workItem from="1634985747022" duration="143000" />
+      <workItem from="1635003873529" duration="15866000" />
+      <workItem from="1635055843763" duration="8110000" />
+      <workItem from="1635101471691" duration="4044000" />
+      <workItem from="1635147867260" duration="4270000" />
+      <workItem from="1635157251427" duration="9128000" />
+      <workItem from="1635180830708" duration="6491000" />
+      <workItem from="1635238420381" duration="8588000" />
+      <workItem from="1635259624802" duration="7463000" />
+      <workItem from="1635316976398" duration="6055000" />
+      <workItem from="1635330466979" duration="3375000" />
+      <workItem from="1635336297558" duration="1685000" />
+      <workItem from="1635341490080" duration="7917000" />
+      <workItem from="1635402595387" duration="5254000" />
+      <workItem from="1635411354980" duration="1534000" />
+      <workItem from="1635420084397" duration="4218000" />
+      <workItem from="1635440684572" duration="3859000" />
+      <workItem from="1635444618077" duration="4182000" />
+      <workItem from="1635501272533" duration="1401000" />
+      <workItem from="1635837756247" duration="1623000" />
+      <workItem from="1635840292806" duration="2388000" />
+      <workItem from="1635847086293" duration="1806000" />
+      <workItem from="1635848916150" duration="3421000" />
+      <workItem from="1635859818832" duration="2682000" />
+      <workItem from="1635877399877" duration="7330000" />
+      <workItem from="1635923194615" duration="2795000" />
+      <workItem from="1636021383260" duration="636000" />
+      <workItem from="1636042953460" duration="5342000" />
+      <workItem from="1636115091322" duration="3466000" />
+      <workItem from="1636303404756" duration="13071000" />
+      <workItem from="1636380731502" duration="590000" />
+      <workItem from="1636401581088" duration="1472000" />
+      <workItem from="1636448052359" duration="9554000" />
+      <workItem from="1636467860545" duration="3808000" />
+      <workItem from="1636520125398" duration="4396000" />
+      <workItem from="1636530138462" duration="4940000" />
     </task>
     <servers />
   </component>
@@ -342,10 +428,14 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="0" y="159" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1631044336180" />
-    <state x="304" y="211" key="#com.intellij.ide.util.MemberChooser" timestamp="1634051013213">
+    <state x="304" y="211" key="#com.intellij.ide.util.MemberChooser" timestamp="1636402865888">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="304" y="211" key="#com.intellij.ide.util.MemberChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1634051013213" />
+    <state x="304" y="211" key="#com.intellij.ide.util.MemberChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1636402865888" />
+    <state x="659" y="315" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1636318330069">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="659" y="315" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1636318330069" />
     <state x="130" y="193" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1631043920067">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -354,82 +444,82 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="636" y="464" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1631540543618" />
-    <state x="342" y="412" width="433" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1633522998873">
+    <state x="342" y="412" width="433" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1636305524964">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="342" y="412" width="433" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1858.1080@0.0.1858.1080" timestamp="1633522998873" />
+    <state x="342" y="412" width="433" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1858.1080@0.0.1858.1080" timestamp="1636305524964" />
     <state x="459" y="253" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1632425169903">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="459" y="253" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1632425169903" />
-    <state x="337" y="294" key="FileChooserDialogImpl" timestamp="1633113623533">
+    <state x="337" y="294" key="FileChooserDialogImpl" timestamp="1636044022022">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="337" y="294" key="FileChooserDialogImpl/0.0.1858.1080@0.0.1858.1080" timestamp="1633113623533" />
-    <state width="1534" height="178" key="GridCell.Tab.0.bottom" timestamp="1634058162618">
+    <state x="337" y="294" key="FileChooserDialogImpl/0.0.1858.1080@0.0.1858.1080" timestamp="1636044022022" />
+    <state width="1534" height="178" key="GridCell.Tab.0.bottom" timestamp="1636538862057">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="178" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1634058162618" />
-    <state width="1534" height="178" key="GridCell.Tab.0.center" timestamp="1634058162618">
+    <state width="1534" height="178" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1636538862057" />
+    <state width="1534" height="178" key="GridCell.Tab.0.center" timestamp="1636538862057">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="178" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1634058162618" />
-    <state width="1534" height="178" key="GridCell.Tab.0.left" timestamp="1634058162618">
+    <state width="1534" height="178" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1636538862057" />
+    <state width="1534" height="178" key="GridCell.Tab.0.left" timestamp="1636538862057">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="178" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1634058162618" />
-    <state width="1534" height="178" key="GridCell.Tab.0.right" timestamp="1634058162618">
+    <state width="1534" height="178" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1636538862057" />
+    <state width="1534" height="178" key="GridCell.Tab.0.right" timestamp="1636538862057">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="178" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1634058162618" />
-    <state width="1534" height="178" key="GridCell.Tab.1.bottom" timestamp="1634058162618">
+    <state width="1534" height="178" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1636538862057" />
+    <state width="1534" height="178" key="GridCell.Tab.1.bottom" timestamp="1636538862057">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="178" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1634058162618" />
-    <state width="1534" height="178" key="GridCell.Tab.1.center" timestamp="1634058162618">
+    <state width="1534" height="178" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1636538862057" />
+    <state width="1534" height="178" key="GridCell.Tab.1.center" timestamp="1636538862057">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="178" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1634058162618" />
-    <state width="1534" height="178" key="GridCell.Tab.1.left" timestamp="1634058162618">
+    <state width="1534" height="178" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1636538862057" />
+    <state width="1534" height="178" key="GridCell.Tab.1.left" timestamp="1636538862057">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="178" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1634058162618" />
-    <state width="1534" height="178" key="GridCell.Tab.1.right" timestamp="1634058162618">
+    <state width="1534" height="178" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1636538862057" />
+    <state width="1534" height="178" key="GridCell.Tab.1.right" timestamp="1636538862057">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="178" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1634058162618" />
-    <state width="1534" height="178" key="GridCell.Tab.2.bottom" timestamp="1634058162618">
+    <state width="1534" height="178" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1636538862057" />
+    <state width="1534" height="178" key="GridCell.Tab.2.bottom" timestamp="1636538862057">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="178" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1634058162618" />
-    <state width="1534" height="178" key="GridCell.Tab.2.center" timestamp="1634058162618">
+    <state width="1534" height="178" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1636538862057" />
+    <state width="1534" height="178" key="GridCell.Tab.2.center" timestamp="1636538862057">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="178" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1634058162618" />
-    <state width="1534" height="178" key="GridCell.Tab.2.left" timestamp="1634058162618">
+    <state width="1534" height="178" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1636538862057" />
+    <state width="1534" height="178" key="GridCell.Tab.2.left" timestamp="1636538862057">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="178" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1634058162618" />
-    <state width="1534" height="178" key="GridCell.Tab.2.right" timestamp="1634058162618">
+    <state width="1534" height="178" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1636538862057" />
+    <state width="1534" height="178" key="GridCell.Tab.2.right" timestamp="1636538862057">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="178" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1634058162618" />
-    <state width="1051" height="336" key="GridCell.Tab.3.bottom" timestamp="1632477945216">
+    <state width="1534" height="178" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1636538862057" />
+    <state width="1534" height="178" key="GridCell.Tab.3.bottom" timestamp="1635105478483">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1051" height="336" key="GridCell.Tab.3.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1632477945216" />
-    <state width="1051" height="336" key="GridCell.Tab.3.center" timestamp="1632477945216">
+    <state width="1534" height="178" key="GridCell.Tab.3.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1635105478483" />
+    <state width="1534" height="178" key="GridCell.Tab.3.center" timestamp="1635105478483">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1051" height="336" key="GridCell.Tab.3.center/0.0.1858.1080@0.0.1858.1080" timestamp="1632477945216" />
-    <state width="1051" height="336" key="GridCell.Tab.3.left" timestamp="1632477945216">
+    <state width="1534" height="178" key="GridCell.Tab.3.center/0.0.1858.1080@0.0.1858.1080" timestamp="1635105478483" />
+    <state width="1534" height="178" key="GridCell.Tab.3.left" timestamp="1635105478483">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1051" height="336" key="GridCell.Tab.3.left/0.0.1858.1080@0.0.1858.1080" timestamp="1632477945216" />
-    <state width="1051" height="336" key="GridCell.Tab.3.right" timestamp="1632477945216">
+    <state width="1534" height="178" key="GridCell.Tab.3.left/0.0.1858.1080@0.0.1858.1080" timestamp="1635105478483" />
+    <state width="1534" height="178" key="GridCell.Tab.3.right" timestamp="1635105478483">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1051" height="336" key="GridCell.Tab.3.right/0.0.1858.1080@0.0.1858.1080" timestamp="1632477945216" />
+    <state width="1534" height="178" key="GridCell.Tab.3.right/0.0.1858.1080@0.0.1858.1080" timestamp="1635105478483" />
     <state x="87" y="196" key="Maven.ArtifactSearchDialog" timestamp="1631633134516">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -454,10 +544,14 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="1046" y="0" width="797" height="768" key="dock-window-5/0.0.1858.1080@0.0.1858.1080" timestamp="1631189981756" />
-    <state x="0" y="27" key="new project wizard" timestamp="1632074002660">
+    <state x="659" y="295" key="extract.method.dialog" timestamp="1636531470856">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="0" y="27" key="new project wizard/0.0.1858.1080@0.0.1858.1080" timestamp="1632074002660" />
+    <state x="659" y="295" key="extract.method.dialog/0.0.1858.1080@0.0.1858.1080" timestamp="1636531470856" />
+    <state x="0" y="27" key="new project wizard" timestamp="1636044026485">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="0" y="27" key="new project wizard/0.0.1858.1080@0.0.1858.1080" timestamp="1636044026485" />
     <state x="206" y="252" key="refactoring.ChangeSignatureDialog" timestamp="1633956122370">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -466,5 +560,200 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="214" y="254" key="run.anything.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1631788107009" />
+    <state x="592" y="235" key="search.everywhere.popup" timestamp="1635020898932">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="592" y="235" key="search.everywhere.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1635020898932" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>113</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>114</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>115</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>116</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>117</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>119</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>121</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>123</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>124</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>126</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>127</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>128</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>130</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>133</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>135</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>137</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>143</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>141</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>139</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>147</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>149</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>153</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>155</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/js/timer.js</url>
+          <line>160</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cook_page_cooking.jsp</url>
+          <line>37</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cook_page_cooking.jsp</url>
+          <line>38</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/company/statistic/CookInfo.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/company/statistic/CookInfo.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/company/statistic/CookInfo.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/company/statistic/CookInfo.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/company/statistic/CookInfo.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/company/statistic/CookInfo.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/company/statistic/CookInfo.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/company/statistic/CookInfo.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/company/statistic/CookInfo.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/company/statistic/CookInfo.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/company/statistic/CookInfo.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

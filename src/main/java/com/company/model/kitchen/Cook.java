@@ -11,10 +11,6 @@ public class Cook extends Observable {
     private LinkedBlockingQueue<Order> queue;
     private Order currentOrder;
 
-
-
-
-
     public Order getCurrentOrder() { return currentOrder; }
 
     //public void setBusy(boolean busy) { this.busy = busy; }

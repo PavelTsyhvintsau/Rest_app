@@ -9,17 +9,12 @@ public class SecurityConfig {
     public static final String MANAGER = "MANAGER";
     public static final String TABLET_TABLE = "TABLET_TABLE";
     public static final String UNKNOWN = "UNKNOWN";
-
-    // String: Role
-    // List<String>: urlPatterns.
     private static final Map<String, List<String>> mapConfig = new HashMap<String, List<String>>();
-
     static {
         init();
     }
 
     private static void init() {
-        System.out.println("now init SecurityConf");
 
         // Конфигурация для роли "ADMIN".
         List<String> urlAdmin = new ArrayList<String>();
@@ -30,7 +25,15 @@ public class SecurityConfig {
         urlAdmin.add("/add_user");
         urlAdmin.add("/logout");
         urlAdmin.add("/update_dish_price");
+        urlAdmin.add("/admin_look_orders");
         urlAdmin.add("/style/style1.css");
+        urlAdmin.add("/js/timer.js");
+        urlAdmin.add("/order_info");
+        urlAdmin.add("/admin_statistic_page");
+        urlAdmin.add("/cooks_statistic");
+        urlAdmin.add("/waiter_statistic");
+        urlAdmin.add("/dish_statistic");
+        urlAdmin.add("/order_completed_page");
         mapConfig.put(ADMIN, urlAdmin);
 
 
@@ -48,6 +51,7 @@ public class SecurityConfig {
         urlCook.add("/order_completed");
         urlCook.add("/js/timer.js");
         urlCook.add("/style/style1.css");
+        urlCook.add("/order_info");
         mapConfig.put(COOK, urlCook);
 
 
@@ -60,7 +64,20 @@ public class SecurityConfig {
         urlWaiter.add("/waiter_ordering");
         urlWaiter.add("/order_to_bank");
         urlWaiter.add("/style/style1.css");
+        urlWaiter.add("/js/timer.js");
+        urlWaiter.add("/order_info");
+        urlWaiter.add("/waiter_create_tabletTable");
+
         mapConfig.put(WAITER,urlWaiter);
+
+        // Конфигурация для роли "TABLET_TABLE".
+        List<String> urlTable = new ArrayList<String>();
+        urlTable.add("/table_menu");
+        urlTable.add("/add_dish_to_orderTable");
+        urlTable.add("/add_order_to_TableQueue");
+        urlTable.add("/logout");
+        urlTable.add("/style/style1.css");
+        mapConfig.put(TABLET_TABLE, urlTable);
 
     }
 
