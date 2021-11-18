@@ -45,23 +45,17 @@ public class ContextListener implements ServletContextListener {
         for (User.ROLE e: User.ROLE.values()){
             dao.get().getRoleList().add(e.toString());
         }
-
         dao.get().add(new User(1, "Admin", "1", User.ROLE.ADMIN));
         dao.get().add(new User(2, "Cook", "1", User.ROLE.COOK));
         dao.get().add(new User(3, "Cook1", "1", User.ROLE.COOK));
         dao.get().add(new User(4, "Waiter", "1", User.ROLE.WAITER));
         dao.get().add(new User(5, "Table1", "1", User.ROLE.WAITER));
-
-
-
         servletContext.setAttribute("dao", dao);
 
         menu=new AtomicReference<>(new Menu());
         for (DishType e:DishType.values()){
             menu.get().getDishTypeList().add(e.toString());
         }
-
-
         menu.get().addDishToMenu(new Dish("Пюре с котлетой",1,"src/main/java/com/company/dao/pictures/olive.jpg", DishType.HOT,1));
         menu.get().addDishToMenu(new Dish("Сельд под шубой",30,"com/company/dao/pictures/olive.jpg", DishType.SALAD,2));
         menu.get().addDishToMenu(new Dish("Цезарь",15,"com/company/dao/pictures/olive.jpg", DishType.SALAD,3));

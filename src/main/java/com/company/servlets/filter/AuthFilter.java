@@ -37,21 +37,16 @@ public class AuthFilter implements Filter {
         final String password = req.getParameter("password");
         System.out.println("login "+login);
         System.out.println("password "+password);
-
         @SuppressWarnings("unchecked")
         final AtomicReference<UserDAO> dao = (AtomicReference<UserDAO>) req.getServletContext().getAttribute("dao");
-
         final HttpSession session = req.getSession();
-
         //Logged user.
         if (nonNull(session) &&
                 nonNull(session.getAttribute("login")) &&
                 nonNull(session.getAttribute("password"))) {
 
             final User.ROLE role = (User.ROLE) session.getAttribute("role");
-
             moveToMenu(req, res, role);
-
 
         } else if (dao.get().userIsExist(login, password)) {
             System.out.println("не знаем роль и ищем(doFiltr AuthFiltr)");
@@ -60,7 +55,6 @@ public class AuthFilter implements Filter {
             req.getSession().setAttribute("password", password);
             req.getSession().setAttribute("login", login);
             req.getSession().setAttribute("role", role);
-
             moveToMenu(req, res, role);
 
         } else {
@@ -105,7 +99,6 @@ public class AuthFilter implements Filter {
         }
         req.getSession().setAttribute("user", user);
         req.getRequestDispatcher("/WEB-INF/view/table_menu.jsp").forward(req, res);
-
     } else {
             AppUtils.setSessionUserParam(req.getSession(), User.ROLE.UNKNOWN,null,user);
             req.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(req, res);
