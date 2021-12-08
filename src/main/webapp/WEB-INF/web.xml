@@ -334,5 +334,13 @@
         <servlet-name>AddOrderTable</servlet-name>
         <servlet-class>com.company.servlets.servlet.AddOrderTableServlet</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>createTable</servlet-name>
+        <url-pattern>/create_table</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>createTable</servlet-name>
+        <servlet-class>com.company.servlets.servlet.createTableServlet</servlet-class>
+    </servlet>
 
 </web-app>

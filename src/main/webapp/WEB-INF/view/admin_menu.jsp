@@ -16,6 +16,8 @@
     <a class="button28" href="<c:url value='/admin_statistic_page' />">Статистика</a></div>
 <div class="body">
    Hello admin!
+    <a class="button28" href="<c:url value='/create_table' />">Cjplfnm nf,kbwe d ,fpt</a></div>
+
 </div>
 </body>
 </html>
