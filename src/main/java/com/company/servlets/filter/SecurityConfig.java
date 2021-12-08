@@ -34,6 +34,7 @@ public class SecurityConfig {
         urlAdmin.add("/waiter_statistic");
         urlAdmin.add("/dish_statistic");
         urlAdmin.add("/order_completed_page");
+        urlAdmin.add("/create_table");
         mapConfig.put(ADMIN, urlAdmin);
 
 

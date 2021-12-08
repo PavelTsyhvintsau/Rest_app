@@ -25,161 +25,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d799b732-0c63-4290-884f-ebdf9fea81a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/tableInBase.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/REST4.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/filter/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/filter/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/createTableServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/createTableServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/SynchronousQueueDemo$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/SynchronousQueueDemo$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/SynchronousQueueDemo$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/SynchronousQueueDemo$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/SynchronousQueueDemo$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/SynchronousQueueDemo$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/SynchronousQueueDemo$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/SynchronousQueueDemo$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/SynchronousQueueDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/SynchronousQueueDemo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/advertisement/Advertisement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/advertisement/Advertisement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/advertisement/AdvertisementManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/advertisement/AdvertisementManager$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/advertisement/AdvertisementManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/advertisement/AdvertisementManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/advertisement/AdvertisementStorage$InstanceHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/advertisement/AdvertisementStorage$InstanceHolder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/advertisement/AdvertisementStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/advertisement/AdvertisementStorage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/advertisement/NoVideoAvailableException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/advertisement/NoVideoAvailableException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/advertisement/StatisticAdvertisementManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/advertisement/StatisticAdvertisementManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/dao/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/dao/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/dao/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Manager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Restaurant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/TabletTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/TabletTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/User$ROLE.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/User$ROLE.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/kitchen/ConsoleHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/kitchen/ConsoleHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/kitchen/Cook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/kitchen/Cook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/kitchen/Order$Orderstatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/kitchen/Order$Orderstatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/kitchen/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/kitchen/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/kitchen/dishes/Dish.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/kitchen/dishes/Dish.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/kitchen/dishes/DishType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/kitchen/dishes/DishType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/ContextListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/ContextListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/filter/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/filter/AuthFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/META-INF/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/META-INF/context.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/filter/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/filter/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/filter/SecurityFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/filter/SecurityFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/ActivateCookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/ActivateCookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/ActivateDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/ActivateDishServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddDishServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddDishToOrderServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddDishToOrderServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddDishToOrderTableServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddDishToOrderTableServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddOrderTableServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddOrderTableServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddOrderToQueueServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddOrderToQueueServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AdminAddRemoveServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AdminAddRemoveServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AdminLookOrdersServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AdminLookOrdersServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AdminStatisticPageServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AdminStatisticPageServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/CookCookingServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/CookCookingServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/CooksStatisticServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/CooksStatisticServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/CreateTabletTableServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/CreateTabletTableServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DeleteDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DeleteDishServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DeleteUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DeleteUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DishStatisticServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DishStatisticServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DishesMenuEditorServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DishesMenuEditorServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DishesPriceCorrectingServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DishesPriceCorrectingServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/LogoutServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/MenuForOrderingServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/MenuForOrderingServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/OrderCompleteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/OrderCompleteServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/OrderInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/OrderInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/TableMenuServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/TableMenuServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UpdateDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UpdateDishServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UpdateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UpdateUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UserInfoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UserInfoServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/WaiterOrderToBankServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/WaiterOrderToBankServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/WaiterOrderingListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/WaiterOrderingListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/WaiterStatisticServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/WaiterStatisticServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/ordersCompletePageServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/ordersCompletePageServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/CookInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/CookInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/DishInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/DishInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/StatisticManager$StatisticStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/StatisticManager$StatisticStorage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/StatisticManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/StatisticManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/WaiterInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/WaiterInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/event/CookedOrderEventDataRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/event/CookedOrderEventDataRow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/event/EventDataRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/event/EventDataRow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/event/EventType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/event/EventType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/event/NoAvailableVideoEventDataRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/event/NoAvailableVideoEventDataRow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/event/VideoSelectedEventDataRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/statistic/event/VideoSelectedEventDataRow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/util/AppUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/util/AppUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/util/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/util/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/SynchronousQueueDemo$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/SynchronousQueueDemo$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/SynchronousQueueDemo$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/SynchronousQueueDemo$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/SynchronousQueueDemo$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/SynchronousQueueDemo$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/SynchronousQueueDemo$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/SynchronousQueueDemo$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/SynchronousQueueDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/SynchronousQueueDemo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/advertisement/Advertisement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/advertisement/Advertisement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/advertisement/AdvertisementManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/advertisement/AdvertisementManager$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/advertisement/AdvertisementManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/advertisement/AdvertisementManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/advertisement/AdvertisementStorage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/advertisement/AdvertisementStorage$InstanceHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/advertisement/AdvertisementStorage$InstanceHolder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/advertisement/AdvertisementStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/advertisement/AdvertisementStorage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/advertisement/NoVideoAvailableException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/advertisement/NoVideoAvailableException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/advertisement/StatisticAdvertisementManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/advertisement/StatisticAdvertisementManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/dao/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/dao/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/dao/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/Manager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/Restaurant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/TabletTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/TabletTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/User$ROLE.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/User$ROLE.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/kitchen/ConsoleHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/kitchen/ConsoleHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/kitchen/Cook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/kitchen/Cook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/kitchen/Order$Orderstatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/kitchen/Order$Orderstatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/kitchen/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/kitchen/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/kitchen/dishes/Dish.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/kitchen/dishes/Dish.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/kitchen/dishes/DishType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/kitchen/dishes/DishType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/ContextListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/ContextListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/filter/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/filter/AuthFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/admin_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/admin_menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/filter/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/filter/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/filter/SecurityFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/filter/SecurityFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/ActivateCookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/ActivateCookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/ActivateDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/ActivateDishServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddDishServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddDishToOrderServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddDishToOrderServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddDishToOrderTableServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddDishToOrderTableServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddOrderTableServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddOrderTableServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddOrderToQueueServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddOrderToQueueServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AdminAddRemoveServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AdminAddRemoveServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AdminLookOrdersServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AdminLookOrdersServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AdminStatisticPageServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AdminStatisticPageServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/CookCookingServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/CookCookingServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/CooksStatisticServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/CooksStatisticServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/CreateTabletTableServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/CreateTabletTableServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DeleteDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DeleteDishServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DeleteUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DeleteUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DishStatisticServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DishStatisticServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DishesMenuEditorServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DishesMenuEditorServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DishesPriceCorrectingServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DishesPriceCorrectingServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/LogoutServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/MenuForOrderingServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/MenuForOrderingServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/OrderCompleteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/OrderCompleteServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/OrderInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/OrderInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/TableMenuServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/TableMenuServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UpdateDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UpdateDishServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UpdateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UpdateUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UserInfoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UserInfoServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/WaiterOrderToBankServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/WaiterOrderToBankServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/WaiterOrderingListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/WaiterOrderingListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/WaiterStatisticServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/WaiterStatisticServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/ordersCompletePageServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/ordersCompletePageServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/statistic/CookInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/statistic/CookInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/statistic/DishInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/statistic/DishInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/statistic/StatisticManager$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/statistic/StatisticManager$StatisticStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/statistic/StatisticManager$StatisticStorage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/statistic/StatisticManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/statistic/StatisticManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/statistic/WaiterInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/statistic/WaiterInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/statistic/event/CookedOrderEventDataRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/statistic/event/CookedOrderEventDataRow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/statistic/event/EventDataRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/statistic/event/EventDataRow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/statistic/event/EventType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/statistic/event/EventType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/statistic/event/NoAvailableVideoEventDataRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/statistic/event/NoAvailableVideoEventDataRow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/statistic/event/VideoSelectedEventDataRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/statistic/event/VideoSelectedEventDataRow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/util/AppUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/util/AppUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/util/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/util/Utils.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +107,7 @@
       <recent name="com.company.servlets.filter" />
     </key>
   </component>
-  <component name="RunManager" selected="Database Script.console.sql">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.55">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="REST4" />
@@ -535,7 +393,7 @@
       <workItem from="1637781113511" duration="7761000" />
       <workItem from="1638787970997" duration="2097000" />
       <workItem from="1638820813046" duration="3107000" />
-      <workItem from="1638976302366" duration="548000" />
+      <workItem from="1638976302366" duration="4374000" />
     </task>
     <servers />
   </component>
@@ -559,10 +417,10 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="692" y="114" key="#Project_Structure/0.0.1858.1080@0.0.1858.1080" timestamp="1637778755030" />
-    <state x="459" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1638895040896">
+    <state x="459" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1638979278104">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="459" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1638895040896" />
+    <state x="459" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1638979278104" />
     <state x="841" y="266" key="#com.intellij.ide.util.ExportDialog" timestamp="1637697314198">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -595,10 +453,14 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="459" y="253" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1632425169903" />
-    <state x="921" y="188" width="581" height="777" key="#console.sql" timestamp="1637929576104">
+    <state x="921" y="188" width="581" height="777" key="#console.sql" timestamp="1638977671838">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="921" y="188" width="581" height="777" key="#console.sql/0.0.1858.1080@0.0.1858.1080" timestamp="1637929576104" />
+    <state x="921" y="188" width="581" height="777" key="#console.sql/0.0.1858.1080@0.0.1858.1080" timestamp="1638977671838" />
+    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1638980160178">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1858.1080@0.0.1858.1080" timestamp="1638980160178" />
     <state x="802" y="395" key="DetectedRootsChooserDialog" timestamp="1637782528600">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -607,54 +469,54 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="337" y="294" key="FileChooserDialogImpl/0.0.1858.1080@0.0.1858.1080" timestamp="1637782525836" />
-    <state width="1033" height="206" key="GridCell.Tab.0.bottom" timestamp="1637929576302">
+    <state width="706" height="206" key="GridCell.Tab.0.bottom" timestamp="1638980689202">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1033" height="206" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1637929576302" />
-    <state width="1033" height="206" key="GridCell.Tab.0.center" timestamp="1637929576302">
+    <state width="706" height="206" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1638980689202" />
+    <state width="706" height="206" key="GridCell.Tab.0.center" timestamp="1638980689202">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1033" height="206" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1637929576302" />
-    <state width="1033" height="206" key="GridCell.Tab.0.left" timestamp="1637929576302">
+    <state width="706" height="206" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1638980689202" />
+    <state width="706" height="206" key="GridCell.Tab.0.left" timestamp="1638980689202">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1033" height="206" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1637929576302" />
-    <state width="1033" height="206" key="GridCell.Tab.0.right" timestamp="1637929576302">
+    <state width="706" height="206" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1638980689202" />
+    <state width="706" height="206" key="GridCell.Tab.0.right" timestamp="1638980689202">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1033" height="206" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1637929576302" />
-    <state width="1033" height="206" key="GridCell.Tab.1.bottom" timestamp="1637929053229">
+    <state width="706" height="206" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1638980689202" />
+    <state width="706" height="206" key="GridCell.Tab.1.bottom" timestamp="1638980689202">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1033" height="206" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1637929053229" />
-    <state width="1033" height="206" key="GridCell.Tab.1.center" timestamp="1637929053229">
+    <state width="706" height="206" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1638980689202" />
+    <state width="706" height="206" key="GridCell.Tab.1.center" timestamp="1638980689202">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1033" height="206" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1637929053229" />
-    <state width="1033" height="206" key="GridCell.Tab.1.left" timestamp="1637929053229">
+    <state width="706" height="206" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1638980689202" />
+    <state width="706" height="206" key="GridCell.Tab.1.left" timestamp="1638980689202">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1033" height="206" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1637929053229" />
-    <state width="1033" height="206" key="GridCell.Tab.1.right" timestamp="1637929053229">
+    <state width="706" height="206" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1638980689202" />
+    <state width="706" height="206" key="GridCell.Tab.1.right" timestamp="1638980689202">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1033" height="206" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1637929053229" />
-    <state width="1033" height="206" key="GridCell.Tab.2.bottom" timestamp="1637929053230">
+    <state width="706" height="206" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1638980689202" />
+    <state width="706" height="206" key="GridCell.Tab.2.bottom" timestamp="1638980689203">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1033" height="206" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1637929053230" />
-    <state width="1033" height="206" key="GridCell.Tab.2.center" timestamp="1637929053229">
+    <state width="706" height="206" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1638980689203" />
+    <state width="706" height="206" key="GridCell.Tab.2.center" timestamp="1638980689202">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1033" height="206" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1637929053229" />
-    <state width="1033" height="206" key="GridCell.Tab.2.left" timestamp="1637929053229">
+    <state width="706" height="206" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1638980689202" />
+    <state width="706" height="206" key="GridCell.Tab.2.left" timestamp="1638980689202">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1033" height="206" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1637929053229" />
-    <state width="1033" height="206" key="GridCell.Tab.2.right" timestamp="1637929053229">
+    <state width="706" height="206" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1638980689202" />
+    <state width="706" height="206" key="GridCell.Tab.2.right" timestamp="1638980689203">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1033" height="206" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1637929053229" />
+    <state width="706" height="206" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1638980689203" />
     <state width="1534" height="178" key="GridCell.Tab.3.bottom" timestamp="1635105478483">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
