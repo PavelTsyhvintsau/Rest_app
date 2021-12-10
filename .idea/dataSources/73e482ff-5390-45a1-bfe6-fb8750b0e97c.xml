@@ -3,14 +3,16 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.18">
     <root id="1">
       <ServerVersion>14.1</ServerVersion>
-      <StartupTime>1637780949</StartupTime>
+      <StartupTime>1638964657</StartupTime>
     </root>
     <database id="2" parent="1" name="Restaurant">
       <ObjectId>24590</ObjectId>
       <Comment>база данных ресторана</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>819</IntrospectionStateNumber>
+      <IntrospectionStateNumber>875</IntrospectionStateNumber>
       <Current>1</Current>
+      <Relations>sequence|table|24629|24619|4
+</Relations>
     </database>
     <database id="3" parent="1" name="postgres">
       <ObjectId>13754</ObjectId>
@@ -83,7 +85,7 @@
       <Comment>standard public schema</Comment>
       <StateNumber>527</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>820</IntrospectionStateNumber>
+      <IntrospectionStateNumber>876</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="21" parent="2" name="heap">
@@ -153,45 +155,102 @@
     <language id="30" parent="2" name="internal"/>
     <language id="31" parent="2" name="plpgsql"/>
     <language id="32" parent="2" name="sql"/>
-    <table id="33" parent="20" name="allUsers">
+    <sequence id="33" parent="20" name="allUsers_id_seq">
+      <ObjectId>24629</ObjectId>
+      <StateNumber>831</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer|0s</DataType>
+    </sequence>
+    <table id="34" parent="20" name="allusers">
       <ObjectId>24619</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>818</StateNumber>
+      <StateNumber>867</StateNumber>
     </table>
-    <column id="34" parent="33" name="name">
+    <table id="35" parent="20" name="exemp">
+      <ObjectId>24641</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>852</StateNumber>
+    </table>
+    <column id="36" parent="34" name="name">
       <Position>1</Position>
       <DataType>char(32)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>818</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="35" parent="33" name="parole">
+    <column id="37" parent="34" name="parole">
       <Position>2</Position>
       <DataType>char(32)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>818</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="36" parent="33" name="role">
+    <column id="38" parent="34" name="role">
       <Position>3</Position>
       <DataType>char(32)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>818</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <index id="37" parent="33" name="allUsers_pkey">
-      <ObjectId>24622</ObjectId>
-      <StateNumber>818</StateNumber>
+    <column id="39" parent="34" name="id">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>831</StateNumber>
+      <DefaultExpression>nextval(&apos;&quot;allUsers_id_seq&quot;&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="40" parent="34" name="allusers_name_uindex">
+      <ObjectId>24638</ObjectId>
+      <StateNumber>839</StateNumber>
       <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="41" parent="34" name="allusers_id_uindex">
+      <ObjectId>24635</ObjectId>
+      <StateNumber>832</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="42" parent="34" name="allusers_pk">
+      <ObjectId>24636</ObjectId>
+      <StateNumber>834</StateNumber>
+      <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="38" parent="33" name="allUsers_pkey">
-      <ObjectId>24623</ObjectId>
-      <StateNumber>818</StateNumber>
-      <ColNames>name</ColNames>
+    <key id="43" parent="34" name="allusers_pk">
+      <ObjectId>24637</ObjectId>
+      <StateNumber>834</StateNumber>
+      <ColNames>id</ColNames>
       <Primary>1</Primary>
-      <UnderlyingIndexName>allUsers_pkey</UnderlyingIndexName>
+      <UnderlyingIndexName>allusers_pk</UnderlyingIndexName>
     </key>
+    <column id="44" parent="35" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>852</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="45" parent="35" name="username">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>852</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="46" parent="35" name="parole">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>852</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="47" parent="35" name="role">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>852</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
   </database-model>
 </dataSource>

@@ -9,7 +9,7 @@ public class User {
     private String password;
     private ROLE role;
     private Cook cook;
-    private int tableNumber;
+    //private int tableNumber;
     private boolean isActive;
 
 
@@ -24,7 +24,7 @@ public class User {
         if(role.equals(ROLE.COOK)){
             cook=new Cook(login);
         }
-        tableNumber=0;
+        //tableNumber=0;
         isActive=true;
     }
 
