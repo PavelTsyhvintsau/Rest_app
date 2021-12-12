@@ -1,6 +1,7 @@
 package com.company.servlets.filter;
 
 import com.company.dao.UserDAO;
+import com.company.model.Restaurant;
 import com.company.model.User;
 import com.company.model.kitchen.Cook;
 import com.company.model.kitchen.Order;
@@ -18,51 +19,40 @@ import static java.util.Objects.nonNull;
  * Acidification filter.
  */
 public class AuthFilter implements Filter {
-
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
     }
-
     @Override
     public void doFilter(final ServletRequest request,
                          final ServletResponse response,
                          final FilterChain filterChain)
-
             throws IOException, ServletException {
         System.out.println("now do filter AuthFilt");
         final HttpServletRequest req = (HttpServletRequest) request;
         final HttpServletResponse res = (HttpServletResponse) response;
-
         final String login = req.getParameter("login");
         final String password = req.getParameter("password");
-        System.out.println("login "+login);
-        System.out.println("password "+password);
         @SuppressWarnings("unchecked")
-        final AtomicReference<UserDAO> dao = (AtomicReference<UserDAO>) req.getServletContext().getAttribute("dao");
+        Restaurant restaurant= (Restaurant) req.getServletContext().getAttribute("restaurant");
+        final AtomicReference<UserDAO> dao = restaurant.getDao();
         final HttpSession session = req.getSession();
         //Logged user.
         if (nonNull(session) &&
                 nonNull(session.getAttribute("login")) &&
                 nonNull(session.getAttribute("password"))) {
-
             final User.ROLE role = (User.ROLE) session.getAttribute("role");
             moveToMenu(req, res, role);
-
         } else if (dao.get().userIsExist(login, password)) {
             System.out.println("не знаем роль и ищем(doFiltr AuthFiltr)");
             final User.ROLE role = dao.get().getRoleByLoginPassword(login, password);
-
             req.getSession().setAttribute("password", password);
             req.getSession().setAttribute("login", login);
             req.getSession().setAttribute("role", role);
             moveToMenu(req, res, role);
-
         } else {
-
             moveToMenu(req, res, User.ROLE.UNKNOWN);
         }
     }
-
     /**
      * Move user to menu.
      * If access 'admin' move to admin menu.
@@ -76,10 +66,8 @@ public class AuthFilter implements Filter {
        user.setPassword((String) req.getSession().getAttribute("password"));
        user.setRole(role);
        user.setLogin((String)req.getSession().getAttribute("login"));
-
-        System.out.println("now do move to menu AuthFilt ---- create user for session"+ user.getLogin());
+       System.out.println("now do move to menu AuthFilt ---- create user for session"+ user.getLogin());
        AppUtils.setSessionUserParam(req.getSession(),role,user.getLogin(),user);
-
         if (role.equals(User.ROLE.ADMIN)) {
             req.getRequestDispatcher("/WEB-INF/view/admin_menu.jsp").forward(req, res);
         } else if (role.equals(User.ROLE.COOK)) {
@@ -92,7 +80,6 @@ public class AuthFilter implements Filter {
             }
             req.getSession().setAttribute("user", user);
             req.getRequestDispatcher("/WEB-INF/view/waiter_menu.jsp").forward(req, res);
-
         } else if (role.equals(User.ROLE.TABLET_TABLE)) {
         if (req.getSession().getAttribute("order")==null){
             req.getSession().setAttribute("order",new Order(user));
@@ -104,10 +91,7 @@ public class AuthFilter implements Filter {
             req.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(req, res);
         }
     }
-
-
     @Override
     public void destroy() {
     }
-
 }

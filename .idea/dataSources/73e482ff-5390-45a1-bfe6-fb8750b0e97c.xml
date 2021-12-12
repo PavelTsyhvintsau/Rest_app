@@ -9,7 +9,7 @@
       <ObjectId>24590</ObjectId>
       <Comment>база данных ресторана</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>875</IntrospectionStateNumber>
+      <IntrospectionStateNumber>896</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|24629|24619|4
 </Relations>
@@ -85,7 +85,7 @@
       <Comment>standard public schema</Comment>
       <StateNumber>527</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>876</IntrospectionStateNumber>
+      <IntrospectionStateNumber>897</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="21" parent="2" name="heap">
@@ -166,7 +166,7 @@
     <table id="34" parent="20" name="allusers">
       <ObjectId>24619</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>867</StateNumber>
+      <StateNumber>892</StateNumber>
     </table>
     <table id="35" parent="20" name="exemp">
       <ObjectId>24641</ObjectId>
@@ -175,24 +175,24 @@
     </table>
     <column id="36" parent="34" name="name">
       <Position>1</Position>
-      <DataType>char(32)|0s</DataType>
+      <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>818</StateNumber>
-      <TypeId>1042</TypeId>
+      <StateNumber>886</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
     <column id="37" parent="34" name="parole">
       <Position>2</Position>
-      <DataType>char(32)|0s</DataType>
+      <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>818</StateNumber>
-      <TypeId>1042</TypeId>
+      <StateNumber>889</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
     <column id="38" parent="34" name="role">
       <Position>3</Position>
-      <DataType>char(32)|0s</DataType>
+      <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>818</StateNumber>
-      <TypeId>1042</TypeId>
+      <StateNumber>892</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
     <column id="39" parent="34" name="id">
       <Position>4</Position>
@@ -203,20 +203,20 @@
       <TypeId>23</TypeId>
     </column>
     <index id="40" parent="34" name="allusers_name_uindex">
-      <ObjectId>24638</ObjectId>
-      <StateNumber>839</StateNumber>
+      <ObjectId>24658</ObjectId>
+      <StateNumber>892</StateNumber>
       <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="41" parent="34" name="allusers_id_uindex">
       <ObjectId>24635</ObjectId>
-      <StateNumber>832</StateNumber>
+      <StateNumber>892</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="42" parent="34" name="allusers_pk">
       <ObjectId>24636</ObjectId>
-      <StateNumber>834</StateNumber>
+      <StateNumber>892</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>

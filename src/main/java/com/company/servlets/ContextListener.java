@@ -8,10 +8,17 @@ import com.company.model.kitchen.dishes.Dish;
 import com.company.model.kitchen.dishes.DishType;
 import com.company.model.User;
 
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicReference;
@@ -28,7 +35,6 @@ public class ContextListener implements ServletContextListener {
     private AtomicReference<Menu> menu;
     private LinkedBlockingQueue<Order> queueOrders;
    private ArrayList<Order> ordersBank;
-
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         final ServletContext servletContext =
@@ -36,22 +42,16 @@ public class ContextListener implements ServletContextListener {
         restaurant=new Restaurant();
         queueOrders=new LinkedBlockingQueue<>();
         servletContext.setAttribute("queueOrders", queueOrders);
-
         ordersBank=new ArrayList<>();
         servletContext.setAttribute("ordersBank",ordersBank);
-
         servletContext.setAttribute("dao", dao);
-        dao = new AtomicReference<>(new UserDAO());
-        for (User.ROLE e: User.ROLE.values()){
-            dao.get().getRoleList().add(e.toString());
-        }
-        dao.get().add(new User(1, "Admin", "1", User.ROLE.ADMIN));
+
+        /*dao.get().add(new User(1, "Admin", "1", User.ROLE.ADMIN));
         dao.get().add(new User(2, "Cook", "1", User.ROLE.COOK));
         dao.get().add(new User(3, "Cook1", "1", User.ROLE.COOK));
         dao.get().add(new User(4, "Waiter", "1", User.ROLE.WAITER));
-        dao.get().add(new User(5, "Table1", "1", User.ROLE.WAITER));
+        dao.get().add(new User(5, "Table1", "1", User.ROLE.WAITER));*/
         servletContext.setAttribute("dao", dao);
-
         menu=new AtomicReference<>(new Menu());
         for (DishType e:DishType.values()){
             menu.get().getDishTypeList().add(e.toString());
@@ -65,13 +65,12 @@ public class ContextListener implements ServletContextListener {
             e.setActive(true);
         }
         servletContext.setAttribute("menu", menu);
-        restaurant.setDao(this.dao);
+        restaurant.setDao();
         restaurant.setMenu(this.menu);
         restaurant.setQueueOrders(this.queueOrders);
         restaurant.setOrdersBank(this.ordersBank);
         servletContext.setAttribute("restaurant", restaurant);
     }
-
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
         //dao = null;
