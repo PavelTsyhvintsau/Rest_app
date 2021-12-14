@@ -9,7 +9,7 @@
       <ObjectId>24590</ObjectId>
       <Comment>база данных ресторана</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>896</IntrospectionStateNumber>
+      <IntrospectionStateNumber>946</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|24629|24619|4
 </Relations>
@@ -85,7 +85,7 @@
       <Comment>standard public schema</Comment>
       <StateNumber>527</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>897</IntrospectionStateNumber>
+      <IntrospectionStateNumber>947</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="21" parent="2" name="heap">
@@ -166,7 +166,7 @@
     <table id="34" parent="20" name="allusers">
       <ObjectId>24619</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>892</StateNumber>
+      <StateNumber>945</StateNumber>
     </table>
     <table id="35" parent="20" name="exemp">
       <ObjectId>24641</ObjectId>
@@ -180,11 +180,11 @@
       <StateNumber>886</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="37" parent="34" name="parole">
+    <column id="37" parent="34" name="password">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>889</StateNumber>
+      <StateNumber>920</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="38" parent="34" name="role">
@@ -202,51 +202,63 @@
       <DefaultExpression>nextval(&apos;&quot;allUsers_id_seq&quot;&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <index id="40" parent="34" name="allusers_name_uindex">
+    <column id="40" parent="34" name="is_active">
+      <Position>5</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>944</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="41" parent="34" name="cook_id">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>945</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="42" parent="34" name="allusers_name_uindex">
       <ObjectId>24658</ObjectId>
       <StateNumber>892</StateNumber>
       <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="41" parent="34" name="allusers_id_uindex">
+    <index id="43" parent="34" name="allusers_id_uindex">
       <ObjectId>24635</ObjectId>
       <StateNumber>892</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="42" parent="34" name="allusers_pk">
+    <index id="44" parent="34" name="allusers_pk">
       <ObjectId>24636</ObjectId>
       <StateNumber>892</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="43" parent="34" name="allusers_pk">
+    <key id="45" parent="34" name="allusers_pk">
       <ObjectId>24637</ObjectId>
       <StateNumber>834</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>allusers_pk</UnderlyingIndexName>
     </key>
-    <column id="44" parent="35" name="id">
+    <column id="46" parent="35" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>852</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="45" parent="35" name="username">
+    <column id="47" parent="35" name="username">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>852</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="46" parent="35" name="parole">
+    <column id="48" parent="35" name="parole">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>852</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="47" parent="35" name="role">
+    <column id="49" parent="35" name="role">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>852</StateNumber>

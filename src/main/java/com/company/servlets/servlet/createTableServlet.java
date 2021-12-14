@@ -40,7 +40,7 @@ public class createTableServlet extends HttpServlet {
             // выполнить вставку в таблицу
             //statement.executeUpdate(insertTableSQL);
             System.out.println("выполнена вставка в таблицу");
-            String selectTableSQL = "SELECT name, role, parole, id FROM ALLUSERS where id=2";
+            String selectTableSQL = "SELECT name, role, password, id FROM ALLUSERS where id=2";
             ResultSet rs=statement.executeQuery(selectTableSQL);
             System.out.println("вычитан сет из базы");
             ArrayList<User> users=new ArrayList<>();

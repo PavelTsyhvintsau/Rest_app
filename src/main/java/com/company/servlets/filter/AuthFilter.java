@@ -66,7 +66,6 @@ public class AuthFilter implements Filter {
        user.setPassword((String) req.getSession().getAttribute("password"));
        user.setRole(role);
        user.setLogin((String)req.getSession().getAttribute("login"));
-       System.out.println("now do move to menu AuthFilt ---- create user for session"+ user.getLogin());
        AppUtils.setSessionUserParam(req.getSession(),role,user.getLogin(),user);
         if (role.equals(User.ROLE.ADMIN)) {
             req.getRequestDispatcher("/WEB-INF/view/admin_menu.jsp").forward(req, res);

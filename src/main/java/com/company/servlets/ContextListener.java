@@ -45,13 +45,6 @@ public class ContextListener implements ServletContextListener {
         ordersBank=new ArrayList<>();
         servletContext.setAttribute("ordersBank",ordersBank);
         servletContext.setAttribute("dao", dao);
-
-        /*dao.get().add(new User(1, "Admin", "1", User.ROLE.ADMIN));
-        dao.get().add(new User(2, "Cook", "1", User.ROLE.COOK));
-        dao.get().add(new User(3, "Cook1", "1", User.ROLE.COOK));
-        dao.get().add(new User(4, "Waiter", "1", User.ROLE.WAITER));
-        dao.get().add(new User(5, "Table1", "1", User.ROLE.WAITER));*/
-        servletContext.setAttribute("dao", dao);
         menu=new AtomicReference<>(new Menu());
         for (DishType e:DishType.values()){
             menu.get().getDishTypeList().add(e.toString());

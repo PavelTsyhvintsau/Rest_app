@@ -20,7 +20,7 @@ public class LogoutServlet extends HttpServlet {
 
 
         final HttpSession session = req.getSession();
-System.out.println("do /logout servlet");
+System.out.println("===do /logout servlet");
         session.removeAttribute("password");
         session.removeAttribute("login");
         session.removeAttribute("role");
