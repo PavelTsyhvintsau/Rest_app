@@ -3,6 +3,7 @@ package com.company.model;
 import com.company.dao.Menu;
 import com.company.dao.UserDAO;
 import com.company.model.kitchen.Order;
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -21,7 +22,7 @@ public class Restaurant {
     private LinkedBlockingQueue<Order> queueOrders;
     private ArrayList<Order> ordersBank;
 
-    public Connection doConnection (){
+   /* public Connection doConnection (){
         InitialContext initContext= null;
         Connection connection=null;
         try {
@@ -34,15 +35,24 @@ public class Restaurant {
             System.out.println("экзепшн соединения с БД");
         }
         return connection;
-    }
-    public void setDao() {
+    }*/
+   public Connection doConnection (ComboPooledDataSource cpds){
+       Connection connection=null;
+       try {
+           connection=cpds.getConnection();
+       } catch (SQLException throwables) {
+           throwables.printStackTrace();
+       }return connection;
+   }
+    public void setDao(ComboPooledDataSource cpds) {
         AtomicReference<UserDAO> dao = new AtomicReference<>(new UserDAO());
         for (User.ROLE e: User.ROLE.values()){
             dao.get().getRoleList().add(e.toString());
         }
         Statement statement = null;
-        Connection con=doConnection();
+
         try {
+            Connection con=doConnection(cpds);
             statement = con.createStatement();
             //System.out.println("создано statement");
             String selectTableSQL = "SELECT name, role, password, id, is_active FROM ALLUSERS";
@@ -67,9 +77,9 @@ public class Restaurant {
         }
         this.dao = dao;
     }
-    public void addUser(String login, String password, String role){
+    public void addUser(ComboPooledDataSource cpds, String login, String password, String role){
         Statement statement = null;
-        Connection con=doConnection();
+        Connection con=doConnection(cpds);
         String insertUser = "INSERT INTO allusers" + "( name, password, role, is_active) " + "VALUES" + "('"+login+"', '"+password+"', '"+role+"', 'true')";
         try {
             statement = con.createStatement();
@@ -80,8 +90,8 @@ public class Restaurant {
             System.out.println("экзепшн добавления юзера в БД");
         }
     }
-    public AtomicReference<UserDAO> getDao() {
-        setDao();
+    public AtomicReference<UserDAO> getDao(ComboPooledDataSource cpds) {
+        setDao(cpds);
         return dao;
     }
     public AtomicReference<Menu> getMenu() {

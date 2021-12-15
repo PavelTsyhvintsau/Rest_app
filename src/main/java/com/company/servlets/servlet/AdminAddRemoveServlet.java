@@ -2,6 +2,7 @@ package com.company.servlets.servlet;
 
 import com.company.dao.UserDAO;
 import com.company.model.Restaurant;
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -25,7 +26,7 @@ public class AdminAddRemoveServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("dao", restaurant.getDao().get());
+        req.setAttribute("dao", restaurant.getDao((ComboPooledDataSource)req.getAttribute("cpds")).get());
 
         req.getRequestDispatcher("/WEB-INF/view/admin_add_remove_users.jsp").forward(req, resp);
 

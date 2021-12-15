@@ -3,6 +3,8 @@ package com.company.servlets.servlet;
 import com.company.model.Restaurant;
 import com.company.model.User;
 import com.company.util.Utils;
+import com.mchange.v2.c3p0.ComboPooledDataSource;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -30,8 +32,8 @@ public class AddUserServlet extends HttpServlet {
             final String login = req.getParameter("login");
             final String password = req.getParameter("password");
             final  String role=req.getParameter("role");
-            restaurant.addUser(login,password,role);
-            restaurant.setDao();
+            restaurant.addUser((ComboPooledDataSource)req.getAttribute("cpds"),login,password,role);
+            restaurant.setDao((ComboPooledDataSource)req.getAttribute("cpds"));
         }
         resp.sendRedirect(req.getContextPath()+"/updateUsers");
     }

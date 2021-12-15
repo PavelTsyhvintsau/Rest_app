@@ -4,6 +4,7 @@ import com.company.dao.UserDAO;
 import com.company.model.Restaurant;
 import com.company.model.User;
 import com.company.util.Utils;
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -29,7 +30,7 @@ public class DeleteUserServlet extends HttpServlet {
             throws ServletException, IOException {
 
         req.setCharacterEncoding("UTF-8");
-        List<User> list=restaurant.getDao().get().getStore();
+        List<User> list=restaurant.getDao((ComboPooledDataSource)req.getAttribute("cpds")).get().getStore();
         if (Utils.idIsNumber(req)) {
             for (int i = 0; i < list.size(); i++) {
                 if (list.get(i).getId() == Integer.parseInt(req.getParameter("id"))) {

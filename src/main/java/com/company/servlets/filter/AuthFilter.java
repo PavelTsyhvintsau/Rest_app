@@ -6,6 +6,7 @@ import com.company.model.User;
 import com.company.model.kitchen.Cook;
 import com.company.model.kitchen.Order;
 import com.company.util.AppUtils;
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -34,7 +35,7 @@ public class AuthFilter implements Filter {
         final String password = req.getParameter("password");
         @SuppressWarnings("unchecked")
         Restaurant restaurant= (Restaurant) req.getServletContext().getAttribute("restaurant");
-        final AtomicReference<UserDAO> dao = restaurant.getDao();
+        final AtomicReference<UserDAO> dao = restaurant.getDao((ComboPooledDataSource)req.getAttribute("cpds"));
         final HttpSession session = req.getSession();
         //Logged user.
         if (nonNull(session) &&

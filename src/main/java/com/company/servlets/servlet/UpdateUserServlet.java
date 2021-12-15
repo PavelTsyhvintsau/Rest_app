@@ -3,6 +3,7 @@ package com.company.servlets.servlet;
 import com.company.model.Restaurant;
 import com.company.model.User;
 import com.company.util.Utils;
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -37,7 +38,7 @@ public class UpdateUserServlet extends HttpServlet {
         final String role=req.getParameter("role");
         final String isActive=req.getParameter("active");
 
-        final User user = restaurant.getDao().get().getById(Integer.valueOf(id));
+        final User user = restaurant.getDao((ComboPooledDataSource)req.getAttribute("cpds")).get().getById(Integer.valueOf(id));
         user.setLogin(login);
         user.setPassword(password);
         user.setRole(User.ROLE.valueOf(role));
@@ -56,7 +57,7 @@ public class UpdateUserServlet extends HttpServlet {
 
         final String id = req.getParameter("id");
         Map<Integer, User> users= new HashMap<>();
-        for (User element:restaurant.getDao().get().getStore()){
+        for (User element:restaurant.getDao((ComboPooledDataSource)req.getAttribute("cpds")).get().getStore()){
             users.put(element.getId(),element);
         }
 
@@ -67,7 +68,7 @@ public class UpdateUserServlet extends HttpServlet {
 
         final User user =users.get(Integer.parseInt(id));
         req.setAttribute("user", user);
-        req.setAttribute("dao", restaurant.getDao().get());
+        req.setAttribute("dao", restaurant.getDao((ComboPooledDataSource)req.getAttribute("cpds")).get());
         req.getRequestDispatcher("/WEB-INF/view/update_user.jsp").forward(req, resp);
     }
 }
