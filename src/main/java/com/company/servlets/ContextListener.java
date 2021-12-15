@@ -1,6 +1,5 @@
 package com.company.servlets;
-import java.beans.PropertyVetoException;
-import com.mchange.v2.c3p0.ComboPooledDataSource;
+
 import com.company.dao.Menu;
 import com.company.dao.UserDAO;
 import com.company.model.Restaurant;
@@ -16,10 +15,11 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 import javax.sql.DataSource;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.Properties;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicReference;
 /**
@@ -39,39 +39,19 @@ public class ContextListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         final ServletContext servletContext =
                 servletContextEvent.getServletContext();
-//c3p0=
-        ComboPooledDataSource cpds = new ComboPooledDataSource();
-        try {
-            cpds.setDriverClass("org.postgresql.Driver"             );
-            cpds.setJdbcUrl    ("jdbc:postgresql://localhost:5432/Restaurant");
-            cpds.setUser       ("postgres"   );
-            cpds.setPassword   ("1");
-
-            Properties properties = new Properties();
-            properties.setProperty ("user"             , "postgres"   );
-            properties.setProperty ("password"         , "1");
-            properties.setProperty ("useUnicode"       , "true"      );
-            properties.setProperty ("characterEncoding", "UTF8"      );
-            cpds.setProperties(properties);
-
-            // set options
-            cpds.setMaxStatements             (180);
-            cpds.setMaxStatementsPerConnection(180);
-            cpds.setMinPoolSize               ( 50);
-            cpds.setAcquireIncrement          ( 10);
-            cpds.setMaxPoolSize               ( 60);
-            cpds.setMaxIdleTime               ( 30);
-        } catch (PropertyVetoException e) {
-            e.printStackTrace();
-        }
-        servletContext.setAttribute("cpds", cpds);
-//=c3p0
         restaurant=new Restaurant();
         queueOrders=new LinkedBlockingQueue<>();
         servletContext.setAttribute("queueOrders", queueOrders);
         ordersBank=new ArrayList<>();
         servletContext.setAttribute("ordersBank",ordersBank);
-        servletContext.setAttribute("dao", dao);
+
+
+        /*dao.get().add(new User(1, "Admin", "1", User.ROLE.ADMIN));
+        dao.get().add(new User(2, "Cook", "1", User.ROLE.COOK));
+        dao.get().add(new User(3, "Cook1", "1", User.ROLE.COOK));
+        dao.get().add(new User(4, "Waiter", "1", User.ROLE.WAITER));
+        dao.get().add(new User(5, "Table1", "1", User.ROLE.WAITER));*/
+
         menu=new AtomicReference<>(new Menu());
         for (DishType e:DishType.values()){
             menu.get().getDishTypeList().add(e.toString());
@@ -85,7 +65,8 @@ public class ContextListener implements ServletContextListener {
             e.setActive(true);
         }
         servletContext.setAttribute("menu", menu);
-        dao=restaurant.getDao(cpds);
+        restaurant.setDao();
+        servletContext.setAttribute("dao", dao);
         restaurant.setMenu(this.menu);
         restaurant.setQueueOrders(this.queueOrders);
         restaurant.setOrdersBank(this.ordersBank);
@@ -93,17 +74,6 @@ public class ContextListener implements ServletContextListener {
     }
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
-        Enumeration<Driver> drivers = DriverManager.getDrivers();
-        while (drivers.hasMoreElements()) {
-            Driver driver = drivers.nextElement();
-            try {
-                DriverManager.deregisterDriver(driver);
-                //LOG.log(Level.INFO, String.format("deregistering jdbc driver: %s", driver));
-            } catch (SQLException e) {
-                //LOG.log(Level.SEVERE, String.format("Error deregistering driver %s", driver), e);
-            }
-        }
-        restaurant=null;
         //dao = null;
     }
 }

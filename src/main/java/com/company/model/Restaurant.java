@@ -3,7 +3,6 @@ package com.company.model;
 import com.company.dao.Menu;
 import com.company.dao.UserDAO;
 import com.company.model.kitchen.Order;
-import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -22,76 +21,42 @@ public class Restaurant {
     private LinkedBlockingQueue<Order> queueOrders;
     private ArrayList<Order> ordersBank;
 
-   /* public Connection doConnection (){
-        InitialContext initContext= null;
-        Connection connection=null;
-        try {
-            initContext = new InitialContext();
-            //System.out.println("создан initContext");
-            DataSource ds = (DataSource) initContext.lookup("java:comp/env/jdbc/appname");
-            //System.out.println("создано DataSource");
-            connection = ds.getConnection();
-        }catch (NamingException | SQLException e){
-            System.out.println("экзепшн соединения с БД");
-        }
-        return connection;
-    }*/
-   public Connection doConnection (ComboPooledDataSource cpds){
-       Connection connection=null;
-       try {
-           connection=cpds.getConnection();
-       } catch (SQLException throwables) {
-           throwables.printStackTrace();
-       }return connection;
-   }
-    public void setDao(ComboPooledDataSource cpds) {
+    public void setDao() {
         AtomicReference<UserDAO> dao = new AtomicReference<>(new UserDAO());
         for (User.ROLE e: User.ROLE.values()){
             dao.get().getRoleList().add(e.toString());
         }
+        InitialContext initContext= null;
+        Connection connection=null;
         Statement statement = null;
-
         try {
-            Connection con=doConnection(cpds);
-            statement = con.createStatement();
-            //System.out.println("создано statement");
-            String selectTableSQL = "SELECT name, role, password, id, is_active FROM ALLUSERS";
+            initContext = new InitialContext();
+            System.out.println("создан initContext");
+            DataSource ds = (DataSource) initContext.lookup("java:comp/env/jdbc/appname");
+            System.out.println("создано DataSource");
+            connection = ds.getConnection();
+            statement = connection.createStatement();
+            System.out.println("создано statement");
+            String selectTableSQL = "SELECT name, role, password, id FROM ALLUSERS";
+            System.out.println("строка");
             ResultSet rs=statement.executeQuery(selectTableSQL);
+            System.out.println("вычитан сет");
             while (rs.next()) {
                 String nameuser=rs.getString("name");
                 String role=rs.getString("role");
                 int id=rs.getInt("id");
                 String password=rs.getString("password");
                 User.ROLE userRole=User.ROLE.valueOf(role);
-                Boolean isActive=false;
-                if(rs.getString("is_active").equals("t")){
-                    isActive=true;
-                }
-                User user=new User(id, nameuser,password,userRole);
-                user.setActive(isActive);
-                dao.get().add(user);
+                dao.get().add(new User(id, nameuser,password,userRole));
             }
-            con.close();
-        }catch (SQLException e){
+            connection.close();
+        }catch (NamingException | SQLException e){
             System.out.println("экзепшн вычитивания юзеров из БД");
         }
         this.dao = dao;
     }
-    public void addUser(ComboPooledDataSource cpds, String login, String password, String role){
-        Statement statement = null;
-        Connection con=doConnection(cpds);
-        String insertUser = "INSERT INTO allusers" + "( name, password, role, is_active) " + "VALUES" + "('"+login+"', '"+password+"', '"+role+"', 'true')";
-        try {
-            statement = con.createStatement();
-            statement.executeUpdate(insertUser);
-            System.out.println("----------юзер вставлен");
-            con.close();
-        }catch (SQLException e){
-            System.out.println("экзепшн добавления юзера в БД");
-        }
-    }
-    public AtomicReference<UserDAO> getDao(ComboPooledDataSource cpds) {
-        setDao(cpds);
+    public AtomicReference<UserDAO> getDao() {
+        setDao();
         return dao;
     }
     public AtomicReference<Menu> getMenu() {

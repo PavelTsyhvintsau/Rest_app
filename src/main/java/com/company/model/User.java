@@ -12,6 +12,7 @@ public class User {
     //private int tableNumber;
     private boolean isActive;
 
+
     public User() {
     }
 

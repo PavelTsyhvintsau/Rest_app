@@ -3,7 +3,6 @@ package com.company.servlets.servlet;
 import com.company.model.Restaurant;
 import com.company.model.User;
 import com.company.statistic.CookInfo;
-import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -35,7 +34,7 @@ public class CooksStatisticServlet extends HttpServlet {
             List<String> cooksArray=new ArrayList<>();
             cooksArray= Arrays.asList(cooks);
             if (cooksArray.contains("all")){
-                for (User user:restaurant.getDao((ComboPooledDataSource)req.getAttribute("cpds")).get().getStore()){
+                for (User user:restaurant.getDao().get().getStore()){
                     if(user.getRole().equals(User.ROLE.COOK))
                     infoCooksList.add(new CookInfo(user.getLogin(), start,end,restaurant.getOrdersBank()));
                 }

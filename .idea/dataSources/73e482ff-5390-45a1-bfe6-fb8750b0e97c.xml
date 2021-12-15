@@ -3,13 +3,13 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.18">
     <root id="1">
       <ServerVersion>14.1</ServerVersion>
-      <StartupTime>1638964657</StartupTime>
+      <StartupTime>1639570824</StartupTime>
     </root>
     <database id="2" parent="1" name="Restaurant">
       <ObjectId>24590</ObjectId>
       <Comment>база данных ресторана</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>946</IntrospectionStateNumber>
+      <IntrospectionStateNumber>953</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|24629|24619|4
 </Relations>
@@ -85,7 +85,7 @@
       <Comment>standard public schema</Comment>
       <StateNumber>527</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>947</IntrospectionStateNumber>
+      <IntrospectionStateNumber>954</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="21" parent="2" name="heap">

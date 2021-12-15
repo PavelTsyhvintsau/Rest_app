@@ -6,7 +6,6 @@ import com.company.model.User;
 import com.company.model.kitchen.Cook;
 import com.company.model.kitchen.Order;
 import com.company.util.AppUtils;
-import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -35,7 +34,7 @@ public class AuthFilter implements Filter {
         final String password = req.getParameter("password");
         @SuppressWarnings("unchecked")
         Restaurant restaurant= (Restaurant) req.getServletContext().getAttribute("restaurant");
-        final AtomicReference<UserDAO> dao = restaurant.getDao((ComboPooledDataSource)req.getAttribute("cpds"));
+        final AtomicReference<UserDAO> dao = restaurant.getDao();
         final HttpSession session = req.getSession();
         //Logged user.
         if (nonNull(session) &&
@@ -67,6 +66,7 @@ public class AuthFilter implements Filter {
        user.setPassword((String) req.getSession().getAttribute("password"));
        user.setRole(role);
        user.setLogin((String)req.getSession().getAttribute("login"));
+       System.out.println("now do move to menu AuthFilt ---- create user for session"+ user.getLogin());
        AppUtils.setSessionUserParam(req.getSession(),role,user.getLogin(),user);
         if (role.equals(User.ROLE.ADMIN)) {
             req.getRequestDispatcher("/WEB-INF/view/admin_menu.jsp").forward(req, res);
