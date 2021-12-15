@@ -25,41 +25,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d799b732-0c63-4290-884f-ebdf9fea81a0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/REST4_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/REST4_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/model/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/model/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/ContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/ContextListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/filter/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/filter/AuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AdminAddRemoveServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AdminAddRemoveServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/CooksStatisticServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/CooksStatisticServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DeleteUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DeleteUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/UpdateUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/UpdateUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/WaiterStatisticServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/WaiterStatisticServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/META-INF/context.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Restaurant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/ContextListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/ContextListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/filter/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/filter/AuthFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AdminAddRemoveServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AdminAddRemoveServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/CooksStatisticServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/CooksStatisticServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DeleteUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DeleteUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UpdateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UpdateUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/WaiterStatisticServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/WaiterStatisticServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/Restaurant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/ContextListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/ContextListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/filter/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/filter/AuthFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AdminAddRemoveServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AdminAddRemoveServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/CooksStatisticServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/CooksStatisticServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DeleteUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DeleteUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UpdateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UpdateUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/WaiterStatisticServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/WaiterStatisticServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -364,7 +330,7 @@
       <workItem from="1639340921556" duration="15273000" />
       <workItem from="1639512864257" duration="13894000" />
       <workItem from="1639567243782" duration="1528000" />
-      <workItem from="1639572450243" duration="1144000" />
+      <workItem from="1639572450243" duration="1846000" />
     </task>
     <servers />
   </component>
