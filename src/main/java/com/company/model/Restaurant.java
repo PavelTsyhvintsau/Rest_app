@@ -37,7 +37,7 @@ public class Restaurant {
             connection = ds.getConnection();
             statement = connection.createStatement();
             System.out.println("создано statement");
-            String selectTableSQL = "SELECT name, role, password, id FROM ALLUSERS";
+            String selectTableSQL = "SELECT name, role, password, id, is_active FROM ALLUSERS";
             System.out.println("строка");
             ResultSet rs=statement.executeQuery(selectTableSQL);
             System.out.println("вычитан сет");
@@ -46,8 +46,15 @@ public class Restaurant {
                 String role=rs.getString("role");
                 int id=rs.getInt("id");
                 String password=rs.getString("password");
+                String active=rs.getString("is_active");
                 User.ROLE userRole=User.ROLE.valueOf(role);
-                dao.get().add(new User(id, nameuser,password,userRole));
+                User user=new User(id, nameuser,password,userRole);
+                if ("t".equals(active)){
+                    user.setActive(true);
+                }else {
+                    user.setActive(false);
+                }
+                dao.get().add(user);
             }
             connection.close();
         }catch (NamingException | SQLException e){
