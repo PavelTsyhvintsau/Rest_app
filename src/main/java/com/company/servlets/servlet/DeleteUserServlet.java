@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -30,18 +32,33 @@ public class DeleteUserServlet extends HttpServlet {
             throws ServletException, IOException {
 
         req.setCharacterEncoding("UTF-8");
-        List<User> list= null;
-
-            list = restaurant.getDao().get().getStore();
-
-        if (Utils.idIsNumber(req)) {
-            for (int i = 0; i < list.size(); i++) {
-                if (list.get(i).getId() == Integer.parseInt(req.getParameter("id"))) {
-                    list.remove(i);
+        int id=Integer.parseInt(req.getParameter("id"));
+        String deleteTableSQL = "DELETE FROM allusers WHERE id = "+id;
+        Statement statement = null;
+        Connection connection=null;
+        try {
+            connection=restaurant.getConnection();
+            statement=connection.createStatement();
+            statement.execute(deleteTableSQL);;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally {
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
                 }
             }
-
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
         }
+
 
         resp.sendRedirect(req.getContextPath()+"/updateUsers" );
     }

@@ -34,7 +34,6 @@ public class AddUserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
         req.setCharacterEncoding("UTF-8");
-        System.out.println("-----начинаю добавку юзера");
         if (Utils.requestIsValid(req)) {
             final String login = req.getParameter("login");
             final String password = req.getParameter("password");
@@ -47,12 +46,9 @@ public class AddUserServlet extends HttpServlet {
             try {
                 connection=restaurant.getConnection();
                 statement=connection.createStatement();
-                System.out.println("-----начинаю добавку юзера/есть коннект    строка="+insertTableSQL);
                 statement.executeUpdate(insertTableSQL);
-                System.out.println("-----начинаю добавку юзера/есть вставка");
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
-                System.out.println("-----екзепшн добавки юзера");
             }finally {
                 if (statement != null) {
                     try {
