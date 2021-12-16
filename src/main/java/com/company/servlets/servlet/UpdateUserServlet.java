@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -37,7 +38,7 @@ public class UpdateUserServlet extends HttpServlet {
         final String role=req.getParameter("role");
         final String isActive=req.getParameter("active");
 
-        final User user = restaurant.getDao().get().getById(Integer.valueOf(id));
+        User user = restaurant.getDao().get().getById(Integer.valueOf(id));
         user.setLogin(login);
         user.setPassword(password);
         user.setRole(User.ROLE.valueOf(role));
@@ -58,16 +59,14 @@ public class UpdateUserServlet extends HttpServlet {
         Map<Integer, User> users= new HashMap<>();
         for (User element:restaurant.getDao().get().getStore()){
             users.put(element.getId(),element);
-        }
-
         if (Utils.idUserIsInvalid(id, users)) {
             resp.sendRedirect(req.getContextPath() + "/updateUsers");
             return;
-        }
-
+            }
         final User user =users.get(Integer.parseInt(id));
         req.setAttribute("user", user);
-        req.setAttribute("dao", restaurant.getDao().get());
-        req.getRequestDispatcher("/WEB-INF/view/update_user.jsp").forward(req, resp);
+            req.setAttribute("dao", restaurant.getDao().get());
+            req.getRequestDispatcher("/WEB-INF/view/update_user.jsp").forward(req, resp);
+        }
     }
 }

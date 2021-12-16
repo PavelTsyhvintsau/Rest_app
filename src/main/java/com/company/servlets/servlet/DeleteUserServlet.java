@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -29,7 +30,10 @@ public class DeleteUserServlet extends HttpServlet {
             throws ServletException, IOException {
 
         req.setCharacterEncoding("UTF-8");
-        List<User> list=restaurant.getDao().get().getStore();
+        List<User> list= null;
+
+            list = restaurant.getDao().get().getStore();
+
         if (Utils.idIsNumber(req)) {
             for (int i = 0; i < list.size(); i++) {
                 if (list.get(i).getId() == Integer.parseInt(req.getParameter("id"))) {

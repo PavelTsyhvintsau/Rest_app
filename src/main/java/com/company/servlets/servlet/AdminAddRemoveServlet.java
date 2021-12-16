@@ -8,13 +8,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class AdminAddRemoveServlet extends HttpServlet {
     private Restaurant restaurant;
     @Override
     public void init() throws ServletException {
-
         final Object restaurant = getServletContext().getAttribute("restaurant");
         if (restaurant == null) {
             throw new IllegalStateException("You're restaurant does not initialize! )))))");
@@ -22,14 +22,9 @@ public class AdminAddRemoveServlet extends HttpServlet {
             this.restaurant = (Restaurant) getServletContext().getAttribute("restaurant");
         }
     }
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("dao", restaurant.getDao().get());
-
         req.getRequestDispatcher("/WEB-INF/view/admin_add_remove_users.jsp").forward(req, resp);
-
-
-
     }
 }

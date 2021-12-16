@@ -20,21 +20,27 @@ public class Restaurant {
     private AtomicReference<Menu> menu;
     private LinkedBlockingQueue<Order> queueOrders;
     private ArrayList<Order> ordersBank;
-
-    public void setDao() {
-        AtomicReference<UserDAO> dao = new AtomicReference<>(new UserDAO());
-        for (User.ROLE e: User.ROLE.values()){
-            dao.get().getRoleList().add(e.toString());
-        }
+    public Connection getConnection(){
         InitialContext initContext= null;
         Connection connection=null;
-        Statement statement = null;
         try {
             initContext = new InitialContext();
             System.out.println("создан initContext");
             DataSource ds = (DataSource) initContext.lookup("java:comp/env/jdbc/appname");
             System.out.println("создано DataSource");
             connection = ds.getConnection();
+        }catch (SQLException | NamingException throwables) {
+            throwables.printStackTrace();
+        }
+        return connection;
+    }
+    public void setDao(){
+        AtomicReference<UserDAO> dao = new AtomicReference<>(new UserDAO());
+        InitialContext initContext= null;
+        Connection connection=null;
+        Statement statement = null;
+        try {
+            connection = getConnection();
             statement = connection.createStatement();
             System.out.println("создано statement");
             String selectTableSQL = "SELECT name, role, password, id, is_active FROM ALLUSERS";
@@ -57,12 +63,30 @@ public class Restaurant {
                 dao.get().add(user);
             }
             connection.close();
-        }catch (NamingException | SQLException e){
+        }catch (SQLException e){
             System.out.println("экзепшн вычитивания юзеров из БД");
+        } finally {
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+        for (User.ROLE e: User.ROLE.values()){
+            dao.get().getRoleList().add(e.toString());
         }
         this.dao = dao;
     }
-    public AtomicReference<UserDAO> getDao() {
+    public AtomicReference<UserDAO> getDao(){
         setDao();
         return dao;
     }

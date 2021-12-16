@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.*;
 
 import static java.util.Comparator.comparing;
@@ -35,8 +36,7 @@ public class CooksStatisticServlet extends HttpServlet {
             cooksArray= Arrays.asList(cooks);
             if (cooksArray.contains("all")){
                 for (User user:restaurant.getDao().get().getStore()){
-                    if(user.getRole().equals(User.ROLE.COOK))
-                    infoCooksList.add(new CookInfo(user.getLogin(), start,end,restaurant.getOrdersBank()));
+                    if(user.getRole().equals(User.ROLE.COOK)) infoCooksList.add(new CookInfo(user.getLogin(), start,end,restaurant.getOrdersBank()));
                 }
             }else{
                 for (String cookName:cooks){

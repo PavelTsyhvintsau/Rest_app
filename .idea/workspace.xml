@@ -27,9 +27,30 @@
     <list default="true" id="d799b732-0c63-4290-884f-ebdf9fea81a0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/model/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/model/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/filter/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/filter/AuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AdminAddRemoveServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AdminAddRemoveServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/CooksStatisticServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/CooksStatisticServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DeleteUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DeleteUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/UpdateUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/UpdateUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/WaiterStatisticServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/WaiterStatisticServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Restaurant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/filter/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/filter/AuthFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AdminAddRemoveServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AdminAddRemoveServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/CooksStatisticServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/CooksStatisticServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DeleteUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DeleteUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UpdateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UpdateUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/WaiterStatisticServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/WaiterStatisticServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/Restaurant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/filter/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/filter/AuthFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AdminAddRemoveServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AdminAddRemoveServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/CooksStatisticServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/CooksStatisticServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DeleteUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DeleteUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UpdateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UpdateUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/WaiterStatisticServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/WaiterStatisticServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -404,7 +425,7 @@
       <workItem from="1638998360356" duration="7672000" />
       <workItem from="1639083819697" duration="2149000" />
       <workItem from="1639163433776" duration="10948000" />
-      <workItem from="1639596045650" duration="3111000" />
+      <workItem from="1639596045650" duration="9824000" />
     </task>
     <servers />
   </component>
@@ -500,58 +521,58 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="802" y="395" key="DetectedRootsChooserDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1637782528600" />
-    <state x="337" y="294" key="FileChooserDialogImpl" timestamp="1639079959617">
+    <state x="337" y="294" key="FileChooserDialogImpl" timestamp="1639649746343">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="337" y="294" key="FileChooserDialogImpl/0.0.1858.1080@0.0.1858.1080" timestamp="1639079959617" />
-    <state width="1534" height="210" key="GridCell.Tab.0.bottom" timestamp="1639648071021">
+    <state x="337" y="294" key="FileChooserDialogImpl/0.0.1858.1080@0.0.1858.1080" timestamp="1639649746343" />
+    <state width="1534" height="210" key="GridCell.Tab.0.bottom" timestamp="1639658898980">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1639648071021" />
-    <state width="1534" height="210" key="GridCell.Tab.0.center" timestamp="1639648071021">
+    <state width="1534" height="210" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1639658898980" />
+    <state width="1534" height="210" key="GridCell.Tab.0.center" timestamp="1639658898980">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1639648071021" />
-    <state width="1534" height="210" key="GridCell.Tab.0.left" timestamp="1639648071021">
+    <state width="1534" height="210" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1639658898980" />
+    <state width="1534" height="210" key="GridCell.Tab.0.left" timestamp="1639658898980">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1639648071021" />
-    <state width="1534" height="210" key="GridCell.Tab.0.right" timestamp="1639648071021">
+    <state width="1534" height="210" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1639658898980" />
+    <state width="1534" height="210" key="GridCell.Tab.0.right" timestamp="1639658898980">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1639648071021" />
-    <state width="1534" height="210" key="GridCell.Tab.1.bottom" timestamp="1639648070952">
+    <state width="1534" height="210" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1639658898980" />
+    <state width="1534" height="210" key="GridCell.Tab.1.bottom" timestamp="1639658898980">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1639648070952" />
-    <state width="1534" height="210" key="GridCell.Tab.1.center" timestamp="1639648070937">
+    <state width="1534" height="210" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1639658898980" />
+    <state width="1534" height="210" key="GridCell.Tab.1.center" timestamp="1639658898980">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1639648070937" />
-    <state width="1534" height="210" key="GridCell.Tab.1.left" timestamp="1639648070937">
+    <state width="1534" height="210" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1639658898980" />
+    <state width="1534" height="210" key="GridCell.Tab.1.left" timestamp="1639658898980">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1639648070937" />
-    <state width="1534" height="210" key="GridCell.Tab.1.right" timestamp="1639648070937">
+    <state width="1534" height="210" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1639658898980" />
+    <state width="1534" height="210" key="GridCell.Tab.1.right" timestamp="1639658898980">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1639648070937" />
-    <state width="1534" height="210" key="GridCell.Tab.2.bottom" timestamp="1639648070937">
+    <state width="1534" height="210" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1639658898980" />
+    <state width="1534" height="210" key="GridCell.Tab.2.bottom" timestamp="1639658898980">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1639648070937" />
-    <state width="1534" height="210" key="GridCell.Tab.2.center" timestamp="1639648070937">
+    <state width="1534" height="210" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1639658898980" />
+    <state width="1534" height="210" key="GridCell.Tab.2.center" timestamp="1639658898980">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1639648070937" />
-    <state width="1534" height="210" key="GridCell.Tab.2.left" timestamp="1639648070937">
+    <state width="1534" height="210" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1639658898980" />
+    <state width="1534" height="210" key="GridCell.Tab.2.left" timestamp="1639658898980">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1639648070937" />
-    <state width="1534" height="210" key="GridCell.Tab.2.right" timestamp="1639648070937">
+    <state width="1534" height="210" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1639658898980" />
+    <state width="1534" height="210" key="GridCell.Tab.2.right" timestamp="1639658898980">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1639648070937" />
+    <state width="1534" height="210" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1639658898980" />
     <state width="1534" height="178" key="GridCell.Tab.3.bottom" timestamp="1635105478483">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -831,7 +852,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/company/servlets/filter/AuthFilter.java</url>
-          <line>93</line>
+          <line>96</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
