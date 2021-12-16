@@ -58,8 +58,6 @@ public class DeleteUserServlet extends HttpServlet {
                 }
             }
         }
-
-
         resp.sendRedirect(req.getContextPath()+"/updateUsers" );
     }
 }
