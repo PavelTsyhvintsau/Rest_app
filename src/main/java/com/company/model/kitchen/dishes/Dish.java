@@ -69,13 +69,13 @@ public class Dish {
         this.dishType = dishType;
     }
 
-    public Dish(String dishName, int dishCookingTime, String dishImagePath, DishType dishType, int id) {
+    public Dish(String dishName, int dishCookingTime, String dishImagePath, DishType dishType, int id, int price) {
         this.dishName = dishName;
         this.dishCookingTime = dishCookingTime;
         this.dishImagePath = dishImagePath;
         this.dishType = dishType;
         this.id=id;
         this.active=false;
-        this.price=0;
+        this.price=price;
     }
 }

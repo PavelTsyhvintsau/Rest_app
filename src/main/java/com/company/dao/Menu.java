@@ -15,15 +15,6 @@ public class Menu {
     public List<Dish> getDishesList() {
         return dishesList;
     }
-    public Dish getDishById(int id){
-        Dish result=new Dish();
-        result.setId(-1);
-        for (Dish dish:dishesList){
-            if (id==dish.getId()){
-                result=dish;
-            }
-        }return result;
-    }
     public List<Dish> getMenuByType(DishType dishType){
         List<Dish> typeDishesList=new ArrayList<>();
         for (Dish dish:dishesList
@@ -32,11 +23,5 @@ public class Menu {
     }
     public boolean addDishToMenu(Dish dish){
         return dishesList.add(dish);
-    }
-    public boolean remooveDishFromMenu(Dish dish){
-        return dishesList.remove(dish);
-    }
-    public boolean contains (Dish dish){
-        return dishesList.contains(dish);
     }
 }

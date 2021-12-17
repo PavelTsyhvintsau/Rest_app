@@ -17,7 +17,6 @@ public class ActivateDishServlet extends HttpServlet {
     private Restaurant restaurant;
     @Override
     public void init() throws ServletException {
-
         final Object restaurant = getServletContext().getAttribute("restaurant");
         if (restaurant == null) {
             throw new IllegalStateException("You're restaurant does not initialize! )))))");
@@ -28,16 +27,10 @@ public class ActivateDishServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         boolean bool = false;
+        int id=Integer.parseInt(req.getParameter("id"));
         if(req.getParameter("act").equals("1"))bool=true;
         if(req.getParameter("act").equals("0"))bool=false;
-        List<Dish> list=restaurant.getMenu().getDishesList();
-        if (Utils.idIsNumber(req)) {
-            for (int i=0;i<list.size();i++){
-                if(list.get(i).getId()==Integer.parseInt(req.getParameter("id"))){
-                    list.get(i).setActive(bool);
-                }
-            }
-        }
+        restaurant.activateDish(id, bool);
         resp.sendRedirect(req.getContextPath()+"/dishes_menu_editor" );
     }
 }

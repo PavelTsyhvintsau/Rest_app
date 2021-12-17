@@ -201,7 +201,7 @@ public class Restaurant {
                 int dishCookingTime=rs.getInt("dish_cooking_time");
                 String active=rs.getString("active");
                 DishType dishType=DishType.valueOf(type);
-                Dish dish=new Dish(dishName,dishCookingTime,dishImagePath,dishType,id);
+                Dish dish=new Dish(dishName,dishCookingTime,dishImagePath,dishType,id,price);
                 if ("t".equals(active)){
                     dish.setActive(true);
                 }else {
@@ -232,6 +232,199 @@ public class Restaurant {
     public Menu getMenu() {
         setMenu();
         return menu;
+    }
+    public void updatePrice(int id, int price) {
+        InitialContext initContext= null;
+        Connection connection=null;
+        Statement statement = null;
+        String updateTableSQL = "UPDATE alldish SET price = '"+price+"' WHERE id = "+id;
+        try {
+            connection = getConnection();
+            statement = connection.createStatement();
+            System.out.println("создано statement");
+            statement.execute(updateTableSQL);;
+        }catch (SQLException e){
+            System.out.println("экзепшн обновления цены блюда");
+        } finally {
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+    }
+    public void activateDish(int id, boolean bool) {
+        InitialContext initContext= null;
+        Connection connection=null;
+        Statement statement = null;
+        String updateActive = "UPDATE alldish SET active = '"+bool+"' WHERE id = "+id;
+        try {
+            connection = getConnection();
+            statement = connection.createStatement();
+            System.out.println("создано statement");
+            statement.execute(updateActive);
+        }catch (SQLException e){
+            System.out.println("экзепшн активации блюда");
+        } finally {
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+    }
+    public void addDish(String dishName, String dishType, int dishCookingTime, String dishImagePath) {
+        String insertTableSQL = "INSERT INTO alldish"
+                + "( dish_name, dish_type, dish_cooking_time, dish_image_path, active) " + "VALUES"
+                + "('"+dishName+"','"+dishType+"','"+dishCookingTime+"','"+dishImagePath+"','true')";
+        Statement statement = null;
+        Connection connection=null;
+        try {
+            connection=getConnection();
+            statement=connection.createStatement();
+            statement.executeUpdate(insertTableSQL);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally {
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+    }
+    public void deleteDish(int id) {
+        String deleteTableSQL = "DELETE FROM alldish WHERE id = "+id;
+        Statement statement = null;
+        Connection connection=null;
+        try {
+            connection=getConnection();
+            statement=connection.createStatement();
+            statement.execute(deleteTableSQL);;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally {
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+    }
+    public void updateDish(String id, String name, String type, int cookingTime, String imagePath) {
+        InitialContext initContext= null;
+        Connection connection=null;
+        Statement statement = null;
+        String updateTableSQL = "UPDATE alldish SET dish_name = '"+name+"', dish_type = '"+type+"', dish_cooking_time = '"+cookingTime+"', dish_image_path = '"+imagePath+"' WHERE id = "+id;
+        try {
+            connection = getConnection();
+            statement = connection.createStatement();
+            System.out.println("создано statement");
+            statement.execute(updateTableSQL);;
+        }catch (SQLException e){
+            System.out.println("экзепшн обновления блюда");
+        } finally {
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+    }
+    public Dish getDish(int id) {
+        InitialContext initContext= null;
+        Connection connection=null;
+        Statement statement = null;
+        Dish dish=null;
+        try {
+            connection = getConnection();
+            statement = connection.createStatement();
+            System.out.println("создано statement");
+            String selectTableSQL = "SELECT id, dish_name, dish_type, dish_image_path, price, dish_cooking_time, active FROM alldish where id = "+id;
+            System.out.println("строка");
+            ResultSet rs=statement.executeQuery(selectTableSQL);
+            System.out.println("вычитан сет");
+            while (rs.next()&&rs.getInt("id")==id) {
+                String dishName=rs.getString("dish_name");
+                String type=rs.getString("dish_type");
+                String dishImagePath=rs.getString("dish_image_path");
+                int price=rs.getInt("price");
+                int dishCookingTime=rs.getInt("dish_cooking_time");
+                String active=rs.getString("active");
+                DishType dishType=DishType.valueOf(type);
+                dish=new Dish(dishName,dishCookingTime,dishImagePath,dishType,id,price);
+                if ("t".equals(active)){
+                    dish.setActive(true);
+                }else {
+                    dish.setActive(false);
+                }
+                menu.addDishToMenu(dish);
+            }
+            connection.close();
+        }catch (SQLException e){
+            System.out.println("экзепшн вычитивания юзеров из БД");
+        } finally {
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+        return dish;
     }
 
     public LinkedBlockingQueue<Order> getQueueOrders() {

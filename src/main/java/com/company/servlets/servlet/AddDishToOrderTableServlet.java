@@ -27,7 +27,7 @@ public class AddDishToOrderTableServlet extends HttpServlet {
         Order order=(Order) req.getSession().getAttribute("order");
 
         final String id = req.getParameter("id");
-        final Dish dish= restaurant.getMenu().getDishById(Integer.valueOf(id));
+        final Dish dish= restaurant.getDish(Integer.valueOf(id));
         final int pieces = Integer.parseInt(req.getParameter("pieces"));
         order.putDish(dish,pieces);
 

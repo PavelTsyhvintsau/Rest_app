@@ -31,24 +31,12 @@ public class UpdateDishServlet extends HttpServlet {
         final int cookingTime = Integer.parseInt(req.getParameter("cookingTime"));
         final String type=req.getParameter("type");
         final String imagePath=req.getParameter("imagePath");
-        final Dish dish= restaurant.getMenu().getDishById(Integer.valueOf(id));
-        dish.setDishName(name);
-        dish.setDishCookingTime(cookingTime);
-        dish.setDishType(DishType.valueOf(type));
-        dish.setDishImagePath(imagePath);
+        restaurant.updateDish(id,name,type,cookingTime,imagePath);
         resp.sendRedirect(req.getContextPath() + "/dishes_menu_editor");
     }
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        final String id = req.getParameter("id");
-        Map<Integer,Dish> dishes=new HashMap<>();
-        for (Dish element:restaurant.getMenu().getDishesList()){
-            dishes.put(element.getId(),element);
-        }
-        if (Utils.idDishIsInvalid(id, dishes)) {
-            resp.sendRedirect(req.getContextPath() + "/dishes_menu_editor");
-            return;
-        }
-        final Dish dish =dishes.get(Integer.parseInt(id));
+        final int id =Integer.valueOf(req.getParameter("id"));
+        Dish dish =restaurant.getDish(id);
         req.setAttribute("dish", dish);
         req.setAttribute("menu", restaurant.getMenu());
         req.getRequestDispatcher("/WEB-INF/view/update_dish.jsp").forward(req, resp);

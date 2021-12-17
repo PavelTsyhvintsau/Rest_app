@@ -26,22 +26,18 @@ public class DishesPriceCorrectingServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        System.out.println("do get DishPriceCorrecting in work");
         req.setAttribute("menu", restaurant.getMenu());
         req.getRequestDispatcher("/WEB-INF/view/dishes_price_update.jsp").forward(req, resp);
     }
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
-        final String id = req.getParameter("id");
+        int id = Integer.parseInt(req.getParameter("id"));
         String newPriceStr=req.getParameter("dishNewPrise");
-        System.out.println("id="+id+"; newprice="+newPriceStr);
         if(newPriceStr.equals("")){
             newPriceStr="0";}
         int newPrice = 0;
             newPrice = Integer.parseInt(newPriceStr);
-            final Dish dish= restaurant.getMenu().getDishById(Integer.valueOf(id));
-            dish.setPrice(newPrice);
-        System.out.println("цена установлена: "+newPrice);
+            restaurant.updatePrice(id, newPrice);
         resp.sendRedirect(req.getContextPath() + "/update_dish_price");
     }
 }

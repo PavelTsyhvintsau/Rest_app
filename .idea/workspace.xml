@@ -25,31 +25,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d799b732-0c63-4290-884f-ebdf9fea81a0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/73e482ff-5390-45a1-bfe6-fb8750b0e97c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/73e482ff-5390-45a1-bfe6-fb8750b0e97c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/73e482ff-5390-45a1-bfe6-fb8750b0e97c/storage_v2/_src_/database/Restaurant.XScsDQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/73e482ff-5390-45a1-bfe6-fb8750b0e97c/storage_v2/_src_/database/Restaurant.XScsDQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/dao/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/model/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/model/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/ContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/ContextListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/model/kitchen/dishes/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/model/kitchen/dishes/Dish.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/ActivateDishServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/ActivateDishServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddDishServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddDishServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddDishToOrderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddDishToOrderServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddDishToOrderTableServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddDishToOrderTableServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/CreateTabletTableServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/CreateTabletTableServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DeleteDishServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DeleteDishServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DeleteUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DeleteUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DishesMenuEditorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DishesMenuEditorServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DishesPriceCorrectingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/DishesPriceCorrectingServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/MenuForOrderingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/MenuForOrderingServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/TableMenuServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/TableMenuServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/UpdateDishServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/UpdateDishServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/UpdateUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/UpdateUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/createTableServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/createTableServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DeleteUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DeleteUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UpdateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UpdateUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DeleteUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DeleteUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UpdateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UpdateUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Restaurant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/kitchen/dishes/Dish.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/kitchen/dishes/Dish.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/ActivateDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/ActivateDishServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddDishServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DeleteDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DeleteDishServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DishesPriceCorrectingServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/DishesPriceCorrectingServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UpdateDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UpdateDishServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/createTableServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/createTableServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/Restaurant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/kitchen/dishes/Dish.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/kitchen/dishes/Dish.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/ActivateDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/ActivateDishServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddDishServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DeleteDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DeleteDishServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DishesPriceCorrectingServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/DishesPriceCorrectingServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UpdateDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UpdateDishServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/createTableServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/createTableServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +101,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../exemples_forDeleting/db_work" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -427,6 +431,8 @@
       <workItem from="1639163433776" duration="10948000" />
       <workItem from="1639596045650" duration="15046000" />
       <workItem from="1639729078814" duration="7831000" />
+      <workItem from="1639746402597" duration="8323000" />
+      <workItem from="1639768721762" duration="897000" />
     </task>
     <servers />
   </component>
@@ -522,54 +528,54 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="337" y="294" key="FileChooserDialogImpl/0.0.1858.1080@0.0.1858.1080" timestamp="1639649746343" />
-    <state width="1534" height="210" key="GridCell.Tab.0.bottom" timestamp="1639739001635">
+    <state width="1534" height="207" key="GridCell.Tab.0.bottom" timestamp="1639768706407">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1639739001635" />
-    <state width="1534" height="210" key="GridCell.Tab.0.center" timestamp="1639739001635">
+    <state width="1534" height="207" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1639768706407" />
+    <state width="1534" height="207" key="GridCell.Tab.0.center" timestamp="1639768706407">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1639739001635" />
-    <state width="1534" height="210" key="GridCell.Tab.0.left" timestamp="1639739001635">
+    <state width="1534" height="207" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1639768706407" />
+    <state width="1534" height="207" key="GridCell.Tab.0.left" timestamp="1639768706407">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1639739001635" />
-    <state width="1534" height="210" key="GridCell.Tab.0.right" timestamp="1639739001635">
+    <state width="1534" height="207" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1639768706407" />
+    <state width="1534" height="207" key="GridCell.Tab.0.right" timestamp="1639768706407">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1639739001635" />
-    <state width="1534" height="210" key="GridCell.Tab.1.bottom" timestamp="1639739001635">
+    <state width="1534" height="207" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1639768706407" />
+    <state width="1534" height="207" key="GridCell.Tab.1.bottom" timestamp="1639768706407">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1639739001635" />
-    <state width="1534" height="210" key="GridCell.Tab.1.center" timestamp="1639739001635">
+    <state width="1534" height="207" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1639768706407" />
+    <state width="1534" height="207" key="GridCell.Tab.1.center" timestamp="1639768706407">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1639739001635" />
-    <state width="1534" height="210" key="GridCell.Tab.1.left" timestamp="1639739001635">
+    <state width="1534" height="207" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1639768706407" />
+    <state width="1534" height="207" key="GridCell.Tab.1.left" timestamp="1639768706407">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1639739001635" />
-    <state width="1534" height="210" key="GridCell.Tab.1.right" timestamp="1639739001635">
+    <state width="1534" height="207" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1639768706407" />
+    <state width="1534" height="207" key="GridCell.Tab.1.right" timestamp="1639768706407">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1639739001635" />
-    <state width="1534" height="210" key="GridCell.Tab.2.bottom" timestamp="1639739001635">
+    <state width="1534" height="207" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1639768706407" />
+    <state width="1534" height="207" key="GridCell.Tab.2.bottom" timestamp="1639768706407">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1639739001635" />
-    <state width="1534" height="210" key="GridCell.Tab.2.center" timestamp="1639739001635">
+    <state width="1534" height="207" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1639768706407" />
+    <state width="1534" height="207" key="GridCell.Tab.2.center" timestamp="1639768706407">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1639739001635" />
-    <state width="1534" height="210" key="GridCell.Tab.2.left" timestamp="1639739001635">
+    <state width="1534" height="207" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1639768706407" />
+    <state width="1534" height="207" key="GridCell.Tab.2.left" timestamp="1639768706407">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1639739001635" />
-    <state width="1534" height="210" key="GridCell.Tab.2.right" timestamp="1639739001635">
+    <state width="1534" height="207" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1639768706407" />
+    <state width="1534" height="207" key="GridCell.Tab.2.right" timestamp="1639768706407">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="210" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1639739001635" />
+    <state width="1534" height="207" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1639768706407" />
     <state width="1534" height="178" key="GridCell.Tab.3.bottom" timestamp="1635105478483">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
