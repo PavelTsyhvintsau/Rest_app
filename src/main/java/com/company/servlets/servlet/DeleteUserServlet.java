@@ -33,31 +33,7 @@ public class DeleteUserServlet extends HttpServlet {
 
         req.setCharacterEncoding("UTF-8");
         int id=Integer.parseInt(req.getParameter("id"));
-        String deleteTableSQL = "DELETE FROM allusers WHERE id = "+id;
-        Statement statement = null;
-        Connection connection=null;
-        try {
-            connection=restaurant.getConnection();
-            statement=connection.createStatement();
-            statement.execute(deleteTableSQL);;
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
-                }
-            }
-        }
+        restaurant.deleteUser(id);
         resp.sendRedirect(req.getContextPath()+"/updateUsers" );
     }
 }

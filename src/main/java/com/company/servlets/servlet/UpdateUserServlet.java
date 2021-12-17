@@ -38,32 +38,7 @@ public class UpdateUserServlet extends HttpServlet {
         final String password = req.getParameter("password");
         final String role=req.getParameter("role");
         String isActive=req.getParameter("active");
-        if(isActive==null)isActive="false";
-        String updateTableSQL = "UPDATE allusers SET name = '"+login+"', password = '"+password+"',role = '"+role+"', is_active = '"+isActive+"' WHERE id = "+id;
-        Statement statement = null;
-        Connection connection=null;
-        try {
-            connection=restaurant.getConnection();
-            statement=connection.createStatement();
-            statement.execute(updateTableSQL);;
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
-                }
-            }
-        }
+        restaurant.updateUser(login,password,role,isActive,id);
         resp.sendRedirect(req.getContextPath() + "/updateUsers");
     }
 

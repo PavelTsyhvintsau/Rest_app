@@ -41,14 +41,14 @@ public class AddDishServlet extends HttpServlet {
         final String dishImagePath = req.getParameter("dishImagePath");
 
         List<String>listNames=new ArrayList<>();
-        for(Dish elem:this.restaurant.getMenu().get().getDishesList()){
+        for(Dish elem:this.restaurant.getMenu().getDishesList()){
             listNames.add(elem.getDishName());
         }
         if(listNames.contains(dishName)){
             resp.sendRedirect(req.getContextPath()+"/dishes_menu_editor");
         }else {
             final int id = this.id.getAndIncrement();
-            restaurant.getMenu().get().addDishToMenu(new Dish(dishName,dishCookingTime,dishImagePath,dishType,id));
+            restaurant.getMenu().addDishToMenu(new Dish(dishName,dishCookingTime,dishImagePath,dishType,id));
             resp.sendRedirect(req.getContextPath()+"/dishes_menu_editor");
         }
 

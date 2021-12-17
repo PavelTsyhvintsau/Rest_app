@@ -16,13 +16,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.concurrent.atomic.AtomicInteger;
 
-
 public class AddUserServlet extends HttpServlet {
     private AtomicInteger id;
     private Restaurant restaurant;
     @Override
     public void init() throws ServletException {
-
         final Object restaurant = getServletContext().getAttribute("restaurant");
         if (restaurant == null) {
             throw new IllegalStateException("You're restaurant does not initialize! )))))");
@@ -30,7 +28,6 @@ public class AddUserServlet extends HttpServlet {
             this.restaurant = (Restaurant) getServletContext().getAttribute("restaurant");
         }
     }
-
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
         req.setCharacterEncoding("UTF-8");
@@ -38,35 +35,8 @@ public class AddUserServlet extends HttpServlet {
             final String login = req.getParameter("login");
             final String password = req.getParameter("password");
             final String role= req.getParameter("role");
-            String insertTableSQL = "INSERT INTO allusers"
-                    + "( name, password, role, is_active) " + "VALUES"
-                    + "('"+login+"','"+password+"','"+role+"','true')";
-            Statement statement = null;
-            Connection connection=null;
-            try {
-                connection=restaurant.getConnection();
-                statement=connection.createStatement();
-                statement.executeUpdate(insertTableSQL);
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }finally {
-                if (statement != null) {
-                    try {
-                        statement.close();
-                    } catch (SQLException throwables) {
-                        throwables.printStackTrace();
-                    }
-                }
-                if (connection != null) {
-                    try {
-                        connection.close();
-                    } catch (SQLException throwables) {
-                        throwables.printStackTrace();
-                    }
-                }
-            }
+            restaurant.addUser(login,password,role);
         }
-
         resp.sendRedirect(req.getContextPath()+"/updateUsers");
     }
 }

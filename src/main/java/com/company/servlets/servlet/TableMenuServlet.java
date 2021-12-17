@@ -31,25 +31,16 @@ public class TableMenuServlet extends HttpServlet {
             this.restaurant = (Restaurant) getServletContext().getAttribute("restaurant");
         }
 
-        menuHot= (ArrayList<Dish>) this.restaurant.getMenu().get().getMenuByType(DishType.HOT);
-        menuSalat= (ArrayList<Dish>) this.restaurant.getMenu().get().getMenuByType(DishType.SALAD);
-        menuSoup= (ArrayList<Dish>) this.restaurant.getMenu().get().getMenuByType(DishType.SOUP);
-        menuGarnish= (ArrayList<Dish>) this.restaurant.getMenu().get().getMenuByType(DishType.GARNISH);
-        menuHotDrink= (ArrayList<Dish>) this.restaurant.getMenu().get().getMenuByType(DishType.HOT_DRINK);
-        menuCouldDrink= (ArrayList<Dish>) this.restaurant.getMenu().get().getMenuByType(DishType.COULD_DRINK);
+        menuHot= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.HOT);
+        menuSalat= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.SALAD);
+        menuSoup= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.SOUP);
+        menuGarnish= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.GARNISH);
+        menuHotDrink= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.HOT_DRINK);
+        menuCouldDrink= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.COULD_DRINK);
     }
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
-        //User user=(User)req.getSession().getAttribute("user");
-        //user.setRole(User.ROLE.TABLET_TABLE);
-        //eq.getSession().setAttribute("user", user);
-        //Order order=(Order)req.getSession().getAttribute("order");
-        //final String tableNumberStr = req.getParameter("tableNumber");
-        //final int tableNumber = Integer.parseInt(tableNumberStr);
-        //order.setTableNumber(tableNumber);
-        //req.getSession().setAttribute("order",order);
-        //req.setAttribute("orderTable", order);
-        req.setAttribute("menu", this.restaurant.getMenu().get());
+        req.setAttribute("menu", this.restaurant.getMenu());
         req.setAttribute("queueOrders", restaurant.getQueueOrders());
         req.setAttribute("menuHot", menuHot);
         req.setAttribute("menuSalat", menuSalat);
@@ -58,7 +49,6 @@ public class TableMenuServlet extends HttpServlet {
         req.setAttribute("menuHotDrink", menuHotDrink);
         req.setAttribute("menuCouldDrink", menuCouldDrink);
         req.setAttribute("restaurant",restaurant);
-
         req.getRequestDispatcher("/WEB-INF/view/table_menu.jsp").forward(req, resp);
 
     }

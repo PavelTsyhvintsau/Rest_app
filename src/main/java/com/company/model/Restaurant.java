@@ -3,6 +3,8 @@ package com.company.model;
 import com.company.dao.Menu;
 import com.company.dao.UserDAO;
 import com.company.model.kitchen.Order;
+import com.company.model.kitchen.dishes.Dish;
+import com.company.model.kitchen.dishes.DishType;
 
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -17,7 +19,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class Restaurant {
     private AtomicReference<UserDAO> dao;
-    private AtomicReference<Menu> menu;
+    private Menu menu;
     private LinkedBlockingQueue<Order> queueOrders;
     private ArrayList<Order> ordersBank;
     public Connection getConnection(){
@@ -90,12 +92,148 @@ public class Restaurant {
         setDao();
         return dao;
     }
-    public AtomicReference<Menu> getMenu() {
+    public void deleteUser (int id){
+        String deleteTableSQL = "DELETE FROM allusers WHERE id = "+id;
+        Statement statement = null;
+        Connection connection=null;
+        try {
+            connection=getConnection();
+            statement=connection.createStatement();
+            statement.execute(deleteTableSQL);;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally {
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+    }
+    public void updateUser(String login,String password, String role, String isActive, int id){
+        if(isActive==null)isActive="false";
+        String updateTableSQL = "UPDATE allusers SET name = '"+login+"', password = '"+password+"',role = '"+role+"', is_active = '"+isActive+"' WHERE id = "+id;
+        Statement statement = null;
+        Connection connection=null;
+        try {
+            connection=getConnection();
+            statement=connection.createStatement();
+            statement.execute(updateTableSQL);;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally {
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+    }
+    public void addUser(String login, String password, String role){
+        String insertTableSQL = "INSERT INTO allusers"
+                + "( name, password, role, is_active) " + "VALUES"
+                + "('"+login+"','"+password+"','"+role+"','true')";
+        Statement statement = null;
+        Connection connection=null;
+        try {
+            connection=getConnection();
+            statement=connection.createStatement();
+            statement.executeUpdate(insertTableSQL);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally {
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+    }
+    public void setMenu() {
+        menu = new Menu();
+        for (DishType e : DishType.values()) {
+            menu.getDishTypeList().add(e.toString());
+        }
+        InitialContext initContext= null;
+        Connection connection=null;
+        Statement statement = null;
+        try {
+            connection = getConnection();
+            statement = connection.createStatement();
+            System.out.println("создано statement");
+            String selectTableSQL = "SELECT id, dish_name, dish_type, dish_image_path, price, dish_cooking_time, active FROM alldish";
+            System.out.println("строка");
+            ResultSet rs=statement.executeQuery(selectTableSQL);
+            System.out.println("вычитан сет");
+            while (rs.next()) {
+                String dishName=rs.getString("dish_name");
+                String type=rs.getString("dish_type");
+                String dishImagePath=rs.getString("dish_image_path");
+                int id=rs.getInt("id");
+                int price=rs.getInt("price");
+                int dishCookingTime=rs.getInt("dish_cooking_time");
+                String active=rs.getString("active");
+                DishType dishType=DishType.valueOf(type);
+                Dish dish=new Dish(dishName,dishCookingTime,dishImagePath,dishType,id);
+                if ("t".equals(active)){
+                    dish.setActive(true);
+                }else {
+                    dish.setActive(false);
+                }
+                menu.addDishToMenu(dish);
+            }
+            connection.close();
+        }catch (SQLException e){
+            System.out.println("экзепшн вычитивания юзеров из БД");
+        } finally {
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+    }
+    public Menu getMenu() {
+        setMenu();
         return menu;
     }
-    public void setMenu(AtomicReference<Menu> menu) {
-        this.menu = menu;
-    }
+
     public LinkedBlockingQueue<Order> getQueueOrders() {
         return queueOrders;
     }

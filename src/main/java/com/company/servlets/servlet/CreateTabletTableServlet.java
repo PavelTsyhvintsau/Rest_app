@@ -31,12 +31,12 @@ public class CreateTabletTableServlet extends HttpServlet {
             this.restaurant = (Restaurant) getServletContext().getAttribute("restaurant");
         }
 
-        menuHot= (ArrayList<Dish>) this.restaurant.getMenu().get().getMenuByType(DishType.HOT);
-        menuSalat= (ArrayList<Dish>) this.restaurant.getMenu().get().getMenuByType(DishType.SALAD);
-        menuSoup= (ArrayList<Dish>) this.restaurant.getMenu().get().getMenuByType(DishType.SOUP);
-        menuGarnish= (ArrayList<Dish>) this.restaurant.getMenu().get().getMenuByType(DishType.GARNISH);
-        menuHotDrink= (ArrayList<Dish>) this.restaurant.getMenu().get().getMenuByType(DishType.HOT_DRINK);
-        menuCouldDrink= (ArrayList<Dish>) this.restaurant.getMenu().get().getMenuByType(DishType.COULD_DRINK);
+        menuHot= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.HOT);
+        menuSalat= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.SALAD);
+        menuSoup= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.SOUP);
+        menuGarnish= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.GARNISH);
+        menuHotDrink= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.HOT_DRINK);
+        menuCouldDrink= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.COULD_DRINK);
     }
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
@@ -50,7 +50,7 @@ public class CreateTabletTableServlet extends HttpServlet {
         req.getSession().setAttribute("order",order);
         req.getSession().setAttribute("role", User.ROLE.TABLET_TABLE);
         req.setAttribute("orderTable", order);
-        req.setAttribute("menu", this.restaurant.getMenu().get());
+        req.setAttribute("menu", this.restaurant.getMenu());
         req.setAttribute("queueOrders", restaurant.getQueueOrders());
         req.setAttribute("menuHot", menuHot);
         req.setAttribute("menuSalat", menuSalat);

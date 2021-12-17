@@ -32,7 +32,7 @@ public class ContextListener implements ServletContextListener {
      */
     private Restaurant restaurant;
     private AtomicReference<UserDAO> dao;
-    private AtomicReference<Menu> menu;
+    private Menu menu;
     private LinkedBlockingQueue<Order> queueOrders;
    private ArrayList<Order> ordersBank;
     @Override
@@ -52,7 +52,7 @@ public class ContextListener implements ServletContextListener {
         dao.get().add(new User(4, "Waiter", "1", User.ROLE.WAITER));
         dao.get().add(new User(5, "Table1", "1", User.ROLE.WAITER));*/
 
-        menu=new AtomicReference<>(new Menu());
+        /*menu=new AtomicReference<>(new Menu());
         for (DishType e:DishType.values()){
             menu.get().getDishTypeList().add(e.toString());
         }
@@ -63,11 +63,11 @@ public class ContextListener implements ServletContextListener {
         for(Dish e:menu.get().getDishesList()){
             e.setPrice((int)(Math.random()*500));
             e.setActive(true);
-        }
+        }*/
+        restaurant.setMenu();
         servletContext.setAttribute("menu", menu);
         restaurant.setDao();
         servletContext.setAttribute("dao", dao);
-        restaurant.setMenu(this.menu);
         restaurant.setQueueOrders(this.queueOrders);
         restaurant.setOrdersBank(this.ordersBank);
         servletContext.setAttribute("restaurant", restaurant);

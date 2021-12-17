@@ -9,16 +9,12 @@ import java.util.List;
 public class Menu {
     private List<Dish> dishesList=new ArrayList<>();
     private final List<String> dishTypeList = new ArrayList<>();
-
-
     public List<String> getDishTypeList(){
             return dishTypeList;
     }
-
     public List<Dish> getDishesList() {
         return dishesList;
     }
-
     public Dish getDishById(int id){
         Dish result=new Dish();
         result.setId(-1);
@@ -28,7 +24,6 @@ public class Menu {
             }
         }return result;
     }
-
     public List<Dish> getMenuByType(DishType dishType){
         List<Dish> typeDishesList=new ArrayList<>();
         for (Dish dish:dishesList

@@ -16,7 +16,6 @@ public class DishesPriceCorrectingServlet extends HttpServlet {
     private Restaurant restaurant;
     @Override
     public void init() throws ServletException {
-
         final Object restaurant = getServletContext().getAttribute("restaurant");
         if (restaurant == null) {
             throw new IllegalStateException("You're restaurant does not initialize! )))))");
@@ -28,24 +27,20 @@ public class DishesPriceCorrectingServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         System.out.println("do get DishPriceCorrecting in work");
-        req.setAttribute("menu", restaurant.getMenu().get());
+        req.setAttribute("menu", restaurant.getMenu());
         req.getRequestDispatcher("/WEB-INF/view/dishes_price_update.jsp").forward(req, resp);
     }
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("do post DishPriceCorrecting in work");
         req.setCharacterEncoding("UTF-8");
         final String id = req.getParameter("id");
         String newPriceStr=req.getParameter("dishNewPrise");
         System.out.println("id="+id+"; newprice="+newPriceStr);
         if(newPriceStr.equals("")){
             newPriceStr="0";}
-
         int newPrice = 0;
-
             newPrice = Integer.parseInt(newPriceStr);
-            final Dish dish= restaurant.getMenu().get().getDishById(Integer.valueOf(id));
+            final Dish dish= restaurant.getMenu().getDishById(Integer.valueOf(id));
             dish.setPrice(newPrice);
-
         System.out.println("цена установлена: "+newPrice);
         resp.sendRedirect(req.getContextPath() + "/update_dish_price");
     }

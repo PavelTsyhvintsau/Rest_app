@@ -3,15 +3,16 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.18">
     <root id="1">
       <ServerVersion>14.1</ServerVersion>
-      <StartupTime>1639570824</StartupTime>
+      <StartupTime>1639724852</StartupTime>
     </root>
     <database id="2" parent="1" name="Restaurant">
       <ObjectId>24590</ObjectId>
       <Comment>база данных ресторана</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>953</IntrospectionStateNumber>
+      <IntrospectionStateNumber>989</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|24629|24619|4
+sequence|table|24700|24694|7
 </Relations>
     </database>
     <database id="3" parent="1" name="postgres">
@@ -85,7 +86,7 @@
       <Comment>standard public schema</Comment>
       <StateNumber>527</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>954</IntrospectionStateNumber>
+      <IntrospectionStateNumber>990</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="21" parent="2" name="heap">
@@ -163,38 +164,123 @@
       <CacheSize>1</CacheSize>
       <DataType>integer|0s</DataType>
     </sequence>
-    <table id="34" parent="20" name="allusers">
+    <sequence id="34" parent="20" name="alldish_id_seq">
+      <ObjectId>24700</ObjectId>
+      <StateNumber>971</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer|0s</DataType>
+    </sequence>
+    <table id="35" parent="20" name="alldish">
+      <ObjectId>24694</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>971</StateNumber>
+    </table>
+    <table id="36" parent="20" name="allusers">
       <ObjectId>24619</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>945</StateNumber>
     </table>
-    <table id="35" parent="20" name="exemp">
+    <table id="37" parent="20" name="exemp">
       <ObjectId>24641</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>852</StateNumber>
     </table>
-    <column id="36" parent="34" name="name">
+    <column id="38" parent="35" name="dish_name">
+      <Position>1</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>978</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="39" parent="35" name="dish_cooking_time">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>981</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="40" parent="35" name="dish_image_path">
+      <Position>3</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>984</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="41" parent="35" name="dish_type">
+      <Position>4</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>988</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="42" parent="35" name="active">
+      <Position>5</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>966</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="43" parent="35" name="price">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>966</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="44" parent="35" name="id">
+      <Position>7</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>971</StateNumber>
+      <DefaultExpression>nextval(&apos;alldish_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="45" parent="35" name="alldish_dishname_uindex">
+      <ObjectId>24699</ObjectId>
+      <StateNumber>971</StateNumber>
+      <ColNames>dish_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="46" parent="35" name="alldish_id_uindex">
+      <ObjectId>24708</ObjectId>
+      <StateNumber>972</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="47" parent="35" name="alldish_pk">
+      <ObjectId>24709</ObjectId>
+      <StateNumber>973</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="48" parent="35" name="alldish_pk">
+      <ObjectId>24710</ObjectId>
+      <StateNumber>973</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>alldish_pk</UnderlyingIndexName>
+    </key>
+    <column id="49" parent="36" name="name">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>886</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="37" parent="34" name="password">
+    <column id="50" parent="36" name="password">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>920</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="38" parent="34" name="role">
+    <column id="51" parent="36" name="role">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>892</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="39" parent="34" name="id">
+    <column id="52" parent="36" name="id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -202,63 +288,63 @@
       <DefaultExpression>nextval(&apos;&quot;allUsers_id_seq&quot;&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="40" parent="34" name="is_active">
+    <column id="53" parent="36" name="is_active">
       <Position>5</Position>
       <DataType>boolean|0s</DataType>
       <StateNumber>944</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="41" parent="34" name="cook_id">
+    <column id="54" parent="36" name="cook_id">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>945</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="42" parent="34" name="allusers_name_uindex">
+    <index id="55" parent="36" name="allusers_name_uindex">
       <ObjectId>24658</ObjectId>
       <StateNumber>892</StateNumber>
       <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="43" parent="34" name="allusers_id_uindex">
+    <index id="56" parent="36" name="allusers_id_uindex">
       <ObjectId>24635</ObjectId>
       <StateNumber>892</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="44" parent="34" name="allusers_pk">
+    <index id="57" parent="36" name="allusers_pk">
       <ObjectId>24636</ObjectId>
       <StateNumber>892</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="45" parent="34" name="allusers_pk">
+    <key id="58" parent="36" name="allusers_pk">
       <ObjectId>24637</ObjectId>
       <StateNumber>834</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>allusers_pk</UnderlyingIndexName>
     </key>
-    <column id="46" parent="35" name="id">
+    <column id="59" parent="37" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>852</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="47" parent="35" name="username">
+    <column id="60" parent="37" name="username">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>852</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="48" parent="35" name="parole">
+    <column id="61" parent="37" name="parole">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>852</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="49" parent="35" name="role">
+    <column id="62" parent="37" name="role">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>852</StateNumber>

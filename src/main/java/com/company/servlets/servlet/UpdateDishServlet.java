@@ -17,7 +17,6 @@ public class UpdateDishServlet extends HttpServlet {
     private Restaurant restaurant;
     @Override
     public void init() throws ServletException {
-
         final Object restaurant = getServletContext().getAttribute("restaurant");
         if (restaurant == null) {
             throw new IllegalStateException("You're restaurant does not initialize! )))))");
@@ -25,7 +24,6 @@ public class UpdateDishServlet extends HttpServlet {
             this.restaurant = (Restaurant) getServletContext().getAttribute("restaurant");
         }
     }
-
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         final String id = req.getParameter("id");
@@ -33,19 +31,17 @@ public class UpdateDishServlet extends HttpServlet {
         final int cookingTime = Integer.parseInt(req.getParameter("cookingTime"));
         final String type=req.getParameter("type");
         final String imagePath=req.getParameter("imagePath");
-
-        final Dish dish= restaurant.getMenu().get().getDishById(Integer.valueOf(id));
+        final Dish dish= restaurant.getMenu().getDishById(Integer.valueOf(id));
         dish.setDishName(name);
         dish.setDishCookingTime(cookingTime);
         dish.setDishType(DishType.valueOf(type));
         dish.setDishImagePath(imagePath);
         resp.sendRedirect(req.getContextPath() + "/dishes_menu_editor");
     }
-
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         final String id = req.getParameter("id");
         Map<Integer,Dish> dishes=new HashMap<>();
-        for (Dish element:restaurant.getMenu().get().getDishesList()){
+        for (Dish element:restaurant.getMenu().getDishesList()){
             dishes.put(element.getId(),element);
         }
         if (Utils.idDishIsInvalid(id, dishes)) {
@@ -54,8 +50,7 @@ public class UpdateDishServlet extends HttpServlet {
         }
         final Dish dish =dishes.get(Integer.parseInt(id));
         req.setAttribute("dish", dish);
-        req.setAttribute("menu", restaurant.getMenu().get());
-        req.getRequestDispatcher("/WEB-INF/view/update_dish.jsp")
-                .forward(req, resp);
+        req.setAttribute("menu", restaurant.getMenu());
+        req.getRequestDispatcher("/WEB-INF/view/update_dish.jsp").forward(req, resp);
     }
 }

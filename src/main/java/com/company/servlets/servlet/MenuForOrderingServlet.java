@@ -32,19 +32,19 @@ public class MenuForOrderingServlet extends HttpServlet {
             System.out.println("меню созданного ресторана  "+this.restaurant.getMenu());
         }
 
-        menuHot= (ArrayList<Dish>) this.restaurant.getMenu().get().getMenuByType(DishType.HOT);
-        menuSalat= (ArrayList<Dish>) this.restaurant.getMenu().get().getMenuByType(DishType.SALAD);
-        menuSoup= (ArrayList<Dish>) this.restaurant.getMenu().get().getMenuByType(DishType.SOUP);
-        menuGarnish= (ArrayList<Dish>) this.restaurant.getMenu().get().getMenuByType(DishType.GARNISH);
-        menuHotDrink= (ArrayList<Dish>) this.restaurant.getMenu().get().getMenuByType(DishType.HOT_DRINK);
-        menuCouldDrink= (ArrayList<Dish>) this.restaurant.getMenu().get().getMenuByType(DishType.COULD_DRINK);
+        menuHot= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.HOT);
+        menuSalat= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.SALAD);
+        menuSoup= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.SOUP);
+        menuGarnish= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.GARNISH);
+        menuHotDrink= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.HOT_DRINK);
+        menuCouldDrink= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.COULD_DRINK);
 
     }
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
-        req.setAttribute("menu", this.restaurant.getMenu().get());
+        req.setAttribute("menu", this.restaurant.getMenu());
         req.setAttribute("queueOrders", restaurant.getQueueOrders());
         req.setAttribute("menuHot", menuHot);
         req.setAttribute("menuSalat", menuSalat);

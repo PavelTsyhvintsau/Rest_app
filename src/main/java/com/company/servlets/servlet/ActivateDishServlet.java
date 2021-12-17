@@ -30,7 +30,7 @@ public class ActivateDishServlet extends HttpServlet {
         boolean bool = false;
         if(req.getParameter("act").equals("1"))bool=true;
         if(req.getParameter("act").equals("0"))bool=false;
-        List<Dish> list=restaurant.getMenu().get().getDishesList();
+        List<Dish> list=restaurant.getMenu().getDishesList();
         if (Utils.idIsNumber(req)) {
             for (int i=0;i<list.size();i++){
                 if(list.get(i).getId()==Integer.parseInt(req.getParameter("id"))){

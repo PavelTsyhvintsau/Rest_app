@@ -15,7 +15,6 @@ public class DishesMenuEditorServlet extends HttpServlet {
     private Restaurant restaurant;
     @Override
     public void init() throws ServletException {
-
         final Object restaurant = getServletContext().getAttribute("restaurant");
         if (restaurant == null) {
             throw new IllegalStateException("You're restaurant does not initialize! )))))");
@@ -26,10 +25,8 @@ public class DishesMenuEditorServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        req.setAttribute("menu", restaurant.getMenu().get());
-
+        req.setAttribute("menu", restaurant.getMenu());
         req.getRequestDispatcher("/WEB-INF/view/dishes_menu_editor.jsp").forward(req, resp);
-
     }
 }
 
