@@ -18,8 +18,6 @@ public class SecurityFilter implements Filter {
     }
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
             throws IOException, ServletException {
-
-        System.out.println("now do filter SecurityFilt");
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) resp;
         String servletPath = request.getServletPath();
@@ -29,11 +27,9 @@ public class SecurityFilter implements Filter {
             chain.doFilter(request, response);
             return;
         }
-
         if (role != null) {
             // User Name
             String userName = AppUtils.getSessionLogin(request.getSession());
-            System.out.println("doFilter:1) username ----"+userName+". 2) role session--- "+request.getSession().getAttribute("role"));
         }
         // Страницы требующие входа в систему.
         if (SecurityConfig.getUrlPatternsAllSecurityPages().contains(servletPath)) {
@@ -45,7 +41,6 @@ public class SecurityFilter implements Filter {
                 request.getServletContext().getRequestDispatcher("/");
                 return;
             }
-
             // Проверить пользователь имеет действительную роль или нет?
             boolean hasPermission=SecurityConfig.getUrlPatternsForRole(role.toString()).contains(servletPath);
                 System.out.println("haPermission "+hasPermission);
@@ -56,9 +51,7 @@ public class SecurityFilter implements Filter {
             }
             System.out.println("права пользователя не подтверждены"+hasPermission);
             RequestDispatcher dispatcher= request.getServletContext().getRequestDispatcher("/WEB-INF/view/access_denied.jsp");
-
             dispatcher.forward(request, response);
-
         }
         if (!SecurityConfig.getUrlPatternsAllSecurityPages().contains(servletPath)) {
             req.setAttribute("path", servletPath);
@@ -67,7 +60,6 @@ public class SecurityFilter implements Filter {
         }
     }
     public void init(FilterConfig fConfig) throws ServletException {
-
     }
     public boolean isLoggable(LogRecord record) {
         return false;

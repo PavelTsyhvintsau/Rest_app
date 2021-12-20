@@ -9,6 +9,7 @@ public class Dish {
     private boolean active;
     private int price;
 
+
     public Dish() {}
 
     public int isActive() {
@@ -77,5 +78,28 @@ public class Dish {
         this.id=id;
         this.active=false;
         this.price=price;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+
+        Dish guest = (Dish) obj;
+        return id == guest.id
+                && (dishName == guest.getDishName()
+                || (dishName != null &&dishName.equals(guest.getDishName())))        && (dishType == guest.getDishType()
+                || (dishType != null && dishType .equals(guest.getDishType())
+        ));
+    }
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((dishName == null) ? 0 : dishName.hashCode());             result = prime * result + id; result = prime * result +
+                ((dishType == null) ? 0 : dishType.hashCode()); return result;
     }
 }

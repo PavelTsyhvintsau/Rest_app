@@ -9,11 +9,10 @@ import com.company.model.kitchen.dishes.DishType;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,9 +26,7 @@ public class Restaurant {
         Connection connection=null;
         try {
             initContext = new InitialContext();
-            System.out.println("создан initContext");
             DataSource ds = (DataSource) initContext.lookup("java:comp/env/jdbc/appname");
-            System.out.println("создано DataSource");
             connection = ds.getConnection();
         }catch (SQLException | NamingException throwables) {
             throwables.printStackTrace();
@@ -44,11 +41,8 @@ public class Restaurant {
         try {
             connection = getConnection();
             statement = connection.createStatement();
-            System.out.println("создано statement");
             String selectTableSQL = "SELECT name, role, password, id, is_active FROM ALLUSERS";
-            System.out.println("строка");
             ResultSet rs=statement.executeQuery(selectTableSQL);
-            System.out.println("вычитан сет");
             while (rs.next()) {
                 String nameuser=rs.getString("name");
                 String role=rs.getString("role");
@@ -174,8 +168,7 @@ public class Restaurant {
                     throwables.printStackTrace();
                 }
             }
-        }
-    }
+        }    }
     public void setMenu() {
         menu = new Menu();
         for (DishType e : DishType.values()) {
@@ -187,11 +180,8 @@ public class Restaurant {
         try {
             connection = getConnection();
             statement = connection.createStatement();
-            System.out.println("создано statement");
             String selectTableSQL = "SELECT id, dish_name, dish_type, dish_image_path, price, dish_cooking_time, active FROM alldish";
-            System.out.println("строка");
             ResultSet rs=statement.executeQuery(selectTableSQL);
-            System.out.println("вычитан сет");
             while (rs.next()) {
                 String dishName=rs.getString("dish_name");
                 String type=rs.getString("dish_type");
@@ -227,8 +217,7 @@ public class Restaurant {
                     throwables.printStackTrace();
                 }
             }
-        }
-    }
+        }    }
     public Menu getMenu() {
         setMenu();
         return menu;
@@ -241,7 +230,6 @@ public class Restaurant {
         try {
             connection = getConnection();
             statement = connection.createStatement();
-            System.out.println("создано statement");
             statement.execute(updateTableSQL);;
         }catch (SQLException e){
             System.out.println("экзепшн обновления цены блюда");
@@ -270,7 +258,6 @@ public class Restaurant {
         try {
             connection = getConnection();
             statement = connection.createStatement();
-            System.out.println("создано statement");
             statement.execute(updateActive);
         }catch (SQLException e){
             System.out.println("экзепшн активации блюда");
@@ -355,7 +342,6 @@ public class Restaurant {
         try {
             connection = getConnection();
             statement = connection.createStatement();
-            System.out.println("создано statement");
             statement.execute(updateTableSQL);;
         }catch (SQLException e){
             System.out.println("экзепшн обновления блюда");
@@ -384,7 +370,6 @@ public class Restaurant {
         try {
             connection = getConnection();
             statement = connection.createStatement();
-            System.out.println("создано statement");
             String selectTableSQL = "SELECT id, dish_name, dish_type, dish_image_path, price, dish_cooking_time, active FROM alldish where id = "+id;
             System.out.println("строка");
             ResultSet rs=statement.executeQuery(selectTableSQL);
@@ -427,34 +412,34 @@ public class Restaurant {
         return dish;
     }
     public void putOrderToDdAndINQUEUE(Order order){
-        Statement statement = null;
         Connection connection=null;
         try {
             order.setOrderstatus(Order.Orderstatus.INQUEUE);
-            String insertTableSQL = "INSERT INTO orders"
-                    + "( user_id, table_number, create_time, status) " + "VALUES"
-                    + "('"+order.getUser().getId()+"','"+order.getTableNumber()+"','"+new java.sql.Timestamp(order.getOrderCreateTime())+"','"+order.getOrderstatus().toString()+"')";
+            order.setOrderCreateTime(System.currentTimeMillis());
+            String insTableSQL ="INSERT INTO orders (user_id ,table_number,create_time,status,dishes ) VALUES (?,?,?,?,?)";
+
             connection=getConnection();
-            statement=connection.createStatement();
-            statement.executeUpdate(insertTableSQL);
+            Array masSQL=connection.createArrayOf("integer",order.getDishesArray());
+            PreparedStatement preparedStatement =connection.prepareStatement(insTableSQL);
+            preparedStatement.setInt(1, order.getUser().getId());
+            preparedStatement.setInt(2,order.getTableNumber());
+            preparedStatement.setTimestamp(3,new java.sql.Timestamp(order.getOrderCreateTime()));
+            preparedStatement.setString(4,order.getOrderstatus().toString());
+            preparedStatement.setArray(5,masSQL);
+
+            preparedStatement.executeUpdate();
+            System.out.println("========= заказ в очереди готово");
+
         } catch (SQLException throwables) {
             System.out.println("===ошибка помещения заказа в бд/очередь");
             throwables.printStackTrace();
         }finally {
-            if (statement != null) {
                 try {
-                    statement.close();
+                    if (connection != null)connection.close();
+
                 } catch (SQLException throwables) {
                     throwables.printStackTrace();
                 }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
-                }
-            }
         }
     }
 

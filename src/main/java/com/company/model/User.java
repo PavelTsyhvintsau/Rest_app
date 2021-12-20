@@ -1,6 +1,7 @@
 package com.company.model;
 
 import com.company.model.kitchen.Cook;
+import com.company.model.kitchen.dishes.Dish;
 
 public class User {
 
@@ -67,5 +68,27 @@ public class User {
         MANAGER,
         WAITER,
         UNKNOWN
+    }
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+
+        User guest = (User) obj;
+        return id == guest.id
+                && (login == guest.getLogin()
+                || (login != null &&login.equals(guest.getLogin())))        && (password == guest.getPassword()
+                || (password != null && password .equals(guest.getPassword())
+        ));
+    }
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = id;
+        result = prime * result + ((login == null) ? 0 : login.hashCode());             result = prime * result + id; result = prime * result +
+                ((password == null) ? 0 : password.hashCode()); return result;
     }
 }

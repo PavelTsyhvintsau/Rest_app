@@ -9,7 +9,7 @@
       <ObjectId>24590</ObjectId>
       <Comment>база данных ресторана</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1059</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1074</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|24629|24619|4
 sequence|table|24700|24694|7
@@ -87,7 +87,7 @@ sequence|table|24711|24712|1
       <Comment>standard public schema</Comment>
       <StateNumber>527</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1060</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1075</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="21" parent="2" name="heap">
@@ -199,7 +199,7 @@ sequence|table|24711|24712|1
     <table id="39" parent="20" name="orders">
       <ObjectId>24712</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1051</StateNumber>
+      <StateNumber>1073</StateNumber>
     </table>
     <column id="40" parent="36" name="dish_name">
       <Position>1</Position>
@@ -421,20 +421,26 @@ sequence|table|24711|24712|1
       <DefaultExpression>false</DefaultExpression>
       <TypeId>16</TypeId>
     </column>
-    <index id="74" parent="39" name="orders_id_uindex">
+    <column id="74" parent="39" name="dishes">
+      <Position>10</Position>
+      <DataType>integer[]|0s</DataType>
+      <StateNumber>1073</StateNumber>
+      <TypeId>1007</TypeId>
+    </column>
+    <index id="75" parent="39" name="orders_id_uindex">
       <ObjectId>24716</ObjectId>
       <StateNumber>1006</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="75" parent="39" name="orders_pk">
+    <index id="76" parent="39" name="orders_pk">
       <ObjectId>24717</ObjectId>
       <StateNumber>1007</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="76" parent="39" name="orders_pk">
+    <key id="77" parent="39" name="orders_pk">
       <ObjectId>24718</ObjectId>
       <StateNumber>1007</StateNumber>
       <ColNames>id</ColNames>

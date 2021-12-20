@@ -1,6 +1,8 @@
 package com.company.servlets.servlet;
 
 import java.io.IOException;
+import java.util.Enumeration;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -21,9 +23,13 @@ public class LogoutServlet extends HttpServlet {
 
         final HttpSession session = req.getSession();
 System.out.println("do /logout servlet");
-        session.removeAttribute("password");
-        session.removeAttribute("login");
-        session.removeAttribute("role");
+        Enumeration<String> atr=session.getAttributeNames();
+        while (atr.hasMoreElements()){
+            String padam=atr.nextElement();
+            System.out.println(padam);
+            session.removeAttribute(padam);
+        }
+
 
         resp.sendRedirect(req.getContextPath() + "/");
     }

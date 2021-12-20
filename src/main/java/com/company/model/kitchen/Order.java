@@ -198,5 +198,15 @@ public class Order {
          return getTotalCookingTime()/60;
     }
     protected void initDishes(){dishes=new HashMap<>();}
+    public Integer[][] getDishesArray(){
+        Integer [][] array=new Integer[2][dishes.size()];
+        int i=0;
+        for(Map.Entry<Dish,Integer> e:dishes.entrySet()){
+            array[0][i]=e.getKey().getId();
+            array[1][i]=e.getValue();
+            i++;
+        }
+        return array;
 
+    }
 }
