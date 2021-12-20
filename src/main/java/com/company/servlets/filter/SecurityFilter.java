@@ -22,11 +22,7 @@ public class SecurityFilter implements Filter {
         System.out.println("now do filter SecurityFilt");
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) resp;
-
         String servletPath = request.getServletPath();
-        System.out.println("!!!!doFilter servletPath ----"+servletPath);
-        // Информация пользователя сохранена в Session
-        // (После успешного входа в систему).
         User.ROLE role = AppUtils.getSessionRole(((HttpServletRequest) req).getSession());
 
         if (servletPath.equals("/login")) {
@@ -41,7 +37,6 @@ public class SecurityFilter implements Filter {
         }
         // Страницы требующие входа в систему.
         if (SecurityConfig.getUrlPatternsAllSecurityPages().contains(servletPath)) {
-
             // Если пользователь еще не вошел в систему,
             // Redirect (перенаправить) к странице логина.
             if (role == null) {

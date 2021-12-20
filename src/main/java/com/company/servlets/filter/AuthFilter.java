@@ -44,16 +44,17 @@ public class AuthFilter implements Filter {
                 nonNull(session.getAttribute("login")) &&
                 nonNull(session.getAttribute("password"))) {
             final User.ROLE role = (User.ROLE) session.getAttribute("role");
-            moveToMenu(req, res, role);
+            final int id=dao.get().getUserID((String) session.getAttribute("login"),(String) session.getAttribute("password"));
+            moveToMenu(req, res, role,id);
         } else if (dao.get().userIsExist(login, password)) {
             System.out.println("не знаем роль и ищем(doFiltr AuthFiltr)");
             final User.ROLE role = dao.get().getRoleByLoginPassword(login, password);
             req.getSession().setAttribute("password", password);
             req.getSession().setAttribute("login", login);
             req.getSession().setAttribute("role", role);
-            moveToMenu(req, res, role);
+            moveToMenu(req, res, role,dao.get().getUserID((String) session.getAttribute("login"),(String) session.getAttribute("password")));
         } else {
-            moveToMenu(req, res, User.ROLE.UNKNOWN);
+            moveToMenu(req, res, User.ROLE.UNKNOWN,-3);
         }
     }
     /**
@@ -63,14 +64,16 @@ public class AuthFilter implements Filter {
      */
     private void moveToMenu(final HttpServletRequest req,
                             final HttpServletResponse res,
-                            final User.ROLE role)
+                            final User.ROLE role,
+                            final int id)
             throws ServletException, IOException {
        User user=new User();
        user.setPassword((String) req.getSession().getAttribute("password"));
        user.setRole(role);
        user.setLogin((String)req.getSession().getAttribute("login"));
+       user.setId(id);
        System.out.println("now do move to menu AuthFilt ---- create user for session"+ user.getLogin());
-       AppUtils.setSessionUserParam(req.getSession(),role,user.getLogin(),user);
+       AppUtils.setSessionUserParam(req.getSession(),role,user.getLogin(),user, id);
         if (role.equals(User.ROLE.ADMIN)) {
             req.getRequestDispatcher("/WEB-INF/view/admin_menu.jsp").forward(req, res);
         } else if (role.equals(User.ROLE.COOK)) {
@@ -90,7 +93,7 @@ public class AuthFilter implements Filter {
         req.getSession().setAttribute("user", user);
         req.getRequestDispatcher("/WEB-INF/view/table_menu.jsp").forward(req, res);
     } else {
-            AppUtils.setSessionUserParam(req.getSession(), User.ROLE.UNKNOWN,null,user);
+            AppUtils.setSessionUserParam(req.getSession(), User.ROLE.UNKNOWN,null,user,-2);
             req.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(req, res);
         }
     }

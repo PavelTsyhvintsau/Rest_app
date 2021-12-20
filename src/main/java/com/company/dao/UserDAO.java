@@ -8,6 +8,7 @@ import java.util.List;
 public class UserDAO {
     private final List<User> store = new ArrayList<>();
     private final List<String> roleList = new ArrayList<>();
+
     public List<String> getRoleList() {
         return roleList;
     }
@@ -55,5 +56,14 @@ public class UserDAO {
                 break;
             }
         }return result;
+    }
+    public int getUserID(final String login, final String password){
+        User result = new User();
+        result.setId(-1);
+        for (User user : store) {
+            if (user.getLogin().equals(login) && user.getPassword().equals(password)) {
+                result = user;
+            }
+        }return result.getId();
     }
 }

@@ -426,6 +426,38 @@ public class Restaurant {
         }
         return dish;
     }
+    public void putOrderToDdAndINQUEUE(Order order){
+        Statement statement = null;
+        Connection connection=null;
+        try {
+            order.setOrderstatus(Order.Orderstatus.INQUEUE);
+            String insertTableSQL = "INSERT INTO orders"
+                    + "( user_id, table_number, create_time, status) " + "VALUES"
+                    + "('"+order.getUser().getId()+"','"+order.getTableNumber()+"','"+new java.sql.Timestamp(order.getOrderCreateTime())+"','"+order.getOrderstatus().toString()+"')";
+            connection=getConnection();
+            statement=connection.createStatement();
+            statement.executeUpdate(insertTableSQL);
+        } catch (SQLException throwables) {
+            System.out.println("===ошибка помещения заказа в бд/очередь");
+            throwables.printStackTrace();
+        }finally {
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+    }
+
 
     public LinkedBlockingQueue<Order> getQueueOrders() {
         return queueOrders;

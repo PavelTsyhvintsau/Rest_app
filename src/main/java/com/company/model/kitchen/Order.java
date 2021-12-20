@@ -35,7 +35,10 @@ public class Order {
         this.user = user;
         initDishes();
     }
-     public long getOrderStartCookingTimeLong(){
+
+    public long getOrderCreateTime() { return orderCreateTime; }
+    public long getOrderStartCookingTime() { return orderStartCookingTime; }
+    public long getOrderStartCookingTimeLong(){
         return orderStartCookingTime;
     }
     public long getOrderEndCookingTimeLong(){
@@ -44,10 +47,9 @@ public class Order {
     public Orderstatus getOrderstatus() {
         return orderstatus;
     }
-        public long getOrderToClientTime() {
+    public long getOrderToClientTime() {
         return orderToClientTime;
     }
-
     public String getOrderToClientTimeString() {
         if (orderToClientTime==0){return "---";}
         else {
@@ -62,7 +64,7 @@ public class Order {
     public boolean isDone() {
         return done;
     }
-    public String getOrderCreateTime(){
+    public String getOrderCreateTimeString(){
         String result=new String();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         Date date =new Date(orderCreateTime);
@@ -70,7 +72,6 @@ public class Order {
         this.orderStartCreateString =result;
         return result;
     }
-
     public Cook getCook() {return cook; }
     public void setCook(Cook cook) { this.cook = cook; }
     public void setDone(boolean done) {
@@ -88,7 +89,7 @@ public class Order {
     public void setOrderStartCookingTime(long orderStartCookingTime) {
         this.orderStartCookingTime = orderStartCookingTime;
     }
-    public String getOrderStartCookingTime(){
+    public String getOrderStartCookingTimeString(){
         if(orderStartCookingTime==0){
             return "---";
         }else{
@@ -109,8 +110,7 @@ public class Order {
         String time = String.format("%02d:%02d:%02d", hour, minute, second);
         return time;
     }
-
-    public String getTimeFactCooking(){
+    public String getTimeFactCookingString(){
         String result=new String();
         if(orderStartCookingTime==0|| orderEndCookingTime==0){
             result="---";
@@ -138,11 +138,8 @@ public class Order {
         this.orderEndCookingTimeString =result;
         return result;}
     }
-
     public int getTableNumber() {return tableNumber; }
-
     public void setTableNumber(int tableNumber) { this.tableNumber = tableNumber;}
-
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     public HashMap<Dish, Integer> getDishes() {
@@ -163,11 +160,9 @@ public class Order {
     public int getPennyPrice(){
         return getTotalPrice()%100;
     }
-
     public User getUser() {
         return user;
     }
-
     public void putDish(Dish dish,Integer count){
         if (dishes==null){
             dishes=new HashMap<>();

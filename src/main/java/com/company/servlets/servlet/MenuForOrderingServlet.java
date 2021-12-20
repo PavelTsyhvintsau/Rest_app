@@ -31,19 +31,16 @@ public class MenuForOrderingServlet extends HttpServlet {
             this.restaurant = (Restaurant) getServletContext().getAttribute("restaurant");
             System.out.println("меню созданного ресторана  "+this.restaurant.getMenu());
         }
-
         menuHot= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.HOT);
         menuSalat= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.SALAD);
         menuSoup= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.SOUP);
         menuGarnish= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.GARNISH);
         menuHotDrink= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.HOT_DRINK);
         menuCouldDrink= (ArrayList<Dish>) this.restaurant.getMenu().getMenuByType(DishType.COULD_DRINK);
-
     }
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-
         req.setAttribute("menu", this.restaurant.getMenu());
         req.setAttribute("queueOrders", restaurant.getQueueOrders());
         req.setAttribute("menuHot", menuHot);
@@ -52,7 +49,6 @@ public class MenuForOrderingServlet extends HttpServlet {
         req.setAttribute("menuGarnish", menuGarnish);
         req.setAttribute("menuHotDrink", menuHotDrink);
         req.setAttribute("menuCouldDrink", menuCouldDrink);
-
         req.getRequestDispatcher("/WEB-INF/view/menu_for_ordering.jsp").forward(req, resp);
 
     }
