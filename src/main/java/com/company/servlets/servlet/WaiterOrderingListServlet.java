@@ -20,7 +20,10 @@ public class WaiterOrderingListServlet extends HttpServlet {
         }
     }
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("ordersBank", restaurant.getOrdersBank());
+        System.out.println("===waiter ordering servlet start");
+        req.setAttribute("ordersBank", restaurant.getOrdersListFromDd());
+        System.out.println("====waiter ordering servlet orderBank установлен");
         req.getRequestDispatcher("/WEB-INF/view/waiter_orders_list.jsp").forward(req, resp);
+        System.out.println("====waiter ordering servlet перенаправлен");
     }
 }

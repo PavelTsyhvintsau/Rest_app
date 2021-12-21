@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class CookInfo {
+    private int ID;
     private String name;
     private String dateStart;
     private String dateEnd;
@@ -27,7 +28,7 @@ public class CookInfo {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         for (Order order : dataList) {
             try {
-            if (order.getCook().getName().equals(name) &&
+            if (order.getCookID()==ID &&
                     order.getOrderstatus().equals(Order.Orderstatus.ISCLOSE)) {
                 Date startDate=new Date(order.getOrderStartCookingTimeLong());
                 Date endDate=new Date(format.parse(dateEnd).getTime()+(long)(24*60*60*1000));

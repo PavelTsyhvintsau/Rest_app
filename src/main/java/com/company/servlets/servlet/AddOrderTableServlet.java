@@ -32,7 +32,7 @@ public class AddOrderTableServlet extends HttpServlet {
         }else {
             restaurant.putOrderToDdAndINQUEUE(order);
             request.getSession().removeAttribute("order");
-            request.getSession().setAttribute("order",new Order((User)request.getSession().getAttribute("user")));
+            request.getSession().setAttribute("order",new Order(((User)request.getSession().getAttribute("user")).getId()));
             response.sendRedirect(request.getContextPath()+"/table_menu");
         }
     }

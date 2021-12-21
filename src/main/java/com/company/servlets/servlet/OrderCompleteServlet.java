@@ -24,7 +24,7 @@ public class OrderCompleteServlet extends HttpServlet {
     }
     protected void doPost ( HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
-        Cook cook=((User)req.getSession().getAttribute("user")).getCook();
+        /*Cook cook=((User)req.getSession().getAttribute("user")).getCook();
         Order order=cook.getCurrentOrder();
         cook.setCurrentOrder(null);
         for(Order e:restaurant.getOrdersBank()){
@@ -34,7 +34,7 @@ public class OrderCompleteServlet extends HttpServlet {
             }
         }
 
-        req.setAttribute("cook",cook);
+        req.setAttribute("cook",cook);*/
         resp.sendRedirect(req.getContextPath()+"/cooking_page" );
     }
 }

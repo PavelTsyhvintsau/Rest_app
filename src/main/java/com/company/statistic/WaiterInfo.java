@@ -27,7 +27,7 @@ public class  WaiterInfo {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         for (Order order : dataList) {
             try {
-                if (order.getUser().getLogin().equals(name) &&
+                if (//order.getCreatorID().equals(name) && нужно исправить
                         order.getOrderstatus().equals(Order.Orderstatus.ISCLOSE)) {
                     Date startDate=new Date(order.getOrderStartCookingTimeLong());
                     Date endDate=new Date(format.parse(dateEnd).getTime()+(long)(24*60*60*1000));

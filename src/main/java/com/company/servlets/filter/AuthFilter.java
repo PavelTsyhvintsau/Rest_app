@@ -78,17 +78,16 @@ public class AuthFilter implements Filter {
             req.getRequestDispatcher("/WEB-INF/view/admin_menu.jsp").forward(req, res);
         } else if (role.equals(User.ROLE.COOK)) {
             req.getSession().setAttribute("user", user);
-            user.setCook(new Cook(user.getLogin()));
             req.getRequestDispatcher("/WEB-INF/view/cook_menu.jsp").forward(req, res);
         } else if (role.equals(User.ROLE.WAITER)) {
             if (req.getSession().getAttribute("order")==null){
-                req.getSession().setAttribute("order",new Order(user));
+                req.getSession().setAttribute("order",new Order(id));
             }
             req.getSession().setAttribute("user", user);
             req.getRequestDispatcher("/WEB-INF/view/waiter_menu.jsp").forward(req, res);
         } else if (role.equals(User.ROLE.TABLET_TABLE)) {
         if (req.getSession().getAttribute("order")==null){
-            req.getSession().setAttribute("order",new Order(user));
+            req.getSession().setAttribute("order",new Order(id));
         }
         req.getSession().setAttribute("user", user);
         req.getRequestDispatcher("/WEB-INF/view/table_menu.jsp").forward(req, res);

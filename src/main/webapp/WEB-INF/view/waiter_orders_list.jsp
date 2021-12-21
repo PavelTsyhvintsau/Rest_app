@@ -26,7 +26,7 @@
     <div class="listOrder1">
         <h2> Список моих заказов в очереди ожидания</h2>
         <c:forEach var="order" items="${requestScope.ordersBank}">
-            <c:if test="${order.user.login == sessionScope.login && order.orderstatus eq 'INQUEUE' }" >
+            <c:if test="${order.creatorID == sessionScope.user.id && order.orderstatus eq 'INQUEUE' }" >
                 <%@include file="_order_shot.jsp" %>
             </c:if>
         </c:forEach>
@@ -34,15 +34,16 @@
     <div class="listOrder2">
         <h2> Список моих заказов готовятся</h2>
         <c:forEach var="order" items="${requestScope.ordersBank}">
-            <c:if test="${order.user.login == sessionScope.login && order.orderstatus eq 'INWORK'}" >
+            <c:if test="${order.creatorID == sessionScope.user.id && order.orderstatus eq 'INWORK'}" >
                 <%@include file="_order_shot.jsp" %>
+
             </c:if>
         </c:forEach>
     </div>
     <div class="listOrder3">
         <h2> Список моих заказов готовых для доставки:</h2>
         <c:forEach var="order" items="${requestScope.ordersBank}">
-            <c:if test="${order.user.login == sessionScope.login && order.orderstatus eq 'ISREADY'}" >
+            <c:if test="${order.creatorID == sessionScope.user.id && order.orderstatus eq 'ISREADY'}" >
                 <div style="border: 2px solid black; padding: 5px;">
                     <%@include file="_order_shot.jsp" %>
                     <form method="post" action="<c:url value='/order_to_bank'/>">

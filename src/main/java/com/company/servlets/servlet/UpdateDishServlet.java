@@ -1,17 +1,13 @@
 package com.company.servlets.servlet;
 
-import com.company.dao.Menu;
 import com.company.model.Restaurant;
 import com.company.model.kitchen.dishes.Dish;
-import com.company.model.kitchen.dishes.DishType;
-import com.company.util.Utils;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 public class UpdateDishServlet extends HttpServlet {
     private Restaurant restaurant;
@@ -36,7 +32,7 @@ public class UpdateDishServlet extends HttpServlet {
     }
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         final int id =Integer.valueOf(req.getParameter("id"));
-        Dish dish =restaurant.getDish(id);
+        Dish dish =restaurant.getDishFromDB(id);
         req.setAttribute("dish", dish);
         req.setAttribute("menu", restaurant.getMenu());
         req.getRequestDispatcher("/WEB-INF/view/update_dish.jsp").forward(req, resp);

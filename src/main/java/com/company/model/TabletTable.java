@@ -10,6 +10,6 @@ public class TabletTable {
     public TabletTable(User user, int table) {
         this.user = user;
         this.table = table;
-        order=new Order(user);
+        order=new Order(user.getId());
     }
 }

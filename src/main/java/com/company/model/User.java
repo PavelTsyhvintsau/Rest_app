@@ -10,9 +10,9 @@ public class User {
     private String password;
     private ROLE role;
     private Cook cook;
-    //private int tableNumber;
-    private boolean isActive;
 
+    private boolean isActive;
+    private int currentOrder;
 
     public User() {
     }
@@ -22,10 +22,7 @@ public class User {
         this.login = login;
         this.password = password;
         this.role = role;
-        if(role.equals(ROLE.COOK)){
-            cook=new Cook(login);
-        }
-        //tableNumber=0;
+
         isActive=true;
     }
 
@@ -61,6 +58,12 @@ public class User {
     public void setRole(ROLE role) {
         this.role = role;
     }
+    public int getCurrentOrder() { return currentOrder; }
+
+    public void setCurrentOrder(int currentOrder) {
+        this.currentOrder = currentOrder;
+    }
+
     public enum ROLE {
         ADMIN,
         TABLET_TABLE,

@@ -1,6 +1,5 @@
 package com.company.model.kitchen;
 
-import com.company.model.User;
 import com.company.model.kitchen.dishes.Dish;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -8,20 +7,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Order {
-    private final User user;
+    private final int creatorID;
     private HashMap<Dish, Integer> dishes;
     private  int totalPrice=0;
     private int id;
     private int tableNumber;
     private long orderCreateTime;
     private String orderStartCreateString;
-    private long orderStartCookingTime;
+    private long orderStartCookingTime=-1;
     private String orderStartCookingTimeString;
-    private long orderEndCookingTime;
+    private long orderEndCookingTime=-1;
     private String orderEndCookingTimeString;
-    private long orderToClientTime;
+    private long orderToClientTime=-1;
     private String orderToClientTimeString;
-    private Cook cook;
+    private int cookID=-1;
     private boolean done;
     private Orderstatus orderstatus;
 
@@ -31,9 +30,32 @@ public class Order {
         ISREADY,
         ISCLOSE
     }
-    public Order(User user){
-        this.user = user;
+    public Order(int userID){
+        this.creatorID = userID;
         initDishes();
+    }
+
+    public Order(int userID,
+                 HashMap<Dish, Integer> dishes,
+                 int id, int tableNumber,
+                 long orderCreateTime,
+                 long orderStartCookingTime,
+                 long orderEndCookingTime,
+                 long orderToClientTime,
+                 boolean done,
+                 Order.Orderstatus orderstatus,
+                 int cookID) {
+        this.creatorID = userID;
+        this.dishes = dishes;
+        this.id = id;
+        this.tableNumber = tableNumber;
+        this.orderCreateTime = orderCreateTime;
+        this.orderStartCookingTime = orderStartCookingTime;
+        this.orderEndCookingTime = orderEndCookingTime;
+        this.orderToClientTime = orderToClientTime;
+        this.done = done;
+        this.orderstatus = orderstatus;
+        this.cookID=cookID;
     }
 
     public long getOrderCreateTime() { return orderCreateTime; }
@@ -72,8 +94,8 @@ public class Order {
         this.orderStartCreateString =result;
         return result;
     }
-    public Cook getCook() {return cook; }
-    public void setCook(Cook cook) { this.cook = cook; }
+    public int getCookID() {return cookID; }
+    public void setCookID(int cookID) { this.cookID = cookID; }
     public void setDone(boolean done) {
         this.done = done;
     }
@@ -160,8 +182,8 @@ public class Order {
     public int getPennyPrice(){
         return getTotalPrice()%100;
     }
-    public User getUser() {
-        return user;
+    public int getCreatorID() {
+        return creatorID;
     }
     public void putDish(Dish dish,Integer count){
         if (dishes==null){

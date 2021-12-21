@@ -26,21 +26,21 @@ public class ActivateCookServlet extends HttpServlet {
 
     protected void doPost ( HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
-        Cook cook=((User)req.getSession().getAttribute("user")).getCook();
-        if (!restaurant.getQueueOrders().isEmpty()) {
+        User cook=(User)req.getSession().getAttribute("user");
+       /* if (!restaurant.getQueueOrders().isEmpty()) {
             try {
-                cook.setCurrentOrder(restaurant.getQueueOrders().take());
-                Order order=cook.getCurrentOrder();
-                order.setCook(cook);
+                //cook.setCurrentOrder(restaurant.getQueueOrders().take());
+                Order order=restaurant.getOrderFromDd(cook.getCurrentOrder());
+                order.setCookID(cook.getId());
                 order.setOrderstatus(Order.Orderstatus.INWORK);
                 order.setOrderStartCookingTime(System.currentTimeMillis());
             } catch (InterruptedException e) {
                 System.out.println("ошибка взятия заказа из очереди!");
                 e.printStackTrace();
             }
-        }
+        }*/
 
-        req.setAttribute("cook",cook);
+       //req.setAttribute("cook",cook);
         resp.sendRedirect(req.getContextPath()+"/cooking_page" );
     }
 

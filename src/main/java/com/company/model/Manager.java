@@ -17,12 +17,12 @@ public class Manager {
         return cookHashMap;
     }
 
-    public Cook cookCreator(String name){
+   /* public Cook cookCreator(String name){
         if (cookHashMap.containsKey(name)){
             ConsoleHelper.writeMessage(" name ["+name+"] busy... take anather name");
             return cookHashMap.get(name);
         }else return cookHashMap.put(name, new Cook(name));
-    }
+    }*/
    /* public Waiter waiterCreator(String name){
         if (waiterHashMap.containsKey(name)){
             ConsoleHelper.writeMessage(" name ["+name+"] busy... take anather name");

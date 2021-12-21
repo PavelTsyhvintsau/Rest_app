@@ -11,6 +11,7 @@ import javax.naming.NamingException;
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -362,8 +363,7 @@ public class Restaurant {
             }
         }
     }
-    public Dish getDish(int id) {
-        InitialContext initContext= null;
+    public Dish getDishFromDB(int id) {
         Connection connection=null;
         Statement statement = null;
         Dish dish=null;
@@ -416,16 +416,19 @@ public class Restaurant {
         try {
             order.setOrderstatus(Order.Orderstatus.INQUEUE);
             order.setOrderCreateTime(System.currentTimeMillis());
-            String insTableSQL ="INSERT INTO orders (user_id ,table_number,create_time,status,dishes ) VALUES (?,?,?,?,?)";
+            String insTableSQL ="INSERT INTO orders (user_id ,table_number,create_time,status,dishes,start_cooking_time, end_cooking_time,to_client_time ) VALUES (?,?,?,?,?,?,?,?)";
 
             connection=getConnection();
             Array masSQL=connection.createArrayOf("integer",order.getDishesArray());
             PreparedStatement preparedStatement =connection.prepareStatement(insTableSQL);
-            preparedStatement.setInt(1, order.getUser().getId());
+            preparedStatement.setInt(1, order.getCreatorID());
             preparedStatement.setInt(2,order.getTableNumber());
             preparedStatement.setTimestamp(3,new java.sql.Timestamp(order.getOrderCreateTime()));
             preparedStatement.setString(4,order.getOrderstatus().toString());
             preparedStatement.setArray(5,masSQL);
+            preparedStatement.setTimestamp(6,new java.sql.Timestamp(order.getOrderStartCookingTime()));
+            preparedStatement.setTimestamp(7,new java.sql.Timestamp(order.getOrderEndCookingTimeLong()));
+            preparedStatement.setTimestamp(8,new java.sql.Timestamp(order.getOrderToClientTime()));
 
             preparedStatement.executeUpdate();
             System.out.println("========= заказ в очереди готово");
@@ -442,7 +445,91 @@ public class Restaurant {
                 }
         }
     }
-
+    public HashMap<Dish,Integer> getOrderDishes(Integer[][] data){
+        HashMap<Dish,Integer> result=new HashMap<>();
+        for(int i=0; i<data[0].length;i++){
+            result.put(getDishFromDB(data[0][i]),data[1][i]);
+        }return result;
+    }
+    public ArrayList<Order> getOrdersListFromDd(){
+        Connection connection=null;
+        Statement statement = null;
+        ArrayList<Order> result=new ArrayList<>();
+        try {
+            connection = getConnection();
+            statement = connection.createStatement();
+            String selectTableSQL = "SELECT id, " +
+                    "user_id, " +
+                    "table_number," +
+                    " create_time, " +
+                    "start_cooking_time, " +
+                    "end_cooking_time, " +
+                    "to_client_time, " +
+                    "status," +
+                    "done," +
+                    "cook_id ," +
+                    "dishes FROM orders ";
+            System.out.println("строка");
+            ResultSet rs=statement.executeQuery(selectTableSQL);
+            System.out.println("=====вычитан сет");
+            while (rs.next()) {
+                System.out.println("=====читаю строки");
+                int id=rs.getInt("id");
+                System.out.println("1");
+                int userID=rs.getInt("user_id");
+                System.out.println("===2= "+userID);
+                int cookID=rs.getInt("cook_id");
+                System.out.println("===3= "+userID);
+                int tableNum=rs.getInt("table_number");
+                System.out.println("===4= "+userID);
+                Timestamp createTimeStamp=rs.getTimestamp("create_time");
+                System.out.println("===4.5= "+createTimeStamp.toString());
+                Long createTime=createTimeStamp.getTime();
+                System.out.println("===5= "+userID);
+                Timestamp startCookingTimeStamp=rs.getTimestamp("start_cooking_time");
+                System.out.println("===5.5= "+startCookingTimeStamp.toString());
+                Long startCookingTime=startCookingTimeStamp.getTime();
+                System.out.println("===6= "+userID);
+                Timestamp endCookingTimeStamp=rs.getTimestamp("end_cooking_time");
+                Long endCookingTime=endCookingTimeStamp.getTime();
+                System.out.println("===7= "+userID);
+                Timestamp toClientTimeStamp=rs.getTimestamp("to_client_time");
+                Long toClientTime=toClientTimeStamp.getTime();
+                System.out.println("===8= "+userID);
+                Order.Orderstatus orderstatus=Order.Orderstatus.valueOf(rs.getString("status"));
+                Boolean done=rs.getBoolean("done");
+                System.out.println("===9= "+userID);
+                Array array=rs.getArray("dishes");
+                Integer[][] data=(Integer[][]) array.getArray();
+                System.out.println("===10= "+userID);
+                HashMap<Dish,Integer>dishList=getOrderDishes(data);
+                System.out.println("===11= "+userID);
+                Order order=new Order(userID,dishList,id,tableNum,createTime,startCookingTime,endCookingTime,toClientTime,done,orderstatus,cookID );
+                System.out.println("===ордер создан");
+                result.add(order);
+                System.out.println("===ордер помещен в лист");
+            }
+            connection.close();
+        }catch (SQLException e){
+            System.out.println("экзепшн вычитивания юзеров из БД");
+        } finally {
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+        return result;
+    }
 
     public LinkedBlockingQueue<Order> getQueueOrders() {
         return queueOrders;

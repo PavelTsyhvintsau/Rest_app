@@ -4,8 +4,8 @@
     padding: 10px;">
     <ul>
         <li>ID заказа: <c:out value="${order.id}"/></li>
-        <li>№ стола: <c:out value="${order.tableNumber}"/>, официант: <c:out value="${order.user.login}"/>.</li>
-        <li>Повар: <c:out value="${order.cook.name}"/></li>
+        <li>№ стола: <c:out value="${order.tableNumber}"/>, официант (ID): <c:out value="${order.creatorID}"/>.</li>
+        <li>Повар(ID): <c:out value="${order.cookID}"/></li>
         <li>Время оформления заказа: <c:out value="${order.orderCreateTime}"/>.</li>
         <li>Время на приготовление по нормам: <c:out value="${order.totalCookingTime}"/> мин.</li>
         <li>Стоимость заказа: <c:out value="${order.rublePrice}"/> руб. <c:out value="${order.pennyPrice}"/> коп.</li>
