@@ -44,11 +44,11 @@ public class WaiterStatisticServlet extends HttpServlet {
         if (cooksArray.contains("all")){
             for (User user:restaurant.getDao().get().getStore()){
                 if(user.getRole().equals(User.ROLE.WAITER))
-                    infoWaitersList.add(new WaiterInfo(user.getLogin(), start,end,restaurant.getOrdersBank()));
+                    infoWaitersList.add(new WaiterInfo(user.getLogin(), start,end,restaurant.getOrdersListFromDd()));
             }
         }else{
             for (String name:users){
-                infoWaitersList.add(new WaiterInfo(name, start,end,restaurant.getOrdersBank()));
+                infoWaitersList.add(new WaiterInfo(name, start,end,restaurant.getOrdersListFromDd()));
             }
         }
         if (sortBy.equals("byName")){

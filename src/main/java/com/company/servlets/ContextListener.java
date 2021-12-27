@@ -33,17 +33,17 @@ public class ContextListener implements ServletContextListener {
     private Restaurant restaurant;
     private AtomicReference<UserDAO> dao;
     private Menu menu;
-    private LinkedBlockingQueue<Order> queueOrders;
+    //private LinkedBlockingQueue<Order> queueOrders;
    private ArrayList<Order> ordersBank;
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         final ServletContext servletContext =
                 servletContextEvent.getServletContext();
         restaurant=new Restaurant();
-        queueOrders=new LinkedBlockingQueue<>();
-        servletContext.setAttribute("queueOrders", queueOrders);
-        ordersBank=new ArrayList<>();
-        servletContext.setAttribute("ordersBank",ordersBank);
+        //queueOrders=new LinkedBlockingQueue<>();
+        //servletContext.setAttribute("queueOrders", queueOrders);
+        //ordersBank=new ArrayList<>();
+        //servletContext.setAttribute("ordersBank",ordersBank);
 
 
         /*dao.get().add(new User(1, "Admin", "1", User.ROLE.ADMIN));
@@ -68,8 +68,8 @@ public class ContextListener implements ServletContextListener {
         servletContext.setAttribute("menu", menu);
         restaurant.setDao();
         servletContext.setAttribute("dao", dao);
-        restaurant.setQueueOrders(this.queueOrders);
-        restaurant.setOrdersBank(this.ordersBank);
+        //restaurant.setQueueOrders(this.queueOrders);
+        //restaurant.setOrdersBank(this.ordersBank);
         servletContext.setAttribute("restaurant", restaurant);
     }
     @Override

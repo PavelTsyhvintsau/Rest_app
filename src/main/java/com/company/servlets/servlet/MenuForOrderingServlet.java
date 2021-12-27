@@ -42,7 +42,7 @@ public class MenuForOrderingServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         req.setAttribute("menu", this.restaurant.getMenu());
-        req.setAttribute("queueOrders", restaurant.getQueueOrders());
+        req.setAttribute("queueOrders", restaurant.getOrdersListFromDd());
         req.setAttribute("menuHot", menuHot);
         req.setAttribute("menuSalat", menuSalat);
         req.setAttribute("menuSoup", menuSoup);

@@ -26,7 +26,10 @@ public class ActivateCookServlet extends HttpServlet {
 
     protected void doPost ( HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
-        User cook=(User)req.getSession().getAttribute("user");
+        System.out.println("делаю активацию выполнения заказа для юзера"+Integer.parseInt(req.getSession().getId()));
+        int orderID=restaurant.getOrderFromQueueDd(Integer.parseInt(req.getSession().getId()));
+        System.out.println("заказ из очереди взят (проверь его код)");
+
        /* if (!restaurant.getQueueOrders().isEmpty()) {
             try {
                 //cook.setCurrentOrder(restaurant.getQueueOrders().take());

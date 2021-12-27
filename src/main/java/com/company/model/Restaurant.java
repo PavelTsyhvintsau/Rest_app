@@ -20,8 +20,8 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Restaurant {
     private AtomicReference<UserDAO> dao;
     private Menu menu;
-    private LinkedBlockingQueue<Order> queueOrders;
-    private ArrayList<Order> ordersBank;
+    //private LinkedBlockingQueue<Order> queueOrders;
+    //private ArrayList<Order> ordersBank;
     public Connection getConnection(){
         InitialContext initContext= null;
         Connection connection=null;
@@ -469,45 +469,27 @@ public class Restaurant {
                     "done," +
                     "cook_id ," +
                     "dishes FROM orders ";
-            System.out.println("строка");
             ResultSet rs=statement.executeQuery(selectTableSQL);
-            System.out.println("=====вычитан сет");
             while (rs.next()) {
-                System.out.println("=====читаю строки");
                 int id=rs.getInt("id");
-                System.out.println("1");
                 int userID=rs.getInt("user_id");
-                System.out.println("===2= "+userID);
                 int cookID=rs.getInt("cook_id");
-                System.out.println("===3= "+userID);
                 int tableNum=rs.getInt("table_number");
-                System.out.println("===4= "+userID);
                 Timestamp createTimeStamp=rs.getTimestamp("create_time");
-                System.out.println("===4.5= "+createTimeStamp.toString());
-                Long createTime=createTimeStamp.getTime();
-                System.out.println("===5= "+userID);
+                long createTime=createTimeStamp.getTime();
                 Timestamp startCookingTimeStamp=rs.getTimestamp("start_cooking_time");
-                System.out.println("===5.5= "+startCookingTimeStamp.toString());
-                Long startCookingTime=startCookingTimeStamp.getTime();
-                System.out.println("===6= "+userID);
+                long startCookingTime=startCookingTimeStamp.getTime();
                 Timestamp endCookingTimeStamp=rs.getTimestamp("end_cooking_time");
-                Long endCookingTime=endCookingTimeStamp.getTime();
-                System.out.println("===7= "+userID);
+                long endCookingTime=endCookingTimeStamp.getTime();
                 Timestamp toClientTimeStamp=rs.getTimestamp("to_client_time");
                 Long toClientTime=toClientTimeStamp.getTime();
-                System.out.println("===8= "+userID);
                 Order.Orderstatus orderstatus=Order.Orderstatus.valueOf(rs.getString("status"));
                 Boolean done=rs.getBoolean("done");
-                System.out.println("===9= "+userID);
                 Array array=rs.getArray("dishes");
                 Integer[][] data=(Integer[][]) array.getArray();
-                System.out.println("===10= "+userID);
                 HashMap<Dish,Integer>dishList=getOrderDishes(data);
-                System.out.println("===11= "+userID);
                 Order order=new Order(userID,dishList,id,tableNum,createTime,startCookingTime,endCookingTime,toClientTime,done,orderstatus,cookID );
-                System.out.println("===ордер создан");
                 result.add(order);
-                System.out.println("===ордер помещен в лист");
             }
             connection.close();
         }catch (SQLException e){
@@ -530,17 +512,126 @@ public class Restaurant {
         }
         return result;
     }
+    public Order getOrderFromDdBiID(int ID){
+        Connection connection=null;
+        Statement statement = null;
+        Order result=null;
+        try {
+            connection = getConnection();
+            statement = connection.createStatement();
+            String selectTableSQL = "SELECT id, " +
+                    "user_id, " +
+                    "table_number," +
+                    " create_time, " +
+                    "start_cooking_time, " +
+                    "end_cooking_time, " +
+                    "to_client_time, " +
+                    "status," +
+                    "done," +
+                    "cook_id ," +
+                    "dishes FROM orders order by create_time where id= "+ID;
+            ResultSet rs=statement.executeQuery(selectTableSQL);
+            while (rs.next()) {
+                int id=rs.getInt("id");
+                int userID=rs.getInt("user_id");
+                int cookID=rs.getInt("cook_id");
+                int tableNum=rs.getInt("table_number");
+                Timestamp createTimeStamp=rs.getTimestamp("create_time");
+                long createTime=createTimeStamp.getTime();
+                Timestamp startCookingTimeStamp=rs.getTimestamp("start_cooking_time");
+                long startCookingTime=startCookingTimeStamp.getTime();
+                Timestamp endCookingTimeStamp=rs.getTimestamp("end_cooking_time");
+                long endCookingTime=endCookingTimeStamp.getTime();
+                Timestamp toClientTimeStamp=rs.getTimestamp("to_client_time");
+                Long toClientTime=toClientTimeStamp.getTime();
+                Order.Orderstatus orderstatus=Order.Orderstatus.valueOf(rs.getString("status"));
+                Boolean done=rs.getBoolean("done");
+                Array array=rs.getArray("dishes");
+                Integer[][] data=(Integer[][]) array.getArray();
+                HashMap<Dish,Integer>dishList=getOrderDishes(data);
+                Order order=new Order(userID,dishList,id,tableNum,createTime,startCookingTime,endCookingTime,toClientTime,done,orderstatus,cookID );
+                result=order;
 
-    public LinkedBlockingQueue<Order> getQueueOrders() {
-        return queueOrders;
+            }
+            connection.close();
+        }catch (SQLException e){
+            System.out.println("экзепшн вычитивания юзеров из БД");
+        } finally {
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+        return result;
     }
-    public void setQueueOrders(LinkedBlockingQueue<Order> queueOrders) {
-        this.queueOrders = queueOrders;
+    public int getOrderFromQueueDd(int cookID){
+        Connection connection=null;
+        Statement statement = null;
+        int id=-1;
+        try {
+            System.out.println("гет ордер бай айди начали"+id);
+            connection = getConnection();
+            statement = connection.createStatement();
+            String selectTableSQL =
+                    "SELECT id, " +
+                    " create_time " +
+                    "FROM orders where status='INQUEUE' order by (create_time)";
+            ResultSet rs=statement.executeQuery(selectTableSQL);
+            System.out.println("Выполнена блокировка и вычитка строки");
+            if (rs.next()) {
+                id=rs.getInt("id");
+                System.out.println(" id ордера="+id);
+            }
+            long date=System.currentTimeMillis();
+            java.sql.Timestamp timestamp=new java.sql.Timestamp(date);
+            String udateTableSQL = "UPDATE orders SET cook_id= "+cookID+", status = 'INWORK',start_cooking_time="+timestamp+" WHERE USER_ID ="+id;
+            statement.execute(udateTableSQL);
+            /*String endLockTableSQL = "END;";
+            statement.execute(endLockTableSQL);*/
+
+        }catch (SQLException e){
+            System.out.println("экзепшн вычитивания юзеров из БД");
+        } finally {
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+        return id;
     }
-    public ArrayList<Order> getOrdersBank() {
-        return ordersBank;
-    }
-    public void setOrdersBank(ArrayList<Order> ordersBank) {
-        this.ordersBank = ordersBank;
-    }
+
+
+
+    //public LinkedBlockingQueue<Order> getQueueOrders() {
+    //    return queueOrders;
+    //}
+    //public void setQueueOrders(LinkedBlockingQueue<Order> queueOrders) {
+    //    this.queueOrders = queueOrders;
+    //}
+    //public ArrayList<Order> getOrdersBank() {
+    //    return ordersBank;
+    //}
+    //public void setOrdersBank(ArrayList<Order> ordersBank) {
+     //   this.ordersBank = ordersBank;
+    //}
 }

@@ -25,7 +25,7 @@ public class OrderInfo extends HttpServlet {
         String idStr=req.getParameter("id");
         int id=Integer.valueOf(idStr);
         Order order=null;
-        for(Order e:restaurant.getOrdersBank()){
+        for(Order e:restaurant.getOrdersListFromDd()){
             if(e.getId()==id){
                 order=e;
             }

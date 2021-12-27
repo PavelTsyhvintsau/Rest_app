@@ -25,35 +25,37 @@
 <div class="body">
     <h2 class="h2">Выполнение заказов.</h2>
 
-    <c:if test="${requestScope.cook.currentOrder == null}" >
+    <c:if test="${sessionScope.user.currentOrder == -1}" >
         <li>Активность: <c:out value="Нет заказа в работе"/></li>
         <form method="post" action="<c:url value='/activate_cook'/>">
-            <input type="number" hidden name="id" value="${requestScope.user.id}" />
+            <input type="number" hidden name="id" value="${sessionScope.user.id}" />
             <input type="submit" name="activate" value="Взять заказ"/>
         </form>
     </c:if>
-        <c:if test="${requestScope.cook.currentOrder != null}" >
-            <c:set var="order" scope="request" value="${sessionScope.user.cook.currentOrder}"></c:set>
+        <c:if test="${sessionScope.user.currentOrder >0}" >
+            <c:set var="order" scope="request" value="${requestScope.restaurant.getOrderFromDdBiID(sessionScope.user.currentOrder)}"></c:set>
             <div style="border: 1px solid black; padding: 10px;">
-                Активность: <c:out value="в работе заказ ${requestScope.cook.currentOrder.id}. Номер столика ${requestScope.cook.currentOrder.tableNumber}."/>
+                Активность: <c:out value="в работе заказ ${sessionScope.user.currentOrder}. Номер столика ${requestScope.restaurant.getOrderFromDdBiID(sessionScope.user.currentOrder).tableNumber}."/>
 
                     <%@include file="_order_full.jsp" %>
 
 
                 <form method="post" action="<c:url value='/order_completed'/>">
 
-                    <input type="number" hidden name="id" value="${requestScope.user.id}" />
+                    <input type="number" hidden name="id" value="${sessionScope.user.id}" />
                     <input type="submit" name="activate" value="выполнен"/>
                 </form>
             </div>
         </c:if>
     <br />
-    <h4>лист заказов :<c:out value="${sessionScope.user.cook.queue}" /> </h4>
-    <c:forEach var="order" items="${sessionScope.user.cook.queue}">
+    <h4>лист заказов : </h4>
+    <c:forEach var="order1" items="${requestScope.restaurant.ordersListFromDd}">
+        <c:if test="${order1.orderstatus.toString() eq 'INQUEUE' }" >
         <ul>
             <li>заказ id: <c:out value="${order}"/></li>
-            <li>время выполнения: <c:out value="${order.totalCookingTime}"/></li>
+            <li>время выполнения: <c:out value="${order1.totalCookingTime}"/></li>
         </ul>
+        </c:if>
         <hr/>
     </c:forEach>
 </div>

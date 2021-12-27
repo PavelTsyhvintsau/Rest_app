@@ -43,7 +43,7 @@ public class DishStatisticServlet extends HttpServlet {
         HashMap<Integer,DishInfo> dishInfoHashMap=new HashMap<>();
         List<String>dishArray= Arrays.asList(dishes);
         if (dishArray.contains("all")){
-            for (Order order:restaurant.getOrdersBank()){
+            for (Order order:restaurant.getOrdersListFromDd()){
                 Date startDate=new Date(order.getOrderStartCookingTimeLong());
                 try {
                     Date endDate=new Date(format.parse(dateEnd).getTime()+(long)(24*60*60*1000));
@@ -72,7 +72,7 @@ public class DishStatisticServlet extends HttpServlet {
                 }
             }
         }else{
-            for (Order order:restaurant.getOrdersBank()){
+            for (Order order:restaurant.getOrdersListFromDd()){
                 Date startDate=new Date(order.getOrderStartCookingTimeLong());
                 try {
                     Date endDate=new Date(format.parse(dateEnd).getTime()+(long)(24*60*60*1000));

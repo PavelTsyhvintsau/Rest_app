@@ -36,11 +36,11 @@ public class CooksStatisticServlet extends HttpServlet {
             cooksArray= Arrays.asList(cooks);
             if (cooksArray.contains("all")){
                 for (User user:restaurant.getDao().get().getStore()){
-                    if(user.getRole().equals(User.ROLE.COOK)) infoCooksList.add(new CookInfo(user.getLogin(), start,end,restaurant.getOrdersBank()));
+                    if(user.getRole().equals(User.ROLE.COOK)) infoCooksList.add(new CookInfo(user.getLogin(), start,end,restaurant.getOrdersListFromDd()));
                 }
             }else{
                 for (String cookName:cooks){
-                    infoCooksList.add(new CookInfo(cookName, start,end,restaurant.getOrdersBank()));
+                    infoCooksList.add(new CookInfo(cookName, start,end,restaurant.getOrdersListFromDd()));
                 }
             }
             if (sortBy.equals("byName")){

@@ -51,7 +51,7 @@ public class CreateTabletTableServlet extends HttpServlet {
         req.getSession().setAttribute("role", User.ROLE.TABLET_TABLE);
         req.setAttribute("orderTable", order);
         req.setAttribute("menu", this.restaurant.getMenu());
-        req.setAttribute("queueOrders", restaurant.getQueueOrders());
+        req.setAttribute("queueOrders", restaurant.getOrdersListFromDd());
         req.setAttribute("menuHot", menuHot);
         req.setAttribute("menuSalat", menuSalat);
         req.setAttribute("menuSoup", menuSoup);

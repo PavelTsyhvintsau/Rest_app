@@ -12,7 +12,7 @@ public class User {
     private Cook cook;
 
     private boolean isActive;
-    private int currentOrder;
+    private int currentOrder=-1;
 
     public User() {
     }

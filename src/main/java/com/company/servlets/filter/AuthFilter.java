@@ -44,7 +44,7 @@ public class AuthFilter implements Filter {
                 nonNull(session.getAttribute("login")) &&
                 nonNull(session.getAttribute("password"))) {
             final User.ROLE role = (User.ROLE) session.getAttribute("role");
-            final int id=dao.get().getUserID((String) session.getAttribute("login"),(String) session.getAttribute("password"));
+            final int id=dao.get().getUserID((String) session.getAttribute("login"), (String) session.getAttribute("password"));
             moveToMenu(req, res, role,id);
         } else if (dao.get().userIsExist(login, password)) {
             System.out.println("не знаем роль и ищем(doFiltr AuthFiltr)");
@@ -67,6 +67,7 @@ public class AuthFilter implements Filter {
                             final User.ROLE role,
                             final int id)
             throws ServletException, IOException {
+        req.getSession().setAttribute("userID", id);
        User user=new User();
        user.setPassword((String) req.getSession().getAttribute("password"));
        user.setRole(role);

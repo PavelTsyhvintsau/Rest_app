@@ -27,7 +27,7 @@ public class WaiterOrderToBankServlet extends HttpServlet {
     protected void doPost ( HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         int id=Integer.parseInt(req.getParameter("ID"));
-        ArrayList<Order>ordersComplete=restaurant.getOrdersBank();
+        ArrayList<Order>ordersComplete=restaurant.getOrdersListFromDd();
         for (int i=0;i<ordersComplete.size();i++){
             if(ordersComplete.get(i).getId()==id){
                 ordersComplete.get(i).setOrderstatus(Order.Orderstatus.ISCLOSE);

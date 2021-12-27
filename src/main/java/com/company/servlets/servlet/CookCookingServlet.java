@@ -26,15 +26,7 @@ public class CookCookingServlet extends HttpServlet {
     }
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("queueOrders", restaurant.getQueueOrders());
-        Cook user=((User)req.getSession().getAttribute("user")).getCook();
-       /* cook.setQueue(restaurant.getQueueOrders());
-                for (Order e:restaurant.getOrdersBank()){
-            if(e.getCookID()!=-1&&e.getCookID()==((User) req.getSession().getAttribute("user")).getId()&&e.getOrderstatus().equals(Order.Orderstatus.INWORK)){
-                cook.setCurrentOrder(e);
-            }
-        }
-        req.setAttribute("cook",cook);*/
+        req.setAttribute("restaurant", restaurant);
         req.getRequestDispatcher("/WEB-INF/view/cook_page_cooking.jsp").forward(req, resp);
     }
 
