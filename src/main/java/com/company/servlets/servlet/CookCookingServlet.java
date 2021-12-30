@@ -27,6 +27,12 @@ public class CookCookingServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("restaurant", restaurant);
+        User user=(User)req.getSession().getAttribute("user");
+        System.out.println("doGet ActivateCookServlet id cur ord="+user.getCurrentOrder());
+        if(user.getCurrentOrder()!=-1){
+            req.setAttribute("curOrder", restaurant.getOrderFromDdBiID(user.getCurrentOrder()));
+        }
+
         req.getRequestDispatcher("/WEB-INF/view/cook_page_cooking.jsp").forward(req, resp);
     }
 

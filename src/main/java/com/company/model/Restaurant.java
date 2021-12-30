@@ -5,23 +5,20 @@ import com.company.dao.UserDAO;
 import com.company.model.kitchen.Order;
 import com.company.model.kitchen.dishes.Dish;
 import com.company.model.kitchen.dishes.DishType;
+import sun.nio.cs.CharsetMapping;
 
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 import java.sql.*;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class Restaurant {
     private AtomicReference<UserDAO> dao;
     private Menu menu;
-    //private LinkedBlockingQueue<Order> queueOrders;
-    //private ArrayList<Order> ordersBank;
     public Connection getConnection(){
         InitialContext initContext= null;
         Connection connection=null;
@@ -42,16 +39,18 @@ public class Restaurant {
         try {
             connection = getConnection();
             statement = connection.createStatement();
-            String selectTableSQL = "SELECT name, role, password, id, is_active FROM ALLUSERS";
+            String selectTableSQL = "SELECT name, role, password, id, is_active,currentorder FROM ALLUSERS";
             ResultSet rs=statement.executeQuery(selectTableSQL);
             while (rs.next()) {
                 String nameuser=rs.getString("name");
                 String role=rs.getString("role");
                 int id=rs.getInt("id");
+                int currentorder=rs.getInt("currentorder");
                 String password=rs.getString("password");
                 String active=rs.getString("is_active");
                 User.ROLE userRole=User.ROLE.valueOf(role);
                 User user=new User(id, nameuser,password,userRole);
+                user.setCurrentOrder(currentorder);
                 if ("t".equals(active)){
                     user.setActive(true);
                 }else {
@@ -61,7 +60,7 @@ public class Restaurant {
             }
             connection.close();
         }catch (SQLException e){
-            System.out.println("экзепшн вычитивания юзеров из БД");
+            System.out.println("экзепшн вычитивания юзеров из БД1");
         } finally {
             if (statement != null) {
                 try {
@@ -144,8 +143,8 @@ public class Restaurant {
     }
     public void addUser(String login, String password, String role){
         String insertTableSQL = "INSERT INTO allusers"
-                + "( name, password, role, is_active) " + "VALUES"
-                + "('"+login+"','"+password+"','"+role+"','true')";
+                + "( name, password, role, is_active, currentorder) " + "VALUES"
+                + "('"+login+"','"+password+"','"+role+"','true', -1)";
         Statement statement = null;
         Connection connection=null;
         try {
@@ -202,7 +201,7 @@ public class Restaurant {
             }
             connection.close();
         }catch (SQLException e){
-            System.out.println("экзепшн вычитивания юзеров из БД");
+            System.out.println("экзепшн вычитивания юзеров из БД2");
         } finally {
             if (statement != null) {
                 try {
@@ -371,9 +370,7 @@ public class Restaurant {
             connection = getConnection();
             statement = connection.createStatement();
             String selectTableSQL = "SELECT id, dish_name, dish_type, dish_image_path, price, dish_cooking_time, active FROM alldish where id = "+id;
-            System.out.println("строка");
             ResultSet rs=statement.executeQuery(selectTableSQL);
-            System.out.println("вычитан сет");
             while (rs.next()&&rs.getInt("id")==id) {
                 String dishName=rs.getString("dish_name");
                 String type=rs.getString("dish_type");
@@ -392,7 +389,7 @@ public class Restaurant {
             }
             connection.close();
         }catch (SQLException e){
-            System.out.println("экзепшн вычитивания юзеров из БД");
+            System.out.println("экзепшн вычитивания юзеров из БД3");
         } finally {
             if (statement != null) {
                 try {
@@ -493,7 +490,7 @@ public class Restaurant {
             }
             connection.close();
         }catch (SQLException e){
-            System.out.println("экзепшн вычитивания юзеров из БД");
+            System.out.println("экзепшн вычитивания юзеров из БД4");
         } finally {
             if (statement != null) {
                 try {
@@ -512,27 +509,16 @@ public class Restaurant {
         }
         return result;
     }
-    public Order getOrderFromDdBiID(int ID){
+    public Order getOrderFromDdBiID(int idOrder){
         Connection connection=null;
         Statement statement = null;
         Order result=null;
         try {
             connection = getConnection();
             statement = connection.createStatement();
-            String selectTableSQL = "SELECT id, " +
-                    "user_id, " +
-                    "table_number," +
-                    " create_time, " +
-                    "start_cooking_time, " +
-                    "end_cooking_time, " +
-                    "to_client_time, " +
-                    "status," +
-                    "done," +
-                    "cook_id ," +
-                    "dishes FROM orders order by create_time where id= "+ID;
-            ResultSet rs=statement.executeQuery(selectTableSQL);
+            String selOrder="SELECT user_id, table_number, create_time, start_cooking_time, end_cooking_time, to_client_time, status, done, cook_id, dishes from orders where id="+idOrder;
+            ResultSet rs=statement.executeQuery(selOrder);
             while (rs.next()) {
-                int id=rs.getInt("id");
                 int userID=rs.getInt("user_id");
                 int cookID=rs.getInt("cook_id");
                 int tableNum=rs.getInt("table_number");
@@ -549,13 +535,12 @@ public class Restaurant {
                 Array array=rs.getArray("dishes");
                 Integer[][] data=(Integer[][]) array.getArray();
                 HashMap<Dish,Integer>dishList=getOrderDishes(data);
-                Order order=new Order(userID,dishList,id,tableNum,createTime,startCookingTime,endCookingTime,toClientTime,done,orderstatus,cookID );
+                Order order=new Order(userID,dishList,idOrder,tableNum,createTime,startCookingTime,endCookingTime,toClientTime,done,orderstatus,cookID );
                 result=order;
-
             }
             connection.close();
         }catch (SQLException e){
-            System.out.println("экзепшн вычитивания юзеров из БД");
+            System.out.println("экзепшн получения ордера по айди");
         } finally {
             if (statement != null) {
                 try {
@@ -577,9 +562,8 @@ public class Restaurant {
     public int getOrderFromQueueDd(int cookID){
         Connection connection=null;
         Statement statement = null;
-        int id=-1;
+        int resultID=-1;
         try {
-            System.out.println("гет ордер бай айди начали"+id);
             connection = getConnection();
             statement = connection.createStatement();
             String selectTableSQL =
@@ -587,20 +571,26 @@ public class Restaurant {
                     " create_time " +
                     "FROM orders where status='INQUEUE' order by (create_time)";
             ResultSet rs=statement.executeQuery(selectTableSQL);
-            System.out.println("Выполнена блокировка и вычитка строки");
             if (rs.next()) {
-                id=rs.getInt("id");
-                System.out.println(" id ордера="+id);
+                resultID=rs.getInt("id");
+                System.out.println(" id ордера="+resultID);
             }
             long date=System.currentTimeMillis();
             java.sql.Timestamp timestamp=new java.sql.Timestamp(date);
-            String udateTableSQL = "UPDATE orders SET cook_id= "+cookID+", status = 'INWORK',start_cooking_time="+timestamp+" WHERE USER_ID ="+id;
-            statement.execute(udateTableSQL);
-            /*String endLockTableSQL = "END;";
-            statement.execute(endLockTableSQL);*/
-
+            String inWork="INWORK";
+            String orderUpdate="UPDATE orders SET start_cooking_time=?, cook_id=?, status=? where id="+resultID;
+            PreparedStatement preparedStatement = connection.prepareStatement(orderUpdate);
+            preparedStatement.setTimestamp(1,timestamp);
+            preparedStatement.setInt(2,cookID);
+            preparedStatement.setString(3,inWork);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            System.out.println(orderUpdate);
+            String cookUpdate="UPDATE allusers SET currentorder="+resultID+" where id="+cookID;
+            statement=connection.createStatement();
+            statement.execute(cookUpdate);
         }catch (SQLException e){
-            System.out.println("экзепшн вычитивания юзеров из БД");
+            System.out.println("!!!!экзепшн постановки orders в очередь кука");
         } finally {
             if (statement != null) {
                 try {
@@ -617,7 +607,83 @@ public class Restaurant {
                 }
             }
         }
-        return id;
+        return resultID;
+    }
+    public void setOrderStatusReady(Order.Orderstatus status, int idOrder, int idCook){
+        Connection connection=null;
+        Statement statement = null;
+        int resultID=-1;
+        try {
+            connection = getConnection();
+            statement = connection.createStatement();
+
+            long date=System.currentTimeMillis();
+            java.sql.Timestamp timestamp=new java.sql.Timestamp(date);
+            String statusStr=status.toString();
+            String orderUpdate="UPDATE orders SET end_cooking_time=?, status=? where id="+idOrder;
+            PreparedStatement preparedStatement = connection.prepareStatement(orderUpdate);
+            preparedStatement.setTimestamp(1,timestamp);
+            preparedStatement.setString(2,statusStr);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            System.out.println(orderUpdate);
+            String cookUpdate="UPDATE allusers SET currentorder="+-1+" where id="+idCook;
+            statement=connection.createStatement();
+            statement.execute(cookUpdate);
+        }catch (SQLException e){
+            System.out.println("!!!!экзепшн перемещения order в очередь "+status.toString());
+        } finally {
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+    }
+    public void setOrderStatusComplete(Order.Orderstatus status, int idOrder){
+        Connection connection=null;
+        Statement statement = null;
+        int resultID=-1;
+        try {
+            connection = getConnection();
+            statement = connection.createStatement();
+
+            long date=System.currentTimeMillis();
+            java.sql.Timestamp timestamp=new java.sql.Timestamp(date);
+            String statusStr=status.toString();
+            String orderUpdate="UPDATE orders SET to_client_time=?, status=? where id="+idOrder;
+            PreparedStatement preparedStatement = connection.prepareStatement(orderUpdate);
+            preparedStatement.setTimestamp(1,timestamp);
+            preparedStatement.setString(2,statusStr);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+        }catch (SQLException e){
+            System.out.println("!!!!экзепшн перемещения order в очередь "+status.toString());
+        } finally {
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
     }
 
 

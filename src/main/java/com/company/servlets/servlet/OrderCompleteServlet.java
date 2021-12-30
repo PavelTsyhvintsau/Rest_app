@@ -2,7 +2,6 @@ package com.company.servlets.servlet;
 
 import com.company.model.Restaurant;
 import com.company.model.User;
-import com.company.model.kitchen.Cook;
 import com.company.model.kitchen.Order;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -24,17 +23,12 @@ public class OrderCompleteServlet extends HttpServlet {
     }
     protected void doPost ( HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
-        /*Cook cook=((User)req.getSession().getAttribute("user")).getCook();
-        Order order=cook.getCurrentOrder();
-        cook.setCurrentOrder(null);
-        for(Order e:restaurant.getOrdersBank()){
-            if (e.getId()==order.getId()){
-                e.setOrderstatus(Order.Orderstatus.ISREADY);
-                e.setOrderEndCookingTime(System.currentTimeMillis());
-            }
-        }
-
-        req.setAttribute("cook",cook);*/
+        int idOrder=Integer.parseInt(req.getParameter("orderid"));
+        User user=(User)req.getSession().getAttribute("user");
+        int idUser=user.getId();
+        restaurant.setOrderStatusReady(Order.Orderstatus.ISREADY,idOrder,idUser);
+        user.setCurrentOrder(-1);
+        req.getSession().setAttribute("user", user);
         resp.sendRedirect(req.getContextPath()+"/cooking_page" );
     }
 }

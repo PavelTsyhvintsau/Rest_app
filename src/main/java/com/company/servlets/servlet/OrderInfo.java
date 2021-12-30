@@ -22,14 +22,8 @@ public class OrderInfo extends HttpServlet {
         }
     }
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String idStr=req.getParameter("id");
-        int id=Integer.valueOf(idStr);
-        Order order=null;
-        for(Order e:restaurant.getOrdersListFromDd()){
-            if(e.getId()==id){
-                order=e;
-            }
-        }
+        int id=Integer.parseInt(req.getParameter("id"));
+        Order order=restaurant.getOrderFromDdBiID(id);
         req.setAttribute("order", order);
         req.getRequestDispatcher("/WEB-INF/view/order_info_page.jsp").forward(req, resp);
     }

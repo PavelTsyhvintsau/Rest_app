@@ -16,13 +16,13 @@
 <body onload="init('timer')">
 <div class="mainMenu"><jsp:include page="_menu.jsp"></jsp:include></div>
 <div class="body">
-    <c:set var="order" scope="page" value="${requestScope.order}"/>
+   <c:set var="order" scope="page" value="${requestScope.order}"/>
     <div>
         <ul>
             <li>ID заказа: <c:out value="${order.id}"/></li>
-            <li>№ стола: <c:out value="${order.tableNumber}"/>, официант: <c:out value="${order.user.login}"/>.</li>
-            <li>Время оформления заказа: <c:out value="${order.orderCreateTime}"/>.</li>
-            <li>Время начала приготовления: <c:out value="${order.orderStartCookingTime}"/>.</li>
+            <li>№ стола: <c:out value="${order.tableNumber}"/>, официант: <c:out value="${order.creatorID}(${requestScope.restaurant.dao.get().getById(order.creatorID).login})"/>.</li>
+            <li>Время оформления заказа: <c:out value="${order.orderCreateTimeString}"/>.</li>
+            <li>Время начала приготовления: <c:out value="${order.orderStartCookingTimeString}"/>.</li>
             <li><p> Время прошло с момента оформления (вводные в секундомер "${order.orderTimeFromCreating}") <span id="timer" style="color: brown; font-size: 150%; font-weight: bold;">${order.orderTimeFromCreating}</span></p></li>
             <li>Время окончания приготовления: <c:out value="${order.orderEndCookingTime}"/>.</li>
             <li>Время потрачено на приготовление: <c:out value="${order.timeFactCookingString}"/> мин.</li>

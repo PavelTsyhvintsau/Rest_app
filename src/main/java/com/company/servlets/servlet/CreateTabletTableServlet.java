@@ -41,27 +41,46 @@ public class CreateTabletTableServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         User user=(User)req.getSession().getAttribute("user");
+        System.out.println("1=////////////");
         user.setRole(User.ROLE.TABLET_TABLE);
+        System.out.println("2=////////////");
         req.getSession().setAttribute("user", user);
+        System.out.println("3=////////////");
         Order order=(Order)req.getSession().getAttribute("order");
+        System.out.println("4=////////////");
         final String tableNumberStr = req.getParameter("tableNumber");
+        System.out.println("5=////////////");
         final int tableNumber = Integer.parseInt(tableNumberStr);
+        System.out.println("6=////////////");
         order.setTableNumber(tableNumber);
+        System.out.println("7=////////////");
         req.getSession().setAttribute("order",order);
+        System.out.println("8=////////////");
         req.getSession().setAttribute("role", User.ROLE.TABLET_TABLE);
+        System.out.println("9=////////////");
         req.setAttribute("orderTable", order);
+        System.out.println("10=////////////");
         req.setAttribute("menu", this.restaurant.getMenu());
+        System.out.println("11=////////////");
         req.setAttribute("queueOrders", restaurant.getOrdersListFromDd());
+        System.out.println("12=////////////");
         req.setAttribute("menuHot", menuHot);
+        System.out.println("13=////////////");
         req.setAttribute("menuSalat", menuSalat);
+        System.out.println("14=////////////");
         req.setAttribute("menuSoup", menuSoup);
+        System.out.println("16=////////////");
         req.setAttribute("menuGarnish", menuGarnish);
+        System.out.println("17=////////////");
         req.setAttribute("menuHotDrink", menuHotDrink);
+        System.out.println("18=////////////");
         req.setAttribute("menuCouldDrink", menuCouldDrink);
+        System.out.println("19=////////////");
         req.setAttribute("restaurant",restaurant);
+        System.out.println("20=////////////");
 
         req.getRequestDispatcher("/WEB-INF/view/table_menu.jsp").forward(req, resp);
-
+        System.out.println("21=////////////");
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {

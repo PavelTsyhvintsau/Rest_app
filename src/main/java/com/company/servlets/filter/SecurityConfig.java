@@ -78,6 +78,7 @@ public class SecurityConfig {
         urlTable.add("/add_order_to_TableQueue");
         urlTable.add("/logout");
         urlTable.add("/style/style1.css");
+        urlTable.add("/table_menu.jsp");
         mapConfig.put(TABLET_TABLE, urlTable);
 
     }

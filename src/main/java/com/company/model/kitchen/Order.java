@@ -1,6 +1,8 @@
 package com.company.model.kitchen;
 
 import com.company.model.kitchen.dishes.Dish;
+import com.company.util.Utils;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -73,12 +75,9 @@ public class Order {
         return orderToClientTime;
     }
     public String getOrderToClientTimeString() {
-        if (orderToClientTime==0){return "---";}
+        if (orderToClientTime==-1){return "---";}
         else {
-            String result=new String();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        Date date =new Date(orderToClientTime);
-        result=formatter.format(date);
+            String result=Utils.formatTimeDate(orderToClientTime);
         this.orderToClientTimeString =result;
         return result;
         }
@@ -87,10 +86,7 @@ public class Order {
         return done;
     }
     public String getOrderCreateTimeString(){
-        String result=new String();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        Date date =new Date(orderCreateTime);
-        result=formatter.format(date);
+        String result= Utils.formatTimeDate(orderCreateTime);
         this.orderStartCreateString =result;
         return result;
     }
@@ -112,13 +108,10 @@ public class Order {
         this.orderStartCookingTime = orderStartCookingTime;
     }
     public String getOrderStartCookingTimeString(){
-        if(orderStartCookingTime==0){
+        if(orderStartCookingTime==-1){
             return "---";
         }else{
-            String result=new String();
-            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-            Date date =new Date(orderStartCookingTime);
-            result=formatter.format(date);
+            String result=Utils.formatTimeDate(orderStartCookingTime);
             this.orderStartCookingTimeString =result;
             return result;
         }
@@ -134,7 +127,7 @@ public class Order {
     }
     public String getTimeFactCookingString(){
         String result=new String();
-        if(orderStartCookingTime==0|| orderEndCookingTime==0){
+        if(orderStartCookingTime==-1|| orderEndCookingTime==-1){
             result="---";
             return result;
         }else{
@@ -150,13 +143,11 @@ public class Order {
     }
     public String getOrderEndCookingTime(){
         String result=new String();
-        if(orderEndCookingTime==0){
+        if(orderEndCookingTime==-1){
             result="---";
             return result;
         }else{
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        Date date =new Date(orderEndCookingTime);
-        result=formatter.format(date);
+        result=Utils.formatTimeDate(orderEndCookingTime);
         this.orderEndCookingTimeString =result;
         return result;}
     }

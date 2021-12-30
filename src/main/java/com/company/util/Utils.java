@@ -6,6 +6,9 @@ import com.company.model.kitchen.dishes.Dish;
 import com.company.model.User;
 
 import javax.servlet.http.HttpServletRequest;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
 
 public class Utils {
@@ -39,5 +42,11 @@ public class Utils {
                 repo.get(Integer.parseInt(id)) != null);
         System.out.println("dish id invalid = "+invalid);
         return invalid;
+    }
+    public static String formatTimeDate(long data){
+        String result="";
+        SimpleDateFormat formater = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        result=formater.format(new Date(data));
+        return result;
     }
 }

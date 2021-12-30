@@ -37,7 +37,7 @@
             <input class="button17" type="submit" name="addToOrder" value="Заказать"/>
         </form>
     </div>
-    <c:forEach var="order" items="${requestScope.restaurant.ordersBank}">
+    <c:forEach var="order" items="${requestScope.restaurant.ordersListFromDd}">
         <c:if test="${order.tableNumber eq sessionScope.order.tableNumber && order.orderstatus ne 'ISCLOSE'}">
             <div class="orderShot">
                 <ul>

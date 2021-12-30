@@ -26,27 +26,16 @@ public class ActivateCookServlet extends HttpServlet {
 
     protected void doPost ( HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
-        System.out.println("делаю активацию выполнения заказа для юзера"+Integer.parseInt(req.getSession().getId()));
-        int orderID=restaurant.getOrderFromQueueDd(Integer.parseInt(req.getSession().getId()));
-        System.out.println("заказ из очереди взят (проверь его код)");
-
-       /* if (!restaurant.getQueueOrders().isEmpty()) {
-            try {
-                //cook.setCurrentOrder(restaurant.getQueueOrders().take());
-                Order order=restaurant.getOrderFromDd(cook.getCurrentOrder());
-                order.setCookID(cook.getId());
-                order.setOrderstatus(Order.Orderstatus.INWORK);
-                order.setOrderStartCookingTime(System.currentTimeMillis());
-            } catch (InterruptedException e) {
-                System.out.println("ошибка взятия заказа из очереди!");
-                e.printStackTrace();
-            }
-        }*/
-
-       //req.setAttribute("cook",cook);
+        String id=req.getParameter("id");
+        int orderID=restaurant.getOrderFromQueueDd(Integer.parseInt(id));
+        User user=(User)req.getSession().getAttribute("user");
+        user.setCurrentOrder(orderID);
+        req.getSession().setAttribute("user",user);
+        if(user.getCurrentOrder()!=-1){
+            req.setAttribute("curOrder", restaurant.getOrderFromDdBiID(user.getCurrentOrder()));
+        }
         resp.sendRedirect(req.getContextPath()+"/cooking_page" );
     }
-
 }
 
 

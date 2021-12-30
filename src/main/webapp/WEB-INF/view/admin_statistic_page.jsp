@@ -82,7 +82,7 @@
             <label> Выбор блюда:</label>
             <select name="dishes" multiple="multiple">
                 <option value="all" selected="selected">Выбрать все</option>
-                <c:forEach var="unit" items="${requestScope.restaurant.menu.get().dishesList}">
+                <c:forEach var="unit" items="${sessionScope.restaurant.menu}">
                         <option value="${unit.id}">${unit.dishName}</option>
                 </c:forEach>
             </select><br>
