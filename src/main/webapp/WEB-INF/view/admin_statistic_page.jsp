@@ -23,7 +23,7 @@
                 <option value="all"selected="selected">Выбрать всех</option>
                 <c:forEach var="cook" items="${requestScope.restaurant.dao.get().store}">
                     <c:if test="${cook.role eq 'COOK'}">
-                    <option value="${cook.login}">${cook.login}</option>
+                    <option value="${cook.id}">${cook.login}</option>
                     </c:if>
                 </c:forEach>
             </select><br>
@@ -50,11 +50,11 @@
         <form method="post" action="<c:url value='/waiter_statistic'/>">
 
             <label> Выбор официантов:</label>
-            <select name="users" multiple="multiple">
+            <select name="usersID" multiple="multiple">
                 <option value="all"selected="selected">Выбрать всех</option>
                 <c:forEach var="user" items="${requestScope.restaurant.dao.get().store}">
                     <c:if test="${user.role eq 'WAITER'}">
-                        <option value="${user.login}">${user.login}</option>
+                        <option value="${user.id}">${user.login}</option>
                     </c:if>
                 </c:forEach>
             </select><br>
@@ -82,7 +82,7 @@
             <label> Выбор блюда:</label>
             <select name="dishes" multiple="multiple">
                 <option value="all" selected="selected">Выбрать все</option>
-                <c:forEach var="unit" items="${sessionScope.restaurant.menu}">
+                <c:forEach var="unit" items="${requestScope.restaurant.menu.dishesList}">
                         <option value="${unit.id}">${unit.dishName}</option>
                 </c:forEach>
             </select><br>

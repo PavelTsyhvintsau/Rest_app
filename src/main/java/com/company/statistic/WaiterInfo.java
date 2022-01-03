@@ -1,11 +1,13 @@
 package com.company.statistic;
 
+import com.company.model.Restaurant;
 import com.company.model.kitchen.Order;
         import java.text.SimpleDateFormat;
         import java.util.ArrayList;
         import java.util.Date;
 
 public class  WaiterInfo {
+    private int id;
     private String name;
     private String dateStart;
     private String dateEnd;
@@ -15,20 +17,20 @@ public class  WaiterInfo {
     private long ordersLongPraсtic;
     private int ordersCost;
 
-    public WaiterInfo(String name, String dateStart, String dateEnd, ArrayList<Order> listOrders) {
-        this.name = name;
+    public WaiterInfo(int id, String dateStart, String dateEnd, Restaurant restaurant) {
+        this.id=id;
+        this.name =restaurant.getDao().get().getById(id).getLogin();
         this.dateStart = dateStart;
         this.dateEnd = dateEnd;
-        this.dataList = listOrders;
+        this.dataList = restaurant.getOrdersListFromDd();
         this.userListOrders = new ArrayList<>();
-        this.ordersLongTheory = 0;
+        this.ordersLongTheory = 0;//милисекунды
         this.ordersLongPraсtic = 0;
         this.ordersCost=0;
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         for (Order order : dataList) {
             try {
-                if (//order.getCreatorID().equals(name) && нужно исправить
-                        order.getOrderstatus().equals(Order.Orderstatus.ISCLOSE)) {
+                if (order.getCreatorID()==id&& order.getOrderstatus().equals(Order.Orderstatus.ISCLOSE)) {
                     Date startDate=new Date(order.getOrderStartCookingTimeLong());
                     Date endDate=new Date(format.parse(dateEnd).getTime()+(long)(24*60*60*1000));
                     if(startDate.before(format.parse(dateStart))||
@@ -37,7 +39,7 @@ public class  WaiterInfo {
                     } else{
                         userListOrders.add(order);
                         ordersLongTheory += order.getTotalCookingTime();
-                        ordersLongPraсtic += order.getOrderEndCookingTimeLong() - order.getOrderStartCookingTimeLong();
+                        ordersLongPraсtic += (order.getOrderToClientTime() - order.getOrderEndCookingTimeLong())/60000;
                         ordersCost+=order.getTotalPrice();
                     }
                 }
@@ -46,6 +48,13 @@ public class  WaiterInfo {
             }
         }
     }
+    public int getRublesPrice(){
+        return ordersCost/100;
+    }
+    public int getPennyPrice(){
+        return ordersCost%100;
+    }
+    public int getId(){return id;}
     public String getName() {
         return name;
     }

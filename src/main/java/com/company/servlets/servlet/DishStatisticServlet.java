@@ -118,6 +118,8 @@ public class DishStatisticServlet extends HttpServlet {
             infoDishList.sort(comparing(DishInfo::getCost));
         }
         req.setAttribute("infoDishList", infoDishList);
+        req.setAttribute("start",dateStart);
+        req.setAttribute("end",dateEnd);
         req.getRequestDispatcher("/WEB-INF/view/dishStat.jsp").forward(req, resp);
     }
 

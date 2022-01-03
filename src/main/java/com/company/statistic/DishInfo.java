@@ -36,4 +36,10 @@ public class DishInfo {
     public String getName() {
         return dish.getDishName();
     }
+    public int getRubCost(){
+        return cost/100;
+    }
+    public int getPennyCost(){
+        return cost%100;
+    }
 }

@@ -23,7 +23,7 @@
 </div>
 <div class="body">
     <div class="listOrder1">
-        <h2> Список заказов в очереди ожидания:</h2>
+        <h2> Список заказов в очереди:</h2>
         <c:forEach var="order" items="${requestScope.restaurant.ordersListFromDd}">
             <c:if test="${order.orderstatus eq 'INQUEUE'}" >
             <%@include file="_order_shot.jsp" %>
@@ -47,6 +47,9 @@
 
         </c:forEach>
     </div>
+</div>
+<div>
+
 </div>
 </body>
 </html>

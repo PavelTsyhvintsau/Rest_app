@@ -14,17 +14,26 @@
     <a class="button28" href="<c:url value='/admin_statistic_page' />">Статистика</a></div>
 </div>
 <div class="body">
-    cooksStat.jsp page<br>
+    Статистика поваров с ${requestScope.start} по ${requestScope.end}<br>
 
-
-    <c:forEach var="val" items="${requestScope.infoCooksList}">
-        <div class="orderShot">
-            <c:out value="${val.name}"/> <br>
-            <c:out value="${val.countOrders}"/> - заказов выполнил,<br>
-            <c:out value="${val.ordersLongTheory}"/>минут в теории, <c:out value="${val.ordersLongPraсtic/60000}"/> минут затратил по факту.<br>
-        </div>
-    </c:forEach>
-
+    <table class="table">
+        <tr>
+            <td>Повар</td>
+            <td>ID</td>
+            <td>Заказов выполнил</td>
+            <td>Мин. в теории</td>
+            <td>Мин. затратил фактически</td>
+        </tr>
+        <c:forEach var="val1" items="${requestScope.infoCooksList}">
+            <tr>
+                <td><c:out value="${val1.name}"/></td>
+                <td><c:out value="${val1.id}"/></td>
+                <td><c:out value="${val1.countOrders}"/></td>
+                <td><c:out value="${val1.ordersLongTheory}"/></td>
+                <td><c:out value="${val1.ordersLongPraсtic/60000}"/></td>
+            </tr>
+        </c:forEach>
+    </table>
 </div>
 </body>
 </html>

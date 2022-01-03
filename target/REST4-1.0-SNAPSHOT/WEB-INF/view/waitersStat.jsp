@@ -14,14 +14,25 @@
     <a class="button28" href="<c:url value='/admin_statistic_page' />">Статистика</a></div>
 </div>
 <div class="body">
-    cooksStat.jsp page<br>
-    <c:forEach var="val" items="${requestScope.infoWaitersList}">
-        <div class="orderShot">
-            <c:out value="${val.name}"/> <br>
-            <c:out value="${val.countOrders}"/> - заказов выполнил,<br>
-            <c:out value="${val.ordersCost}"/> - общая стоимость(коп.). <br>
-        </div>
-    </c:forEach>
+    Статистика официантов с ${requestScope.start} по ${requestScope.end}<br>
+    <table class="table">
+        <tr>
+            <td>Официант</td>
+            <td>ID</td>
+            <td>Заказов выполнил</td>
+            <td>Мин. на доставку ушло</td>
+            <td>Общая стоимость</td>
+        </tr>
+        <c:forEach var="val1" items="${requestScope.infoWaitersList}">
+            <tr>
+                <td><c:out value="${val1.name}"/></td>
+                <td><c:out value="${val1.id}"/></td>
+                <td><c:out value="${val1.countOrders}"/></td>
+                <td><c:out value="${val1.ordersLongPraсtic}"/> мин.</td>
+                <td><c:out value="${val1.rublesPrice}р. ${val1.pennyPrice}коп."/></td>
+            </tr>
+        </c:forEach>
+    </table>
 </div>
 </body>
 </html>

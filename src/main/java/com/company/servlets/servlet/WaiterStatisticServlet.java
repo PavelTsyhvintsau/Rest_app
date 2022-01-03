@@ -37,18 +37,19 @@ public class WaiterStatisticServlet extends HttpServlet {
         final String sortBy = req.getParameter("sortBy");
         final String start = req.getParameter("trip-start");
         final String end = req.getParameter("trip-end");
-        final String[] users=req.getParameterValues("users");
+        final String[] users=req.getParameterValues("usersID");
         ArrayList<WaiterInfo> infoWaitersList=new ArrayList<>();
         List<String> cooksArray=new ArrayList<>();
         cooksArray= Arrays.asList(users);
         if (cooksArray.contains("all")){
             for (User user:restaurant.getDao().get().getStore()){
                 if(user.getRole().equals(User.ROLE.WAITER))
-                    infoWaitersList.add(new WaiterInfo(user.getLogin(), start,end,restaurant.getOrdersListFromDd()));
+                    infoWaitersList.add(new WaiterInfo(user.getId(), start,end,restaurant));
             }
         }else{
             for (String name:users){
-                infoWaitersList.add(new WaiterInfo(name, start,end,restaurant.getOrdersListFromDd()));
+                int id=Integer.parseInt(name);
+                infoWaitersList.add(new WaiterInfo(id, start,end,restaurant));
             }
         }
         if (sortBy.equals("byName")){
@@ -60,7 +61,8 @@ public class WaiterStatisticServlet extends HttpServlet {
         if (sortBy.equals("byCost")){
             infoWaitersList.sort(comparing(WaiterInfo::getOrdersCost));
         }
-        // req.setAttribute("cooks", cooks);
+        req.setAttribute("start",start);
+        req.setAttribute("end",end);
         req.setAttribute("infoWaitersList", infoWaitersList);
 
         req.getRequestDispatcher("/WEB-INF/view/waitersStat.jsp").forward(req, resp);

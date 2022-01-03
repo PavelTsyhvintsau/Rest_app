@@ -1,12 +1,14 @@
 package com.company.statistic;
 
+import com.company.model.Restaurant;
+import com.company.model.User;
 import com.company.model.kitchen.Order;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class CookInfo {
-    private int ID;
+    private int id;
     private String name;
     private String dateStart;
     private String dateEnd;
@@ -16,20 +18,20 @@ public class CookInfo {
     private long ordersLongPraсtic;
     private int ordersCost;
 
-    public CookInfo(String name, String dateStart, String dateEnd, ArrayList<Order> listOrders) {
-        this.name = name;
+    public CookInfo(int coocId, String dateStart, String dateEnd, Restaurant restaurant) {
+        this.id =coocId;
+        this.name = restaurant.getDao().get().getById(coocId).getLogin();
         this.dateStart = dateStart;
         this.dateEnd = dateEnd;
-        this.dataList = listOrders;
+        this.dataList = restaurant.getOrdersListFromDd();
         this.cookListOrders = new ArrayList<>();
-        this.ordersLongTheory = 0;
-        this.ordersLongPraсtic = 0;
+        this.ordersLongTheory = 0; //минуты
+        this.ordersLongPraсtic = 0; //милисекунды
         this.ordersCost=0;
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         for (Order order : dataList) {
             try {
-            if (order.getCookID()==ID &&
-                    order.getOrderstatus().equals(Order.Orderstatus.ISCLOSE)) {
+            if ( (order.getOrderstatus().equals(Order.Orderstatus.ISREADY)||order.getOrderstatus().equals(Order.Orderstatus.ISCLOSE))&&order.getCookID()== this.id  ) {
                 Date startDate=new Date(order.getOrderStartCookingTimeLong());
                 Date endDate=new Date(format.parse(dateEnd).getTime()+(long)(24*60*60*1000));
                    if(startDate.before(format.parse(dateStart))||
@@ -53,6 +55,7 @@ public class CookInfo {
     public String getName() {
         return name;
     }
+    public int getId(){ return id; }
     public String getDateStart () {
         return dateStart;
     }

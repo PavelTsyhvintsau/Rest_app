@@ -30,17 +30,18 @@ public class CooksStatisticServlet extends HttpServlet {
            final String sortBy = req.getParameter("sortBy");
             final String start = req.getParameter("trip-start");
             final String end = req.getParameter("trip-end");
-            final String[] cooks=req.getParameterValues("cooks");
+            final String[] cooksID=req.getParameterValues("cooks");
             ArrayList<CookInfo> infoCooksList=new ArrayList<>();
-            List<String> cooksArray=new ArrayList<>();
-            cooksArray= Arrays.asList(cooks);
-            if (cooksArray.contains("all")){
+            List<String> cooksIDArray=new ArrayList<>();
+            cooksIDArray= Arrays.asList(cooksID);
+            if (cooksIDArray.contains("all")){
                 for (User user:restaurant.getDao().get().getStore()){
-                    if(user.getRole().equals(User.ROLE.COOK)) infoCooksList.add(new CookInfo(user.getLogin(), start,end,restaurant.getOrdersListFromDd()));
+                    if(user.getRole().equals(User.ROLE.COOK)) infoCooksList.add(new CookInfo(user.getId(),start,end,restaurant));
                 }
             }else{
-                for (String cookName:cooks){
-                    infoCooksList.add(new CookInfo(cookName, start,end,restaurant.getOrdersListFromDd()));
+                for (String cookID:cooksID){
+                    int id=Integer.valueOf(cookID);
+                    infoCooksList.add(new CookInfo(id, start,end,restaurant));
                 }
             }
             if (sortBy.equals("byName")){
@@ -56,6 +57,8 @@ public class CooksStatisticServlet extends HttpServlet {
             infoCooksList.sort(comparing(CookInfo::getOrdersLongTheory));
         }
         req.setAttribute("infoCooksList", infoCooksList);
+        req.setAttribute("start", start);
+        req.setAttribute("end",end);
         req.getRequestDispatcher("/WEB-INF/view/cooksStat.jsp").forward(req, resp);
     }
 }

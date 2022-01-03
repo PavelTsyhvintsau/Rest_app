@@ -23,20 +23,36 @@
     <a class="button28" href="<c:url value='/admin_statistic_page' />">Статистика</a></div>
 </div>
 <div class="body">
-    <c:forEach var="order" items="${requestScope.restaurant.ordersBank}">
-        <div class="orderShot">
-            Заказ - <c:out value="${order.id}"/><br>
-            Состояние - <c:out value="${order.orderstatus.toString()}"/><br>
-            Официант - <c:out value="${order.user.login}"/><br>
-            Повар - <c:out value="${order.cook.name}"/><br>
-            Состав :<br>
-            <c:forEach var="dish" items="${order.dishes}">
-                <c:out value="${dish.key.dishName}"/> - <c:out value="${dish.value}"/> шт.<br><br>
-            </c:forEach>
+
+    <table class="table">
+        <tr>
+            <td>ID заказа</td>
+            <td>Состояние</td>
+            <td>Официант</td>
+            <td>Повар</td>
+            <td>Время заказа</td>
+            <td>Время выполнения</td>
+            <td>Состав</td>
+            <td>Цена</td>
+        </tr>
+        <c:forEach var="order" items="${requestScope.restaurant.ordersListFromDd}">
+            <tr>
+                <td><c:out value="${order.id}"/></td>
+                <td><c:out value="${order.orderstatus}"/></td>
+                <td><c:out value="ID=${order.creatorID}(${requestScope.restaurant.dao.get().getById(order.creatorID).login})"/></td>
+                <td><c:out value="ID=${order.cookID}(${requestScope.restaurant.dao.get().getById(order.cookID).login})"/></td>
+                <td><c:out value="${order.orderCreateTimeString}"/></td>
+                <td><c:out value="${order.orderToClientTimeString}"/></td>
+                <td><c:forEach var="dish" items="${order.dishes}">
+                    <c:out value="${dish.key.dishName}"/> - <c:out value="${dish.value}"/> шт.<br>
+                    </c:forEach>
+                </td>
+                <td><c:out value="${order.rublePrice}р. ${order.pennyPrice}коп."/></td>
+            </tr>
+        </c:forEach>
 
 
-        </div>
-    </c:forEach>
+    </table>
 </div>
 </body>
 </html>
