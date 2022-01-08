@@ -35,6 +35,8 @@ public class SecurityConfig {
         urlAdmin.add("/dish_statistic");
         urlAdmin.add("/order_completed_page");
         urlAdmin.add("/create_table");
+
+        urlAdmin.add("/images/olive.jpg");
         mapConfig.put(ADMIN, urlAdmin);
 
 
@@ -53,6 +55,8 @@ public class SecurityConfig {
         urlCook.add("/js/timer.js");
         urlCook.add("/style/style1.css");
         urlCook.add("/order_info");
+
+        urlCook.add("/images/olive.jpg");
         mapConfig.put(COOK, urlCook);
 
 
@@ -69,6 +73,8 @@ public class SecurityConfig {
         urlWaiter.add("/order_info");
         urlWaiter.add("/waiter_create_tabletTable");
 
+        urlWaiter.add("/images/olive.jpg");
+
         mapConfig.put(WAITER,urlWaiter);
 
         // Конфигурация для роли "TABLET_TABLE".
@@ -79,6 +85,8 @@ public class SecurityConfig {
         urlTable.add("/logout");
         urlTable.add("/style/style1.css");
         urlTable.add("/table_menu.jsp");
+
+        urlTable.add("/images/olive.jpg");
         mapConfig.put(TABLET_TABLE, urlTable);
 
     }

@@ -83,6 +83,16 @@
         <url-pattern>/waiter_statistic</url-pattern>
     </servlet-mapping>
 
+    <!--admin- waiter statistic-->
+    <servlet>
+        <servlet-name>WaiterStatisticPSQL</servlet-name>
+        <servlet-class>com.company.servlets.servlet.WaiterStatisticPSQLServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WaiterStatisticPSQL</servlet-name>
+        <url-pattern>/waiter_statistic_postgres</url-pattern>
+    </servlet-mapping>
+
     <!--admin- dish statistic-->
     <servlet>
         <servlet-name>DishStatistic</servlet-name>

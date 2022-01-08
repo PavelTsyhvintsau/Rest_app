@@ -12,27 +12,21 @@ public class DishInfo {
         cost=0;
         count=0;
     }
-
     public int getCount() {
         return count;
     }
-
     public void setCount(int count) {
         this.count = count;
     }
-
     public int getCost() {
         return cost;
     }
-
     public void setCost(int cost) {
         this.cost = cost;
     }
-
     public Dish getDish() {
         return dish;
     }
-
     public String getName() {
         return dish.getDishName();
     }
