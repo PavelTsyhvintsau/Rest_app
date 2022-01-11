@@ -205,8 +205,6 @@
         <servlet-class>com.company.servlets.servlet.ActivateDishServlet</servlet-class>
     </servlet>
 
-
-
     <!--Menu for ordering create-->
     <servlet-mapping>
         <servlet-name>ActivateMenuForOrdering</servlet-name>

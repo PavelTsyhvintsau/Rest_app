@@ -35,6 +35,7 @@ public class UpdateDishServlet extends HttpServlet {
         Dish dish =restaurant.getDishFromDB(id);
         req.setAttribute("dish", dish);
         req.setAttribute("menu", restaurant.getMenu());
+
         req.getRequestDispatcher("/WEB-INF/view/update_dish.jsp").forward(req, resp);
     }
 }

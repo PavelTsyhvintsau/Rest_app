@@ -20,11 +20,14 @@
     <div>Путь к файлу изображения: <c:out value="${requestScope.dish.dishImagePath}"/> </div>
     <div>ID: <c:out value="${requestScope.dish.id}"/> </div>
     <br />
-    <form method="post" action="<c:url value='update_dish'/>">
+
+    <form enctype="multipart/form-data" method="post" action="<c:url value='update_dish'/>">
 
         <label>Новое название: <input type="text" name="name" onblur="if(value=='') value = '${requestScope.dish.dishName}'" onfocus="if(value=='${requestScope.dish.dishName}') value = '${requestScope.dish.dishName}'"/></label><br>
         <label>Новое время готовки: <input type="number" name="cookingTime" onblur="if(value=='') value = '${requestScope.dish.dishCookingTime}'" onfocus="if(value=='${requestScope.dish.dishCookingTime}') value = '${requestScope.dish.dishCookingTime}'"/> </label><br>
-        <label>Новый путь к рисунку: <input type="text" name="imagePath" onblur="if(value=='') value = '${requestScope.dish.dishImagePath}'" onfocus="if(value=='${requestScope.dish.dishImagePath}') value = '${requestScope.dish.dishImagePath}'"/> </label><br>
+        <label>Новый путь к рисунку: <input type="file" name="imagePath" accept="image/*,image/jpeg"></label><br>
+            <%--<input type="text" name="imagePath"/>--%>
+
         <select name="type">
             <c:forEach var="typeFromlist" items="${requestScope.menu.dishTypeList}">
                 <option value="${typeFromlist}">${typeFromlist}</option>
