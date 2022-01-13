@@ -6,13 +6,9 @@
     <title>Cooks stat</title>
 </head>
 <body>
-<div class="mainMenu">
-    <jsp:include page="_menu.jsp"></jsp:include>
-    <a class="button28" href="<c:url value='/updateUsers' />">Обновить пользователей</a>
-    <a class="button28" href="<c:url value='/update_dish_price' />">Обновить стоимость блюд</a>
-    <a class="button28" href="<c:url value='/admin_look_orders' />">Просмотр текущих заказов</a>
-    <a class="button28" href="<c:url value='/admin_statistic_page' />">Статистика</a></div>
-</div>
+
+<jsp:include page="_top_menu.jsp"></jsp:include>
+
 <div class="body">
     <h3>Статистика заказа блюд с <c:out value="${sessionScope.start}"/> по <c:out value="${sessionScope.end}"/>:</h3><br>
     <table class="table">

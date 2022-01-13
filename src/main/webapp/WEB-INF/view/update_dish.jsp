@@ -12,7 +12,9 @@
     <title>Title</title>
 </head>
 <body>
-<div class="mainMenu"><jsp:include page="_menu.jsp"></jsp:include></div>
+
+<div class="mainMenu"><jsp:include page="_top_menu.jsp"></jsp:include></div>
+
 <div class="body">
     <div>Название: <c:out value="${requestScope.dish.dishName}"/> </div>
     <div>Время приготовления: <c:out value="${requestScope.dish.dishCookingTime}"/> </div>

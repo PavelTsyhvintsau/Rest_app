@@ -13,12 +13,9 @@
     </script>
 </head>
 <body onload="prevent();" onpageshow="if (event.persisted) prevent();" onunload="">
-<div class="mainMenu2" style="color: white; text-align: center">
-    <h4 style="margin-top: 1px;">Меню для стола № <c:out value="${sessionScope.order.tableNumber}"/> (Официант: <c:out value="${sessionScope.user.login}"/>) Роль: <c:out value="${sessionScope.user.role}"/></h4>
-    <a class="button28" style="color: red;position: fixed;right: 0;top: 0;" href="<c:url value='/logout' />">
-        Logout
-    </a>
-</div>
+
+<jsp:include page="_top_menu.jsp"></jsp:include>
+
 <div class="rightOrderBar" style="text-align: right;">
 
     <div class="orderShot" style="background-color: cadetblue" >

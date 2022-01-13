@@ -8,12 +8,9 @@
     <title>Создание меню столика</title>
 </head>
 <body>
-<div class="mainMenu">
-    <jsp:include page="_menu.jsp"></jsp:include>
-    <a href="<c:url value="/menu_for_ordering"/>" class="button28">Меню для заказа</a>
-    <a href="<c:url value="/waiter_ordering"/>" class="button28">Мои заказы</a>
-    <a href="<c:url value="/waiter_create_tabletTable"/>"class="button28">Создать планшет для стола</a>
-</div>
+
+<jsp:include page="_top_menu.jsp"></jsp:include>
+
 <div class="body">
     Создание планшета для посетителей.
     <form method="post" action="<c:url value='/waiter_create_tabletTable'/>">

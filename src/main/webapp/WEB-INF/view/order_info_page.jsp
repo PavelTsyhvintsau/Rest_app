@@ -14,7 +14,9 @@
     <script src="js/timer.js" type="text/javascript"></script>
 </head>
 <body onload="init('timer')">
-<div class="mainMenu"><jsp:include page="_menu.jsp"></jsp:include></div>
+
+<jsp:include page="_top_menu.jsp"></jsp:include>
+
 <div class="body">
    <c:set var="order" scope="page" value="${requestScope.order}"/>
     <div>

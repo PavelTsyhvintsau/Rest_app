@@ -17,11 +17,9 @@
     <script src="js/timer.js" type="text/javascript"></script>
 </head>
 <body onload="init('timer')">
-<div class="mainMenu">
-    <jsp:include page="_menu.jsp"></jsp:include>
-    <a class="button28" href="<c:url value="/dishes_menu_editor"/>">Редактор меню</a>
-    <a class="button28" href="<c:url value="/cooking_page"/>">Выполнение заказов</a>
-</div>
+
+<jsp:include page="_top_menu.jsp"></jsp:include>
+
 <div class="body">
     <h2 class="h2">Выполнение заказов.</h2>
 текущий in prop заказ для повара <c:out value="${sessionScope.user.currentOrder}"/>
