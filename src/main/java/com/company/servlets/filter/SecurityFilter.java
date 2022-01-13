@@ -49,11 +49,17 @@ public class SecurityFilter implements Filter {
                 chain.doFilter(request, response);
                 return;
             }
+
             System.out.println("права пользователя не подтверждены"+hasPermission);
             RequestDispatcher dispatcher= request.getServletContext().getRequestDispatcher("/WEB-INF/view/access_denied.jsp");
             dispatcher.forward(request, response);
         }
         if (!SecurityConfig.getUrlPatternsAllSecurityPages().contains(servletPath)) {
+            if(servletPath.startsWith("/image")) {
+                System.out.println("........................pasth start /images ");
+                chain.doFilter(request, response);
+                return;
+            }
             req.setAttribute("path", servletPath);
             RequestDispatcher dispatcher= request.getServletContext().getRequestDispatcher("/WEB-INF/view/unknown_address.jsp");
             dispatcher.forward(request, response);

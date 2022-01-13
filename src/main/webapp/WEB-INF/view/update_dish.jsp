@@ -25,7 +25,7 @@
 
         <label>Новое название: <input type="text" name="name" onblur="if(value=='') value = '${requestScope.dish.dishName}'" onfocus="if(value=='${requestScope.dish.dishName}') value = '${requestScope.dish.dishName}'"/></label><br>
         <label>Новое время готовки: <input type="number" name="cookingTime" onblur="if(value=='') value = '${requestScope.dish.dishCookingTime}'" onfocus="if(value=='${requestScope.dish.dishCookingTime}') value = '${requestScope.dish.dishCookingTime}'"/> </label><br>
-        <label>Новый путь к рисунку: <input type="file" name="imagePath" accept="image/*,image/jpeg"></label><br>
+        <label>Новый путь к рисунку: <input type="file" name="file" accept="image/*,image/jpeg"></label><br>
             <%--<input type="text" name="imagePath"/>--%>
 
         <select name="type">

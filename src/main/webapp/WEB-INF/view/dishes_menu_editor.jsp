@@ -1,11 +1,4 @@
 
-<%--
-  Created by IntelliJ IDEA.
-  User: Лидия
-  Date: 10.09.2021
-  Time: 13:48
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -63,7 +56,7 @@
     </c:forEach>
     <h3>Добавление нового блюда</h3><br />
 
-    <form method="post" action="<c:url value='/add_dish'/>">
+    <form enctype="multipart/form-data" method="post" action="<c:url value='/add_dish'/>">
 
         <label><input type="text" name="dishName"></label>Название<br>
             <select name="dishType">
@@ -71,8 +64,8 @@
                 <option value="${type}">${type}</option>
             </c:forEach>
         </select><br>
-        <label><input type="int" name="dishCookingTime"></label>Время приготовления<br>
-        <label><input type="text" name="dishImagePath"></label>Путь к файлу картинки<br>
+        <label><input type="int" name="dishCookingTime"></label>Время приготовления мин.<br>
+        <label><input type="file" name="file"></label>Картинка блюда<br>
 
         <input type="submit" value="Ok" name="Ok"><br>
     </form>

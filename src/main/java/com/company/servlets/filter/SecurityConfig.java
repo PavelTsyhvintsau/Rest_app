@@ -1,5 +1,7 @@
 package com.company.servlets.filter;
 
+import com.company.model.Restaurant;
+
 import java.util.*;
 
 public class SecurityConfig {
@@ -36,7 +38,7 @@ public class SecurityConfig {
         urlAdmin.add("/order_completed_page");
         urlAdmin.add("/create_table");
 
-        urlAdmin.add("/images/olive.jpg");
+
         mapConfig.put(ADMIN, urlAdmin);
 
 
@@ -56,7 +58,7 @@ public class SecurityConfig {
         urlCook.add("/style/style1.css");
         urlCook.add("/order_info");
 
-        urlCook.add("/images/olive.jpg");
+
         mapConfig.put(COOK, urlCook);
 
 
@@ -73,8 +75,6 @@ public class SecurityConfig {
         urlWaiter.add("/order_info");
         urlWaiter.add("/waiter_create_tabletTable");
 
-        urlWaiter.add("/images/olive.jpg");
-
         mapConfig.put(WAITER,urlWaiter);
 
         // Конфигурация для роли "TABLET_TABLE".
@@ -86,7 +86,6 @@ public class SecurityConfig {
         urlTable.add("/style/style1.css");
         urlTable.add("/table_menu.jsp");
 
-        urlTable.add("/images/olive.jpg");
         mapConfig.put(TABLET_TABLE, urlTable);
 
     }
@@ -98,6 +97,7 @@ public class SecurityConfig {
     public static List<String> getUrlPatternsForRole(String role) {
         return mapConfig.get(role);
     }
+
     public static List<String> getUrlPatternsAllSecurityPages() {
         ArrayList<String>result=new ArrayList<>();
         for (Map.Entry<String, List<String>> entry:mapConfig.entrySet()){

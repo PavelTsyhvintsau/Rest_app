@@ -1,20 +1,21 @@
 package com.company.servlets.servlet;
 
-import com.company.dao.Menu;
+
 import com.company.model.Restaurant;
-import com.company.model.kitchen.dishes.Dish;
-import com.company.model.kitchen.dishes.DishType;
+import com.company.util.Utils;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.InputStream;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicReference;
 
+@MultipartConfig
 public class AddDishServlet extends HttpServlet {
 
     private AtomicInteger id;
@@ -36,8 +37,18 @@ public class AddDishServlet extends HttpServlet {
         final String dishName = req.getParameter("dishName");
         final String dishType =req.getParameter("dishType");
         final int dishCookingTime = Integer.parseInt(req.getParameter("dishCookingTime"));
-        final String dishImagePath = req.getParameter("dishImagePath");
-        restaurant.addDish(dishName,dishType,dishCookingTime,dishImagePath);
+
+
+        Part filePart = req.getPart("file");
+        InputStream fileContent = filePart.getInputStream();
+        String dir="C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0_Tomcat9055\\webapps\\ROOT\\images\\";
+        String namePhoto= Utils.generateName() +".jpeg";
+        File foto=new File(dir,namePhoto);
+        foto.createNewFile();
+        Utils.putDishPhoto(fileContent,foto);
+        String imagePath="images/"+namePhoto;
+
+        restaurant.addDish(dishName,dishType,dishCookingTime,imagePath);
         resp.sendRedirect(req.getContextPath()+"/dishes_menu_editor");
     }
 }
