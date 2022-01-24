@@ -431,7 +431,7 @@ public class Restaurant {
             System.out.println("========= заказ в очереди готово");
 
         } catch (SQLException throwables) {
-            System.out.println("===ошибка помещения заказа в бд/очередь");
+            System.out.println("===экзепшн помещения заказа в бд/очередь");
             throwables.printStackTrace();
         }finally {
                 try {
@@ -457,40 +457,52 @@ public class Restaurant {
             statement = connection.createStatement();
             String selectTableSQL = "SELECT id, " +
                     "user_id, " +
-                    "table_number," +
-                    " create_time, " +
+                    "table_number, " +
+                    "create_time, " +
                     "start_cooking_time, " +
                     "end_cooking_time, " +
                     "to_client_time, " +
                     "status," +
-                    "done," +
-                    "cook_id ," +
-                    "dishes FROM orders ";
+                    "cook_id, " +
+                    "dishes FROM orders";
             ResultSet rs=statement.executeQuery(selectTableSQL);
             while (rs.next()) {
+                System.out.println("===читаем ordersList из БД1");
                 int id=rs.getInt("id");
+                System.out.println("===читаем ordersList из БД2");
                 int userID=rs.getInt("user_id");
+                System.out.println("===читаем ordersList из БД3");
                 int cookID=rs.getInt("cook_id");
+                System.out.println("===читаем ordersList из БД4");
                 int tableNum=rs.getInt("table_number");
+                System.out.println("===читаем ordersList из БД5");
                 Timestamp createTimeStamp=rs.getTimestamp("create_time");
+                System.out.println("===читаем ordersList из БД6");
                 long createTime=createTimeStamp.getTime();
                 Timestamp startCookingTimeStamp=rs.getTimestamp("start_cooking_time");
+                System.out.println("===читаем ordersList из БД7");
                 long startCookingTime=startCookingTimeStamp.getTime();
                 Timestamp endCookingTimeStamp=rs.getTimestamp("end_cooking_time");
+                System.out.println("===читаем ordersList из БД8");
                 long endCookingTime=endCookingTimeStamp.getTime();
                 Timestamp toClientTimeStamp=rs.getTimestamp("to_client_time");
-                Long toClientTime=toClientTimeStamp.getTime();
+                System.out.println("===читаем ordersList из БД9");
+                long toClientTime=toClientTimeStamp.getTime();
                 Order.Orderstatus orderstatus=Order.Orderstatus.valueOf(rs.getString("status"));
-                Boolean done=rs.getBoolean("done");
                 Array array=rs.getArray("dishes");
+                System.out.println("===читаем ordersList из БД10");
                 Integer[][] data=(Integer[][]) array.getArray();
+                System.out.println("===читаем ordersList из БД10.5");
                 HashMap<Dish,Integer>dishList=getOrderDishes(data);
-                Order order=new Order(userID,dishList,id,tableNum,createTime,startCookingTime,endCookingTime,toClientTime,done,orderstatus,cookID );
+                System.out.println("===читаем ordersList из БД11");
+                Order order=new Order(userID,dishList,id,tableNum,createTime,startCookingTime,endCookingTime,toClientTime,orderstatus,cookID );
+                System.out.println("===читаем ordersList из БД12");
                 result.add(order);
+                System.out.println("===читаем ordersList из БД13");
             }
             connection.close();
         }catch (SQLException e){
-            System.out.println("экзепшн вычитивания юзеров из БД4");
+            System.out.println("экзепшн вычитивыния ordersList из БД!!!!");
         } finally {
             if (statement != null) {
                 try {
@@ -516,7 +528,7 @@ public class Restaurant {
         try {
             connection = getConnection();
             statement = connection.createStatement();
-            String selOrder="SELECT user_id, table_number, create_time, start_cooking_time, end_cooking_time, to_client_time, status, done, cook_id, dishes from orders where id="+idOrder;
+            String selOrder="SELECT user_id, table_number, create_time, start_cooking_time, end_cooking_time, to_client_time, status, cook_id, dishes from orders where id="+idOrder;
             ResultSet rs=statement.executeQuery(selOrder);
             while (rs.next()) {
                 int userID=rs.getInt("user_id");
@@ -531,11 +543,10 @@ public class Restaurant {
                 Timestamp toClientTimeStamp=rs.getTimestamp("to_client_time");
                 Long toClientTime=toClientTimeStamp.getTime();
                 Order.Orderstatus orderstatus=Order.Orderstatus.valueOf(rs.getString("status"));
-                Boolean done=rs.getBoolean("done");
                 Array array=rs.getArray("dishes");
                 Integer[][] data=(Integer[][]) array.getArray();
                 HashMap<Dish,Integer>dishList=getOrderDishes(data);
-                Order order=new Order(userID,dishList,idOrder,tableNum,createTime,startCookingTime,endCookingTime,toClientTime,done,orderstatus,cookID );
+                Order order=new Order(userID,dishList,idOrder,tableNum,createTime,startCookingTime,endCookingTime,toClientTime,orderstatus,cookID );
                 result=order;
             }
             connection.close();

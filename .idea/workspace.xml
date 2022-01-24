@@ -25,46 +25,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d799b732-0c63-4290-884f-ebdf9fea81a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_menu_admin.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_menu_cook.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_menu_manager.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_menu_tablet_table.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_menu_waiter.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_top_menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/73e482ff-5390-45a1-bfe6-fb8750b0e97c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/73e482ff-5390-45a1-bfe6-fb8750b0e97c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/73e482ff-5390-45a1-bfe6-fb8750b0e97c/storage_v2/_src_/database/Restaurant.XScsDQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/73e482ff-5390-45a1-bfe6-fb8750b0e97c/storage_v2/_src_/database/Restaurant.XScsDQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/model/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/model/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/model/kitchen/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/model/kitchen/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/WaiterOrderingListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/WaiterOrderingListServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/ordersCompletePageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/ordersCompletePageServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_menu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/access_denied.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/access_denied.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_add_remove_users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_add_remove_users.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_look_orders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_look_orders.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_menu.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_statistic_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_statistic_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cook_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cook_menu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cook_page_cooking.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cook_page_cooking.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cooksStat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cooksStat.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/create_tabletTable.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/create_tabletTable.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/dishStat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/dishStat.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/dishes_menu_editor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/dishes_menu_editor.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/dishes_price_update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/dishes_price_update.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/menu_for_ordering.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/menu_for_ordering.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/order_completed_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/order_completed_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/order_info_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/order_info_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/tableInBase.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/tableInBase.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/table_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/table_menu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/unknown_address.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/unknown_address.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/update_dish.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/update_dish.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/update_user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/update_user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/waiter_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/waiter_menu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/waiter_orders_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/waiter_orders_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/waitersStat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/waitersStat.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/_menu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/dishes_menu_editor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/dishes_menu_editor.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/update_dish.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/update_dish.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Restaurant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/_menu_tablet_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/_menu_tablet_table.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/admin_statistic_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/admin_statistic_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/Restaurant.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="623712de-db44-421b-8014-b4e24d2ac880" value="Orange" />
+    </colors>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -107,10 +94,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../exemples_forDeleting/13" />
+    <property name="database.data.extractors.current.id" value="CSV-Groovy.csv.groovy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../exemples_forDeleting/maven_exemple" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.42068964" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
@@ -162,78 +150,6 @@
       <script-mode>FILE</script-mode>
       <data-source id="73e482ff-5390-45a1-bfe6-fb8750b0e97c" namespace="database/&quot;Restaurant&quot;" />
       <method v="2" />
-    </configuration>
-    <configuration name="Tomcat 9.0.52" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.52" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="REST4:war">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_REST4" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="63389" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="REST4:war" />
-        </option>
-      </method>
     </configuration>
     <configuration name="Tomcat 9.0.55" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.55" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8088/" />
@@ -334,7 +250,6 @@
       <item itemvalue="Database Script.console.sql" />
       <item itemvalue="Database Script.allUsers.sql" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.55" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.52" />
     </list>
     <recent_temporary>
       <list>
@@ -455,7 +370,13 @@
       <workItem from="1641465273090" duration="26913000" />
       <workItem from="1641998176597" duration="1024000" />
       <workItem from="1642002310180" duration="566000" />
-      <workItem from="1642003800017" duration="6980000" />
+      <workItem from="1642003800017" duration="11700000" />
+      <workItem from="1642352415573" duration="3229000" />
+      <workItem from="1642428683482" duration="598000" />
+      <workItem from="1642524146490" duration="7795000" />
+      <workItem from="1642758700210" duration="2643000" />
+      <workItem from="1642763947684" duration="10064000" />
+      <workItem from="1643049291627" duration="5264000" />
     </task>
     <servers />
   </component>
@@ -491,14 +412,18 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="740" y="396" key="#SQL_Resolution_Scopes/0.0.1858.1080@0.0.1858.1080" timestamp="1640685272364" />
+    <state x="443" y="167" key="#SSH_Configurations" timestamp="1643044814642">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="443" y="167" key="#SSH_Configurations/0.0.1858.1080@0.0.1858.1080" timestamp="1643044814642" />
     <state x="638" y="188" key="#allUsers.sql" timestamp="1639081715048">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="638" y="188" key="#allUsers.sql/0.0.1858.1080@0.0.1858.1080" timestamp="1639081715048" />
-    <state x="459" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1641398304111">
+    <state x="93" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1643055117768">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="459" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1641398304111" />
+    <state x="93" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1643055117768" />
     <state x="841" y="266" key="#com.intellij.ide.util.ExportDialog" timestamp="1637697314198">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -511,10 +436,10 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="659" y="315" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1636318330069" />
-    <state x="735" y="164" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1637782575098">
+    <state x="735" y="164" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1643007559759">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="735" y="164" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1858.1080@0.0.1858.1080" timestamp="1637782575098" />
+    <state x="735" y="164" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1858.1080@0.0.1858.1080" timestamp="1643007559759" />
     <state x="927" y="122" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1638992327986">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -535,6 +460,10 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="1112" y="160" key="#postgresql-42.3.1.jar/0.0.1858.1080@0.0.1858.1080" timestamp="1638998231978" />
+    <state x="609" y="294" key="DUMP_DIALOG_DIMENSION_KEY" timestamp="1642759762704">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="609" y="294" key="DUMP_DIALOG_DIMENSION_KEY/0.0.1858.1080@0.0.1858.1080" timestamp="1642759762704" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1638980160178">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -543,58 +472,58 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="802" y="395" key="DetectedRootsChooserDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1637782528600" />
-    <state x="337" y="294" key="FileChooserDialogImpl" timestamp="1641989591141">
+    <state x="337" y="294" width="718" height="491" key="FileChooserDialogImpl" timestamp="1643012330504">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="337" y="294" key="FileChooserDialogImpl/0.0.1858.1080@0.0.1858.1080" timestamp="1641989591141" />
-    <state width="1534" height="212" key="GridCell.Tab.0.bottom" timestamp="1642064822754">
+    <state x="337" y="294" width="718" height="491" key="FileChooserDialogImpl/0.0.1858.1080@0.0.1858.1080" timestamp="1643012330504" />
+    <state width="890" height="205" key="GridCell.Tab.0.bottom" timestamp="1643055093801">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="212" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1642064822754" />
-    <state width="1534" height="212" key="GridCell.Tab.0.center" timestamp="1642064822754">
+    <state width="890" height="205" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1643055093801" />
+    <state width="890" height="205" key="GridCell.Tab.0.center" timestamp="1643055093801">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="212" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1642064822754" />
-    <state width="1534" height="212" key="GridCell.Tab.0.left" timestamp="1642064822754">
+    <state width="890" height="205" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1643055093801" />
+    <state width="890" height="205" key="GridCell.Tab.0.left" timestamp="1643055093801">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="212" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1642064822754" />
-    <state width="1534" height="212" key="GridCell.Tab.0.right" timestamp="1642064822754">
+    <state width="890" height="205" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1643055093801" />
+    <state width="890" height="205" key="GridCell.Tab.0.right" timestamp="1643055093801">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="212" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1642064822754" />
-    <state width="1534" height="212" key="GridCell.Tab.1.bottom" timestamp="1642064822670">
+    <state width="890" height="205" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1643055093801" />
+    <state width="890" height="205" key="GridCell.Tab.1.bottom" timestamp="1643055073408">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="212" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1642064822670" />
-    <state width="1534" height="212" key="GridCell.Tab.1.center" timestamp="1642064822670">
+    <state width="890" height="205" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1643055073408" />
+    <state width="890" height="205" key="GridCell.Tab.1.center" timestamp="1643055073408">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="212" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1642064822670" />
-    <state width="1534" height="212" key="GridCell.Tab.1.left" timestamp="1642064822670">
+    <state width="890" height="205" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1643055073408" />
+    <state width="890" height="205" key="GridCell.Tab.1.left" timestamp="1643055073408">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="212" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1642064822670" />
-    <state width="1534" height="212" key="GridCell.Tab.1.right" timestamp="1642064822670">
+    <state width="890" height="205" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1643055073408" />
+    <state width="890" height="205" key="GridCell.Tab.1.right" timestamp="1643055073408">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="212" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1642064822670" />
-    <state width="1534" height="212" key="GridCell.Tab.2.bottom" timestamp="1642064822670">
+    <state width="890" height="205" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1643055073408" />
+    <state width="890" height="205" key="GridCell.Tab.2.bottom" timestamp="1643055073408">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="212" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1642064822670" />
-    <state width="1534" height="212" key="GridCell.Tab.2.center" timestamp="1642064822670">
+    <state width="890" height="205" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1643055073408" />
+    <state width="890" height="205" key="GridCell.Tab.2.center" timestamp="1643055073408">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="212" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1642064822670" />
-    <state width="1534" height="212" key="GridCell.Tab.2.left" timestamp="1642064822670">
+    <state width="890" height="205" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1643055073408" />
+    <state width="890" height="205" key="GridCell.Tab.2.left" timestamp="1643055073408">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="212" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1642064822670" />
-    <state width="1534" height="212" key="GridCell.Tab.2.right" timestamp="1642064822670">
+    <state width="890" height="205" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1643055073408" />
+    <state width="890" height="205" key="GridCell.Tab.2.right" timestamp="1643055073408">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1534" height="212" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1642064822670" />
+    <state width="890" height="205" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1643055073408" />
     <state width="1534" height="178" key="GridCell.Tab.3.bottom" timestamp="1635105478483">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -611,18 +540,26 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1534" height="178" key="GridCell.Tab.3.right/0.0.1858.1080@0.0.1858.1080" timestamp="1635105478483" />
-    <state x="598" y="58" width="998" height="708" key="SettingsEditor" timestamp="1639081417716">
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1642529595620">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="598" y="58" width="998" height="708" key="SettingsEditor/0.0.1858.1080@0.0.1858.1080" timestamp="1639081417716" />
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1858.1080@0.0.1858.1080" timestamp="1642529595620" />
+    <state x="598" y="58" width="998" height="708" key="SettingsEditor" timestamp="1643008196722">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="598" y="58" width="998" height="708" key="SettingsEditor/0.0.1858.1080@0.0.1858.1080" timestamp="1643008196722" />
     <state width="200" height="441" key="SqlResolveConfigurable" timestamp="1639084217106">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="200" height="441" key="SqlResolveConfigurable/0.0.1858.1080@0.0.1858.1080" timestamp="1639084217106" />
-    <state x="815" y="427" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1639084802181">
+    <state x="815" y="427" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1643055210948">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="815" y="427" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1858.1080@0.0.1858.1080" timestamp="1639084802181" />
+    <state x="815" y="427" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1858.1080@0.0.1858.1080" timestamp="1643055210948" />
+    <state x="509" y="194" key="com.intellij.database.dbimport.ImportDialog" timestamp="1643009026920">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="509" y="194" key="com.intellij.database.dbimport.ImportDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1643009026920" />
     <state x="659" y="344" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1639085849925">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -631,18 +568,22 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="1199" y="361" width="407" height="344" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1639737748110" />
-    <state x="941" y="255" width="656" height="569" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1640691894234">
+    <state x="779" y="237" width="656" height="569" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1643055185462">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="941" y="255" width="656" height="569" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1640691894234" />
+    <state x="779" y="237" width="656" height="569" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1643055185462" />
     <state x="738" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1639080942484">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="738" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1858.1080@0.0.1858.1080" timestamp="1639080942484" />
-    <state x="772" y="72" width="1011" height="819" key="dock-window-1" timestamp="1639735633889">
+    <state x="-16" y="29" width="807" height="826" key="dock-window-1" timestamp="1643052643717">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="772" y="72" width="1011" height="819" key="dock-window-1/0.0.1858.1080@0.0.1858.1080" timestamp="1639735633889" />
+    <state x="-16" y="29" width="807" height="826" key="dock-window-1/0.0.1858.1080@0.0.1858.1080" timestamp="1643052643717" />
+    <state x="16" y="47" width="768" height="831" key="dock-window-2" timestamp="1643044343894">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="16" y="47" width="768" height="831" key="dock-window-2/0.0.1858.1080@0.0.1858.1080" timestamp="1643044343894" />
     <state x="659" y="295" key="extract.method.dialog" timestamp="1636531470856">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -651,10 +592,6 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="0" y="27" key="new project wizard/0.0.1858.1080@0.0.1858.1080" timestamp="1641917318827" />
-    <state x="206" y="252" key="refactoring.ChangeSignatureDialog" timestamp="1633956122370">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state x="206" y="252" key="refactoring.ChangeSignatureDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1633956122370" />
     <state x="214" y="254" key="run.anything.popup" timestamp="1639729217328">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>

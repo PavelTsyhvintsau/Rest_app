@@ -21,7 +21,7 @@ public class ordersCompletePageServlet extends HttpServlet { private Restaurant 
         }
     }
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        req.setAttribute("ordersBank", restaurant.getOrdersListFromDd());
         req.setAttribute("restaurant", restaurant);
         req.getRequestDispatcher("/WEB-INF/view/order_completed_page.jsp").forward(req, resp);
     }

@@ -3,13 +3,13 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.18">
     <root id="1">
       <ServerVersion>14.1</ServerVersion>
-      <StartupTime>1640675125</StartupTime>
+      <StartupTime>1642762012</StartupTime>
     </root>
     <database id="2" parent="1" name="Restaurant">
       <ObjectId>24590</ObjectId>
       <Comment>база данных ресторана</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1151</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1248</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|24629|24619|4
 sequence|table|24700|24694|7
@@ -87,7 +87,7 @@ sequence|table|24711|24712|1
       <Comment>standard public schema</Comment>
       <StateNumber>527</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1152</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1249</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="21" parent="2" name="heap">
@@ -201,45 +201,50 @@ sequence|table|24711|24712|1
       <Owner>postgres</Owner>
       <StateNumber>1097</StateNumber>
     </table>
-    <column id="40" parent="36" name="dish_name">
+    <table id="40" parent="20" name="table_name34">
+      <ObjectId>24741</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1247</StateNumber>
+    </table>
+    <column id="41" parent="36" name="dish_name">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>978</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="41" parent="36" name="dish_cooking_time">
+    <column id="42" parent="36" name="dish_cooking_time">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>981</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="42" parent="36" name="dish_image_path">
+    <column id="43" parent="36" name="dish_image_path">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>984</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="43" parent="36" name="dish_type">
+    <column id="44" parent="36" name="dish_type">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>988</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="44" parent="36" name="active">
+    <column id="45" parent="36" name="active">
       <Position>5</Position>
       <DataType>boolean|0s</DataType>
       <StateNumber>966</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="45" parent="36" name="price">
+    <column id="46" parent="36" name="price">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>966</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="46" parent="36" name="id">
+    <column id="47" parent="36" name="id">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -247,54 +252,54 @@ sequence|table|24711|24712|1
       <DefaultExpression>nextval(&apos;alldish_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <index id="47" parent="36" name="alldish_dishname_uindex">
+    <index id="48" parent="36" name="alldish_dishname_uindex">
       <ObjectId>24699</ObjectId>
       <StateNumber>971</StateNumber>
       <ColNames>dish_name</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="48" parent="36" name="alldish_id_uindex">
+    <index id="49" parent="36" name="alldish_id_uindex">
       <ObjectId>24708</ObjectId>
       <StateNumber>972</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="49" parent="36" name="alldish_pk">
+    <index id="50" parent="36" name="alldish_pk">
       <ObjectId>24709</ObjectId>
       <StateNumber>973</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="50" parent="36" name="alldish_pk">
+    <key id="51" parent="36" name="alldish_pk">
       <ObjectId>24710</ObjectId>
       <StateNumber>973</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>alldish_pk</UnderlyingIndexName>
     </key>
-    <column id="51" parent="37" name="name">
+    <column id="52" parent="37" name="name">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>886</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="52" parent="37" name="password">
+    <column id="53" parent="37" name="password">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>920</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="53" parent="37" name="role">
+    <column id="54" parent="37" name="role">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>892</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="54" parent="37" name="id">
+    <column id="55" parent="37" name="id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -302,75 +307,75 @@ sequence|table|24711|24712|1
       <DefaultExpression>nextval(&apos;&quot;allUsers_id_seq&quot;&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="55" parent="37" name="is_active">
+    <column id="56" parent="37" name="is_active">
       <Position>5</Position>
       <DataType>boolean|0s</DataType>
       <StateNumber>944</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="56" parent="37" name="cook_id">
+    <column id="57" parent="37" name="cook_id">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>945</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="57" parent="37" name="currentorder">
+    <column id="58" parent="37" name="currentorder">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1150</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="58" parent="37" name="allusers_name_uindex">
+    <index id="59" parent="37" name="allusers_name_uindex">
       <ObjectId>24658</ObjectId>
       <StateNumber>892</StateNumber>
       <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="59" parent="37" name="allusers_id_uindex">
+    <index id="60" parent="37" name="allusers_id_uindex">
       <ObjectId>24635</ObjectId>
       <StateNumber>892</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="60" parent="37" name="allusers_pk">
+    <index id="61" parent="37" name="allusers_pk">
       <ObjectId>24636</ObjectId>
       <StateNumber>892</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="61" parent="37" name="allusers_pk">
+    <key id="62" parent="37" name="allusers_pk">
       <ObjectId>24637</ObjectId>
       <StateNumber>834</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>allusers_pk</UnderlyingIndexName>
     </key>
-    <column id="62" parent="38" name="id">
+    <column id="63" parent="38" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>852</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="63" parent="38" name="username">
+    <column id="64" parent="38" name="username">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>852</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="64" parent="38" name="parole">
+    <column id="65" parent="38" name="parole">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>852</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="65" parent="38" name="role">
+    <column id="66" parent="38" name="role">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>852</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="66" parent="39" name="id">
+    <column id="67" parent="39" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -378,49 +383,49 @@ sequence|table|24711|24712|1
       <DefaultExpression>nextval(&apos;orders_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="67" parent="39" name="user_id">
+    <column id="68" parent="39" name="user_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1010</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="68" parent="39" name="table_number">
+    <column id="69" parent="39" name="table_number">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1011</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="69" parent="39" name="create_time">
+    <column id="70" parent="39" name="create_time">
       <Position>4</Position>
       <DataType>timestamp with time zone|0s</DataType>
       <StateNumber>1046</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="70" parent="39" name="start_cooking_time">
+    <column id="71" parent="39" name="start_cooking_time">
       <Position>5</Position>
       <DataType>timestamp with time zone|0s</DataType>
       <StateNumber>1047</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="71" parent="39" name="end_cooking_time">
+    <column id="72" parent="39" name="end_cooking_time">
       <Position>6</Position>
       <DataType>timestamp with time zone|0s</DataType>
       <StateNumber>1048</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="72" parent="39" name="to_client_time">
+    <column id="73" parent="39" name="to_client_time">
       <Position>7</Position>
       <DataType>timestamp with time zone|0s</DataType>
       <StateNumber>1049</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="73" parent="39" name="status">
+    <column id="74" parent="39" name="status">
       <Position>8</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1050</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="74" parent="39" name="done">
+    <column id="75" parent="39" name="done">
       <Position>9</Position>
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
@@ -428,38 +433,50 @@ sequence|table|24711|24712|1
       <DefaultExpression>false</DefaultExpression>
       <TypeId>16</TypeId>
     </column>
-    <column id="75" parent="39" name="dishes">
+    <column id="76" parent="39" name="dishes">
       <Position>10</Position>
       <DataType>integer[]|0s</DataType>
       <StateNumber>1073</StateNumber>
       <TypeId>1007</TypeId>
     </column>
-    <column id="76" parent="39" name="cook_id">
+    <column id="77" parent="39" name="cook_id">
       <Position>11</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1103</StateNumber>
       <DefaultExpression>&apos;-1&apos;::integer</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <index id="77" parent="39" name="orders_id_uindex">
+    <index id="78" parent="39" name="orders_id_uindex">
       <ObjectId>24716</ObjectId>
       <StateNumber>1006</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="78" parent="39" name="orders_pk">
+    <index id="79" parent="39" name="orders_pk">
       <ObjectId>24717</ObjectId>
       <StateNumber>1007</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="79" parent="39" name="orders_pk">
+    <key id="80" parent="39" name="orders_pk">
       <ObjectId>24718</ObjectId>
       <StateNumber>1007</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>orders_pk</UnderlyingIndexName>
     </key>
+    <column id="81" parent="40" name="column_1">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1247</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="82" parent="40" name="column_2">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1247</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
   </database-model>
 </dataSource>

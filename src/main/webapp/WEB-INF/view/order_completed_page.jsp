@@ -31,7 +31,7 @@
             <td>Состав</td>
             <td>Цена</td>
         </tr>
-        <c:forEach var="order" items="${requestScope.restaurant.ordersListFromDd}">
+        <c:forEach var="order" items="${requestScope.ordersBank}">
             <tr>
                 <td><c:out value="${order.id}"/></td>
                 <td><c:out value="${order.orderstatus}"/></td>

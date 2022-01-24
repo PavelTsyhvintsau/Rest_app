@@ -99,38 +99,9 @@
         </form>
     </div>
     <div class="orderFull">
-        <a class="button17" href='/order_completed_page' >Просмотр всех заказов в архиве</a>
+        <a class="button17" href='${pageContext.request.contextPath}/order_completed_page' >Просмотр всех заказов в архиве</a>
     </div>
-</div><%--
-<div class="orderFull">
-    Статистика официантов через PostgreSQL:
-    <form method="post" action="<c:url value='/waiter_statistic_postgres'/>">
-
-        <label> Выбор официантов:</label>
-        <select name="usersID" multiple="multiple">
-            <option value="all"selected="selected">Выбрать всех</option>
-            <c:forEach var="user" items="${requestScope.restaurant.dao.get().store}">
-                <c:if test="${user.role eq 'WAITER'}">
-                    <option value="${user.id}">${user.login}</option>
-                </c:if>
-            </c:forEach>
-        </select><br>
-        <label> Сортировать по:</label>
-        <select name="sortBy" >
-            <option value="byName"selected="selected">Имени</option>
-            <option value="byCount">Количеству заказов</option>
-            <option value="byCost">Стоимости заказов</option>
-        </select><br>
-        <label> Период для отображения:</label>
-        <input type="date" name="trip-start"
-               value="2018-07-22"
-               min="2018-01-01" max="2022-12-31">
-        <input type="date" name="trip-end"
-               value="2018-07-22"
-               min="2018-01-01" max="2022-12-31"><br>
-        <input type="submit" value="Ok" name="Отобразить"><br>
-    </form>
-</div>--%>
+</div>
 
 </body>
 </html>

@@ -23,7 +23,6 @@ public class Order {
     private long orderToClientTime=-1;
     private String orderToClientTimeString;
     private int cookID=-1;
-    private boolean done;
     private Orderstatus orderstatus;
 
     public enum Orderstatus{
@@ -44,7 +43,6 @@ public class Order {
                  long orderStartCookingTime,
                  long orderEndCookingTime,
                  long orderToClientTime,
-                 boolean done,
                  Order.Orderstatus orderstatus,
                  int cookID) {
         this.creatorID = userID;
@@ -55,7 +53,6 @@ public class Order {
         this.orderStartCookingTime = orderStartCookingTime;
         this.orderEndCookingTime = orderEndCookingTime;
         this.orderToClientTime = orderToClientTime;
-        this.done = done;
         this.orderstatus = orderstatus;
         this.cookID=cookID;
     }
@@ -82,9 +79,6 @@ public class Order {
         return result;
         }
     }
-    public boolean isDone() {
-        return done;
-    }
     public String getOrderCreateTimeString(){
         String result= Utils.formatTimeDate(orderCreateTime);
         this.orderStartCreateString =result;
@@ -92,9 +86,6 @@ public class Order {
     }
     public int getCookID() {return cookID; }
     public void setCookID(int cookID) { this.cookID = cookID; }
-    public void setDone(boolean done) {
-        this.done = done;
-    }
     public void setOrderstatus(Orderstatus orderstatus) {
         this.orderstatus = orderstatus;
     }

@@ -7,5 +7,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/Restaurant</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="bobdb@localhost" uuid="623712de-db44-421b-8014-b4e24d2ac880">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/bobdb</jdbc-url>
+    </data-source>
   </component>
 </project>

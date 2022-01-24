@@ -8,7 +8,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <head><link href="style/style1.css" rel="stylesheet" type="text/css"></head>
-<a class="button28" href="/">
+<a class="button28" href="${pageContext.request.contextPath}/">
     MainPage
 </a>
 <a class="button28" style="color: red" href="<c:url value='/logout' />">

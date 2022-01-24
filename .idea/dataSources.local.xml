@@ -16,5 +16,24 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="bobdb@localhost" uuid="623712de-db44-421b-8014-b4e24d2ac880">
+      <database-info product="PostgreSQL" version="12.9 (Ubuntu 12.9-0ubuntu0.20.04.1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="12.9" exact-driver-version="42.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>bob</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="database" qname="@">
+            <node kind="schema" qname="@" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+      <ssh-properties>
+        <enabled>true</enabled>
+        <ssh-config-id>fc12ca40-8915-4c5f-9e0b-5bbf156036e9</ssh-config-id>
+      </ssh-properties>
+    </data-source>
   </component>
 </project>
