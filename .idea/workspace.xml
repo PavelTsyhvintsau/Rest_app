@@ -25,23 +25,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d799b732-0c63-4290-884f-ebdf9fea81a0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/73e482ff-5390-45a1-bfe6-fb8750b0e97c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/73e482ff-5390-45a1-bfe6-fb8750b0e97c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/73e482ff-5390-45a1-bfe6-fb8750b0e97c/storage_v2/_src_/database/Restaurant.XScsDQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/73e482ff-5390-45a1-bfe6-fb8750b0e97c/storage_v2/_src_/database/Restaurant.XScsDQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/623712de-db44-421b-8014-b4e24d2ac880.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/623712de-db44-421b-8014-b4e24d2ac880.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/623712de-db44-421b-8014-b4e24d2ac880/storage_v2/_src_/database/bobdb.8_CYBQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/623712de-db44-421b-8014-b4e24d2ac880/storage_v2/_src_/database/bobdb.8_CYBQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/model/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/model/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/model/kitchen/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/model/kitchen/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/WaiterOrderingListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/WaiterOrderingListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/ordersCompletePageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/ordersCompletePageServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/_menu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_statistic_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_statistic_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/order_completed_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/order_completed_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/ContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/ContextListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/filter/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/filter/SecurityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddDishServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/AddDishServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/UpdateDishServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/servlets/servlet/UpdateDishServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/dishes_menu_editor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/dishes_menu_editor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/olive.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/model/Restaurant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/_menu_tablet_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/_menu_tablet_table.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/admin_statistic_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/admin_statistic_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/ContextListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/ContextListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/filter/SecurityFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/filter/SecurityFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/AddDishServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UpdateDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/classes/com/company/servlets/servlet/UpdateDishServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/dishes_menu_editor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST4-1.0-SNAPSHOT/WEB-INF/view/dishes_menu_editor.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/model/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/model/Restaurant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/ContextListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/ContextListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/filter/SecurityFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/filter/SecurityFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/AddDishServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UpdateDishServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/servlets/servlet/UpdateDishServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,11 +109,9 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\PAVEL\REST4\src\main\webapp" />
-      <recent name="D:\PAVEL\REST4\src\main\java\com\company\DAO" />
-      <recent name="D:\PAVEL\REST4\src\main\webapp\WEB-INF" />
-      <recent name="D:\PAVEL\REST4\src\main" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.company.statistic" />
+      <recent name="com.company.servlets.filter" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\PAVEL\REST4\src\main\java\com\company\dao\pictures" />
@@ -121,9 +124,11 @@
       <recent name="com.company.util" />
       <recent name="com" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.company.statistic" />
-      <recent name="com.company.servlets.filter" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PAVEL\REST4\src\main\webapp" />
+      <recent name="D:\PAVEL\REST4\src\main\java\com\company\DAO" />
+      <recent name="D:\PAVEL\REST4\src\main\webapp\WEB-INF" />
+      <recent name="D:\PAVEL\REST4\src\main" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.55">
@@ -376,7 +381,8 @@
       <workItem from="1642524146490" duration="7795000" />
       <workItem from="1642758700210" duration="2643000" />
       <workItem from="1642763947684" duration="10064000" />
-      <workItem from="1643049291627" duration="5264000" />
+      <workItem from="1643049291627" duration="9349000" />
+      <workItem from="1643137065466" duration="13618000" />
     </task>
     <servers />
   </component>
@@ -428,10 +434,10 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="841" y="266" key="#com.intellij.ide.util.ExportDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1637697314198" />
-    <state x="304" y="211" key="#com.intellij.ide.util.MemberChooser" timestamp="1640107684099">
+    <state x="304" y="211" key="#com.intellij.ide.util.MemberChooser" timestamp="1643210390917">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="304" y="211" key="#com.intellij.ide.util.MemberChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1640107684099" />
+    <state x="304" y="211" key="#com.intellij.ide.util.MemberChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1643210390917" />
     <state x="659" y="315" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1636318330069">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -472,58 +478,58 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="802" y="395" key="DetectedRootsChooserDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1637782528600" />
-    <state x="337" y="294" width="718" height="491" key="FileChooserDialogImpl" timestamp="1643012330504">
+    <state x="337" y="294" width="718" height="491" key="FileChooserDialogImpl" timestamp="1643186234121">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="337" y="294" width="718" height="491" key="FileChooserDialogImpl/0.0.1858.1080@0.0.1858.1080" timestamp="1643012330504" />
-    <state width="890" height="205" key="GridCell.Tab.0.bottom" timestamp="1643055093801">
+    <state x="337" y="294" width="718" height="491" key="FileChooserDialogImpl/0.0.1858.1080@0.0.1858.1080" timestamp="1643186234121" />
+    <state width="1237" height="202" key="GridCell.Tab.0.bottom" timestamp="1643221029337">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="890" height="205" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1643055093801" />
-    <state width="890" height="205" key="GridCell.Tab.0.center" timestamp="1643055093801">
+    <state width="1237" height="202" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1643221029337" />
+    <state width="1237" height="202" key="GridCell.Tab.0.center" timestamp="1643221029337">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="890" height="205" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1643055093801" />
-    <state width="890" height="205" key="GridCell.Tab.0.left" timestamp="1643055093801">
+    <state width="1237" height="202" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1643221029337" />
+    <state width="1237" height="202" key="GridCell.Tab.0.left" timestamp="1643221029337">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="890" height="205" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1643055093801" />
-    <state width="890" height="205" key="GridCell.Tab.0.right" timestamp="1643055093801">
+    <state width="1237" height="202" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1643221029337" />
+    <state width="1237" height="202" key="GridCell.Tab.0.right" timestamp="1643221029337">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="890" height="205" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1643055093801" />
-    <state width="890" height="205" key="GridCell.Tab.1.bottom" timestamp="1643055073408">
+    <state width="1237" height="202" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1643221029337" />
+    <state width="1237" height="202" key="GridCell.Tab.1.bottom" timestamp="1643220850487">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="890" height="205" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1643055073408" />
-    <state width="890" height="205" key="GridCell.Tab.1.center" timestamp="1643055073408">
+    <state width="1237" height="202" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1643220850487" />
+    <state width="1237" height="202" key="GridCell.Tab.1.center" timestamp="1643220850487">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="890" height="205" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1643055073408" />
-    <state width="890" height="205" key="GridCell.Tab.1.left" timestamp="1643055073408">
+    <state width="1237" height="202" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1643220850487" />
+    <state width="1237" height="202" key="GridCell.Tab.1.left" timestamp="1643220850487">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="890" height="205" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1643055073408" />
-    <state width="890" height="205" key="GridCell.Tab.1.right" timestamp="1643055073408">
+    <state width="1237" height="202" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1643220850487" />
+    <state width="1237" height="202" key="GridCell.Tab.1.right" timestamp="1643220850487">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="890" height="205" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1643055073408" />
-    <state width="890" height="205" key="GridCell.Tab.2.bottom" timestamp="1643055073408">
+    <state width="1237" height="202" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1643220850487" />
+    <state width="1237" height="202" key="GridCell.Tab.2.bottom" timestamp="1643220850487">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="890" height="205" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1643055073408" />
-    <state width="890" height="205" key="GridCell.Tab.2.center" timestamp="1643055073408">
+    <state width="1237" height="202" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1643220850487" />
+    <state width="1237" height="202" key="GridCell.Tab.2.center" timestamp="1643220850487">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="890" height="205" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1643055073408" />
-    <state width="890" height="205" key="GridCell.Tab.2.left" timestamp="1643055073408">
+    <state width="1237" height="202" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1643220850487" />
+    <state width="1237" height="202" key="GridCell.Tab.2.left" timestamp="1643220850487">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="890" height="205" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1643055073408" />
-    <state width="890" height="205" key="GridCell.Tab.2.right" timestamp="1643055073408">
+    <state width="1237" height="202" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1643220850487" />
+    <state width="1237" height="202" key="GridCell.Tab.2.right" timestamp="1643220850487">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="890" height="205" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1643055073408" />
+    <state width="1237" height="202" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1643220850487" />
     <state width="1534" height="178" key="GridCell.Tab.3.bottom" timestamp="1635105478483">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -568,10 +574,10 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="1199" y="361" width="407" height="344" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1639737748110" />
-    <state x="779" y="237" width="656" height="569" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1643055185462">
+    <state x="779" y="237" width="656" height="569" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1643221023110">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="779" y="237" width="656" height="569" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1643055185462" />
+    <state x="779" y="237" width="656" height="569" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1643221023110" />
     <state x="738" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1639080942484">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -788,6 +794,11 @@
           <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/update_dish.jsp</url>
           <line>36</line>
           <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/company/model/Restaurant.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

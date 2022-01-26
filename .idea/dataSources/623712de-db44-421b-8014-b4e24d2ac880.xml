@@ -8,7 +8,7 @@
     <database id="2" parent="1" name="bobdb">
       <ObjectId>16385</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>558</IntrospectionStateNumber>
+      <IntrospectionStateNumber>597</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|16392|16394|7
 sequence|table|16401|16403|4
@@ -73,7 +73,7 @@ sequence|table|16410|16412|1
       <Comment>standard public schema</Comment>
       <StateNumber>275</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>559</IntrospectionStateNumber>
+      <IntrospectionStateNumber>598</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="17" parent="2" name="heap">
@@ -231,25 +231,45 @@ sequence|table|16410|16412|1
       <DefaultExpression>nextval(&apos;alldish_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="43" parent="33" name="name">
+    <index id="43" parent="32" name="alldish_id_uindex">
+      <ObjectId>16432</ObjectId>
+      <StateNumber>583</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="44" parent="32" name="alldish_pk">
+      <ObjectId>16437</ObjectId>
+      <StateNumber>593</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="45" parent="32" name="alldish_pk">
+      <ObjectId>16438</ObjectId>
+      <StateNumber>593</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>alldish_pk</UnderlyingIndexName>
+    </key>
+    <column id="46" parent="33" name="name">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>513</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="44" parent="33" name="password">
+    <column id="47" parent="33" name="password">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>513</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="45" parent="33" name="role">
+    <column id="48" parent="33" name="role">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>513</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="46" parent="33" name="id">
+    <column id="49" parent="33" name="id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -257,49 +277,69 @@ sequence|table|16410|16412|1
       <DefaultExpression>nextval(&apos;allusers_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="47" parent="33" name="is_active">
+    <column id="50" parent="33" name="is_active">
       <Position>5</Position>
       <DataType>boolean|0s</DataType>
       <StateNumber>513</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="48" parent="33" name="cook_id">
+    <column id="51" parent="33" name="cook_id">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>513</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="49" parent="33" name="currentorder">
+    <column id="52" parent="33" name="currentorder">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>513</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="50" parent="34" name="id">
+    <index id="53" parent="33" name="allusers_id_uindex">
+      <ObjectId>16433</ObjectId>
+      <StateNumber>586</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="54" parent="33" name="allusers_pk">
+      <ObjectId>16439</ObjectId>
+      <StateNumber>596</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="55" parent="33" name="allusers_pk">
+      <ObjectId>16440</ObjectId>
+      <StateNumber>596</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>allusers_pk</UnderlyingIndexName>
+    </key>
+    <column id="56" parent="34" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>527</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="51" parent="34" name="username">
+    <column id="57" parent="34" name="username">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>527</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="52" parent="34" name="parole">
+    <column id="58" parent="34" name="parole">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>527</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="53" parent="34" name="role">
+    <column id="59" parent="34" name="role">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>527</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="54" parent="35" name="id">
+    <column id="60" parent="35" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -307,59 +347,79 @@ sequence|table|16410|16412|1
       <DefaultExpression>nextval(&apos;orders_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="55" parent="35" name="user_id">
+    <column id="61" parent="35" name="user_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>520</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="56" parent="35" name="table_number">
+    <column id="62" parent="35" name="table_number">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>520</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="57" parent="35" name="create_time">
+    <column id="63" parent="35" name="create_time">
       <Position>4</Position>
       <DataType>timestamp with time zone|0s</DataType>
       <StateNumber>520</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="58" parent="35" name="start_cooking_time">
+    <column id="64" parent="35" name="start_cooking_time">
       <Position>5</Position>
       <DataType>timestamp with time zone|0s</DataType>
       <StateNumber>520</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="59" parent="35" name="end_cooking_time">
+    <column id="65" parent="35" name="end_cooking_time">
       <Position>6</Position>
       <DataType>timestamp with time zone|0s</DataType>
       <StateNumber>520</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="60" parent="35" name="to_client_time">
+    <column id="66" parent="35" name="to_client_time">
       <Position>7</Position>
       <DataType>timestamp with time zone|0s</DataType>
       <StateNumber>520</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="61" parent="35" name="status">
+    <column id="67" parent="35" name="status">
       <Position>8</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>520</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="62" parent="35" name="dishes">
+    <column id="68" parent="35" name="dishes">
       <Position>10</Position>
       <DataType>integer[]|0s</DataType>
       <StateNumber>552</StateNumber>
       <TypeId>1007</TypeId>
     </column>
-    <column id="63" parent="35" name="cook_id">
+    <column id="69" parent="35" name="cook_id">
       <Position>11</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>520</StateNumber>
       <TypeId>23</TypeId>
     </column>
+    <index id="70" parent="35" name="orders_id_uindex">
+      <ObjectId>16434</ObjectId>
+      <StateNumber>589</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="71" parent="35" name="orders_pk">
+      <ObjectId>16435</ObjectId>
+      <StateNumber>590</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="72" parent="35" name="orders_pk">
+      <ObjectId>16436</ObjectId>
+      <StateNumber>590</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>orders_pk</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>

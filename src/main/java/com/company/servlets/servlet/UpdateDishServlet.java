@@ -35,23 +35,24 @@ public class UpdateDishServlet extends HttpServlet {
         final String name = req.getParameter("name");
         final int cookingTime = Integer.parseInt(req.getParameter("cookingTime"));
         final String type=req.getParameter("type");
-        String imagePath=null;
+        String namePhoto=null;
         Part filePart = req.getPart("file");
         if(filePart.getSize()!=0){
             InputStream fileContent = filePart.getInputStream();
-            String dir="C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0_Tomcat9055\\webapps\\ROOT\\images\\";
-            String namePhoto= Utils.generateName() +".jpeg";
-            File foto=new File(dir,namePhoto);
+            //String dir="C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0_Tomcat9055\\webapps\\ROOT\\images\\";
+
+            namePhoto=Utils.generateName() +".jpeg";
+            File foto=new File(restaurant.getSaveImageToServerPasth(),namePhoto);
             foto.createNewFile();
             Utils.putDishPhoto(fileContent,foto);
-            imagePath="images/"+namePhoto;
+
 
         }else{
-            imagePath=restaurant.getDishFromDB(Integer.parseInt(id)).getDishImagePath();
+            namePhoto=restaurant.getDishFromDB(Integer.parseInt(id)).getDishImagePath();
         }
 
 
-        restaurant.updateDish(id,name,type,cookingTime,imagePath);
+        restaurant.updateDish(id,name,type,cookingTime,namePhoto);
         resp.sendRedirect(req.getContextPath() + "/dishes_menu_editor");
     }
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -59,6 +60,7 @@ public class UpdateDishServlet extends HttpServlet {
         Dish dish =restaurant.getDishFromDB(id);
         req.setAttribute("dish", dish);
         req.setAttribute("menu", restaurant.getMenu());
+        req.setAttribute("restaurant",restaurant);
 
         req.getRequestDispatcher("/WEB-INF/view/update_dish.jsp").forward(req, resp);
     }

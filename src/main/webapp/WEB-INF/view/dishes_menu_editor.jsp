@@ -17,9 +17,9 @@
             <li>Название блюда: <c:out value="${dish.dishName}"/></li>
             <li>Тип: <c:out value="${dish.dishType}"/></li>
             <li>Время приготовления: <c:out value="${dish.dishCookingTime}"/></li>
-            <li>Путь файлу к картинки: <c:out value="${dish.dishImagePath}"/></li>
+            <li>Путь файлу к картинки: <c:out value="${restaurant.urlImages}${dish.dishImagePath}"/>
             <li>ID: <c:out value="${dish.id}"/></li>
-            <img src="${dish.dishImagePath}" alt="картинка блюда" height="100">
+            <img src="${restaurant.urlImages}${dish.dishImagePath}" alt="картинка блюда" height="100">
         <c:if test="${dish.isActive() eq 0}" >
             <li>Активно: <c:out value="нет"/></li>
             <form method="post" action="<c:url value='/activate_dish'/>">

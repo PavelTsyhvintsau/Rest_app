@@ -55,8 +55,8 @@ public class SecurityFilter implements Filter {
             dispatcher.forward(request, response);
         }
         if (!SecurityConfig.getUrlPatternsAllSecurityPages().contains(servletPath)) {
-            if(servletPath.startsWith("/image")) {
-                System.out.println("........................pasth start /images ");
+            if(servletPath.startsWith("/file_")) {
+                System.out.println("........pasth start /images ");
                 chain.doFilter(request, response);
                 return;
             }

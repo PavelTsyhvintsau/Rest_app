@@ -41,12 +41,13 @@ public class AddDishServlet extends HttpServlet {
 
         Part filePart = req.getPart("file");
         InputStream fileContent = filePart.getInputStream();
-        String dir="C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0_Tomcat9055\\webapps\\ROOT\\images\\";
+        //String dir="C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0_Tomcat9055\\webapps\\ROOT\\images\\";
+
         String namePhoto= Utils.generateName() +".jpeg";
-        File foto=new File(dir,namePhoto);
+        File foto=new File(restaurant.getSaveImageToServerPasth(),namePhoto);
         foto.createNewFile();
         Utils.putDishPhoto(fileContent,foto);
-        String imagePath="images/"+namePhoto;
+        String imagePath=namePhoto;
 
         restaurant.addDish(dishName,dishType,dishCookingTime,imagePath);
         resp.sendRedirect(req.getContextPath()+"/dishes_menu_editor");

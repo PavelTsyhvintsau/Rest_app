@@ -5,20 +5,24 @@ import com.company.dao.UserDAO;
 import com.company.model.kitchen.Order;
 import com.company.model.kitchen.dishes.Dish;
 import com.company.model.kitchen.dishes.DishType;
-import sun.nio.cs.CharsetMapping;
-
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.*;
-import java.util.Date;
-import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class Restaurant {
     private AtomicReference<UserDAO> dao;
+    private String urlImages;
+    private String saveImageToServerPasth;
     private Menu menu;
+
+    public Restaurant() {
+        this.urlImages="http://tsyhvintsau.online:8080/images/";
+        this.saveImageToServerPasth="/home/image/restaurant/";
+    }
+
     public Connection getConnection(){
         InitialContext initContext= null;
         Connection connection=null;
@@ -31,6 +35,10 @@ public class Restaurant {
         }
         return connection;
     }
+
+    public String getUrlImages() { return urlImages; }
+    public String getSaveImageToServerPasth() { return saveImageToServerPasth; }
+
     public void setDao(){
         AtomicReference<UserDAO> dao = new AtomicReference<>(new UserDAO());
         InitialContext initContext= null;
@@ -696,19 +704,4 @@ public class Restaurant {
             }
         }
     }
-
-
-
-    //public LinkedBlockingQueue<Order> getQueueOrders() {
-    //    return queueOrders;
-    //}
-    //public void setQueueOrders(LinkedBlockingQueue<Order> queueOrders) {
-    //    this.queueOrders = queueOrders;
-    //}
-    //public ArrayList<Order> getOrdersBank() {
-    //    return ordersBank;
-    //}
-    //public void setOrdersBank(ArrayList<Order> ordersBank) {
-     //   this.ordersBank = ordersBank;
-    //}
 }
